@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wolf Holdings</title>
+    <link rel="icon" type="image/png" href="assets/wolf.png" />
+    <link rel="apple-touch-icon" href="assets/wolf.png" />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  </head>
+  <body>
+    <div class="app">
+      <header class="nav">
+        <a class="brand" href="./">
+          <span class="dot"></span>
+          <span>Wolf Holdings</span>
+          <img class="brand-icon" src="assets/wolf.png" alt="" />
+        </a>
+        <div class="actions">
+          <span id="updated-at" class="updated-at" title=""></span>
+          <button id="refresh" class="btn" title="Force-refresh from live API (consumes quota)">
+            <span id="refresh-icon">↻</span>
+            <span>Refresh</span>
+          </button>
+        </div>
+      </header>
+
+      <div id="banner" class="banner" hidden></div>
+
+      <section class="summary">
+        <div class="label">Portfolio value</div>
+        <div id="total-value" class="value skeleton">$0.00</div>
+        <div class="changes">
+          <div class="ch-row">
+            <span id="day-change" class="neutral">—</span>
+            <span class="tag">today</span>
+          </div>
+          <div class="ch-row">
+            <span id="total-change" class="neutral">—</span>
+            <span class="tag">all time</span>
+          </div>
+          <div class="ch-row">
+            <span id="cost-basis" class="muted">—</span>
+            <span class="tag">cost basis</span>
+          </div>
+        </div>
+      </section>
+
+      <div id="tabs" class="tabs"></div>
+
+      <div class="section-header">
+        <h2>Holdings</h2>
+        <div class="sort" id="sort">
+          <button data-sort="value" class="active">Value</button>
+          <button data-sort="change">% Change</button>
+          <button data-sort="symbol">Symbol</button>
+        </div>
+      </div>
+
+      <div id="holdings" class="holdings"></div>
+      <div id="empty" class="empty" hidden>No holdings found in data/holdings.csv.</div>
+    </div>
+
+    <script type="module" src="js/portfolio.js"></script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+symbol,unit_cost,shares,currency,usd_rate,market,client,platform,note,link
+FLY,27.70,37,USD,1,US,true,,,https://au.finance.yahoo.com/quote/FLY/
+LAES,2.73,1100,USD,1,US,true,,,https://au.finance.yahoo.com/quote/LAES/
+PTIR,12.41,165,USD,1,US,true,,,https://au.finance.yahoo.com/quote/PTIR/
+RDW,9.32,162,USD,1,US,true,,,https://au.finance.yahoo.com/quote/RDW/
+BABA,74.20,80,USD,1,US,false,,,https://au.finance.yahoo.com/quote/BABA/
+6488.TWO,443.63,156,TWD,0.031,Taiwan,true,,,https://au.finance.yahoo.com/quote/6488.TWO/
+4977.TW,240.76,413,TWD,0.031,Taiwan,true,,,https://au.finance.yahoo.com/quote/4977.TW/
+6451.TW,215.15,550,TWD,0.031,Taiwan,false,,,https://au.finance.yahoo.com/quote/6451.TW/
+SIVE.ST,28.10,1078,SEK,0.094,Sweden,false,,,https://au.finance.yahoo.com/quote/SIVE.ST/
+LPK.DE,17.07,115,EUR,1.075,Germany,false,,,https://au.finance.yahoo.com/quote/LPK.DE/
+IQE.L,71.24,1250,GBp,0.0125,UK,false,,,https://au.finance.yahoo.com/quote/IQE.L/

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Stock — Wolf Holdings</title>
+    <link rel="icon" type="image/png" href="assets/wolf.png" />
+    <link rel="apple-touch-icon" href="assets/wolf.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <script src="https://unpkg.com/lightweight-charts@4.1.3/dist/lightweight-charts.standalone.production.js"></script>
+  </head>
+  <body>
+    <div class="app">
+      <a class="back-link" href="./">← Portfolio</a>
+
+      <div id="banner" class="banner" hidden></div>
+
+      <header class="detail-header">
+        <div class="name">
+          <div id="logo" class="logo skeleton"></div>
+          <span id="company" class="company skeleton">Loading…</span>
+          <a id="company-link" class="link-btn" target="_blank" rel="noopener noreferrer" hidden title="Open external page"><svg class="link-icon" viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42L17.59 5H14V3z" fill="currentColor"/><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7z" fill="currentColor"/></svg></a>
+          <span id="symbol-tag" class="muted"></span>
+        </div>
+        <div id="price" class="price skeleton">$0.00</div>
+        <div id="price-usd" class="price-usd muted" hidden></div>
+        <div id="change" class="change muted">
+          <span id="change-text">—</span>
+          <span class="tag" id="change-tag">Today</span>
+        </div>
+      </header>
+
+      <section class="chart-card">
+        <div id="chart"></div>
+        <div class="timeframes" id="timeframes">
+          <button data-tf="1D">1D</button>
+          <button data-tf="1W">1W</button>
+          <button data-tf="1M" class="active">1M</button>
+          <button data-tf="3M">3M</button>
+          <button data-tf="1Y">1Y</button>
+          <button data-tf="5Y">5Y</button>
+        </div>
+      </section>
+
+      <section id="position" class="section" hidden>
+        <h3>Your position</h3>
+        <div class="kv" id="position-kv"></div>
+      </section>
+
+      <section id="about" class="section about" hidden>
+        <h3>About</h3>
+        <div id="about-body"></div>
+      </section>
+
+      <section id="stats" class="section" hidden>
+        <h3>Key statistics</h3>
+        <div class="kv" id="stats-kv"></div>
+      </section>
+    </div>
+
+    <script type="module" src="js/stock.js"></script>
+  </body>
+</html>

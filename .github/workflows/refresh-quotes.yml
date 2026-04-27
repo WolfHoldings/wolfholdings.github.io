@@ -1,0 +1,50 @@
+name: Refresh quotes snapshot
+
+on:
+  schedule:
+    # Every 3 hours, on the hour. GitHub may delay cron runs by a few minutes
+    # under load — this is fine for portfolio data.
+    - cron: "0 */3 * * *"
+  workflow_dispatch: {}
+  push:
+    paths:
+      - "data/holdings.csv"
+      - "scripts/refresh.mjs"
+      - ".github/workflows/refresh-quotes.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-quotes
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Refresh snapshot
+        env:
+          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+          RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
+        run: node scripts/refresh.mjs
+
+      - name: Commit snapshot if changed
+        run: |
+          git config user.name  "wolf-bot"
+          git config user.email "wolf-bot@users.noreply.github.com"
+          git add data/snapshot.json
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: refresh quotes snapshot"
+            git push
+          fi
