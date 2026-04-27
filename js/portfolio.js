@@ -1,6 +1,5 @@
 import { loadHoldings } from "./csv.js";
 import {
-  getQuote,
   getProfile,
   getQuotesBatch,
   isInternational,
@@ -156,7 +155,7 @@ function renderRow(row) {
 
     const dayEl = document.createElement("div");
     dayEl.className = `ch ${changeClass(m.dayChangeUsd)}`;
-    dayEl.textContent = `${fmtSignedPercent(m.dpDay)} today`;
+    dayEl.textContent = `${fmtSignedPercent(m.dpDay)} ${quote?.extendedLabel?.toLowerCase() ?? "today"}`;
 
     const mvLine = document.createElement("div");
     mvLine.className = "mv";
@@ -344,58 +343,39 @@ function rerender() {
 
 /* -------- live API path (Refresh button only) -------- */
 
-async function loadOneFinnhub(holding, force = false) {
-  try {
-    const [quote, profile] = await Promise.all([
-      getQuote(holding.symbol, { force }),
-      getProfile(holding.symbol, { force }),
-    ]);
-    return { holding, quote: quote.value, profile: profile.value };
-  } catch (e) {
-    console.warn(`Failed to load ${holding.symbol}:`, e.message);
-    return { holding, quote: null, profile: null };
-  }
-}
-
-async function loadInternational(intlHoldings, force = false) {
-  if (!intlHoldings.length) return [];
-  try {
-    const symbols = intlHoldings.map((h) => h.symbol);
-    const quotes = await getQuotesBatch(symbols, { force });
-    return intlHoldings.map((holding) => {
-      const quote = quotes[holding.symbol] || null;
-      const profile = quote
-        ? {
-            name: quote.name,
-            logo: null,
-            exchange: quote.exchange,
-            currency: quote.currency,
-          }
-        : null;
-      return { holding, quote, profile };
-    });
-  } catch (e) {
-    console.warn("International batch load failed:", e.message);
-    return intlHoldings.map((holding) => ({ holding, quote: null, profile: null }));
-  }
-}
-
 async function loadAllLive(force = true) {
   setRefreshing(true);
   try {
-    const usHoldings = state.rows
-      .map((r) => r.holding)
-      .filter((h) => !isInternational(h.symbol));
-    const intlHoldings = state.rows
-      .map((r) => r.holding)
-      .filter((h) => isInternational(h.symbol));
+    const allHoldings = state.rows.map((r) => r.holding);
+    const usHoldings = allHoldings.filter((h) => !isInternational(h.symbol));
 
-    const [usResults, intlResults] = await Promise.all([
-      Promise.all(usHoldings.map((h) => loadOneFinnhub(h, force))),
-      loadInternational(intlHoldings, force),
-    ]);
+    // Batch ALL symbols (US + international) through Yahoo Finance for quotes.
+    // One API call, and it returns extended-hours prices for all stocks.
+    const allSymbols = allHoldings.map((h) => h.symbol);
+    const quotesPromise = getQuotesBatch(allSymbols, { force });
 
-    const merged = [...usResults, ...intlResults];
+    // US company profiles still come from Finnhub (richer: logo, sector, IPO).
+    // Cached 24 h so this rarely hits the network on a manual Refresh.
+    const usProfilesPromise = Promise.all(
+      usHoldings.map((h) =>
+        getProfile(h.symbol, { force }).catch(() => ({ value: null })),
+      ),
+    );
+
+    const [quotes, usProfiles] = await Promise.all([quotesPromise, usProfilesPromise]);
+
+    const usProfileMap = new Map(
+      usHoldings.map((h, i) => [h.symbol, usProfiles[i]?.value || null]),
+    );
+
+    const merged = allHoldings.map((holding) => {
+      const quote = quotes[holding.symbol] || null;
+      const profile = isInternational(holding.symbol)
+        ? (quote ? { name: quote.name, logo: null, exchange: quote.exchange, currency: quote.currency } : null)
+        : (usProfileMap.get(holding.symbol) || null);
+      return { holding, quote, profile };
+    });
+
     const order = new Map(state.rows.map((r, i) => [r.holding.symbol, i]));
     merged.sort(
       (a, b) =>

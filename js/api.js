@@ -175,11 +175,31 @@ function normalizeFinnhubQuote(raw) {
 
 function normalizeApidojoQuote(r) {
   if (!r) return null;
-  const c = num(r.regularMarketPrice);
+  const regPrice = num(r.regularMarketPrice);
   const pc = num(r.regularMarketPreviousClose);
-  if (!isFinite(c)) return null;
-  const d = num(r.regularMarketChange);
-  const dp = num(r.regularMarketChangePercent);
+  if (!isFinite(regPrice)) return null;
+
+  // Prefer extended-hours price when the regular session is not active.
+  const marketState = r.marketState || null;
+  let c = regPrice;
+  let d = num(r.regularMarketChange);
+  let dp = num(r.regularMarketChangePercent);
+  let extendedLabel = null;
+
+  if (marketState === "POST" || marketState === "POSTPOST") {
+    const pp = num(r.postMarketPrice);
+    if (isFinite(pp) && pp > 0) {
+      c = pp; d = num(r.postMarketChange); dp = num(r.postMarketChangePercent);
+      extendedLabel = "After hours";
+    }
+  } else if (marketState === "PRE" || marketState === "PREPRE") {
+    const pp = num(r.preMarketPrice);
+    if (isFinite(pp) && pp > 0) {
+      c = pp; d = num(r.preMarketChange); dp = num(r.preMarketChangePercent);
+      extendedLabel = "Pre-market";
+    }
+  }
+
   return {
     c,
     d: isFinite(d) ? d : c - pc,
@@ -199,6 +219,8 @@ function normalizeApidojoQuote(r) {
     peTTM: num(r.trailingPE),
     eps: num(r.epsTrailingTwelveMonths),
     divYield: num(r.trailingAnnualDividendYield),
+    marketState,
+    extendedLabel,
   };
 }
 

@@ -109,7 +109,7 @@ function renderHeader() {
     chText.textContent =
       `${fmtSignedNative(quote.d, currency)} (${fmtSignedPercent(quote.dp)})`;
     ch.className = `change ${changeClass(quote.d)}`;
-    $("change-tag").textContent = "Today";
+    $("change-tag").textContent = state.quote?.extendedLabel ?? "Today";
 
     // USD equivalent for non-USD symbols.
     const usdEl = $("price-usd");

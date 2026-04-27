@@ -33,7 +33,6 @@ jobs:
 
       - name: Refresh snapshot
         env:
-          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
           RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
         run: node scripts/refresh.mjs
 
