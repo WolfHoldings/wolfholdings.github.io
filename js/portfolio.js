@@ -1,9 +1,13 @@
-import { loadHoldings } from "./csv.js";
+import { loadHoldings, loadCash } from "./csv.js";
 import {
   getProfile,
   getQuotesBatch,
   isInternational,
 } from "./api.js";
+import {
+  fxSymbolsForCurrencies,
+  rateFromQuotes,
+} from "./fx.js";
 import {
   fmtMoney,
   fmtNative,
@@ -20,11 +24,15 @@ const VERIFIED_SVG = `<svg class="verified" viewBox="0 0 24 24" aria-label="boug
 const EXTERNAL_SVG = `<svg class="link-icon" viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42L17.59 5H14V3z" fill="currentColor"/><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7z" fill="currentColor"/></svg>`;
 
 const state = {
-  rows: [],          // { holding, quote, profile }
+  rows: [],          // main holdings, used by All / V / Mike / market tabs
+  cash: [],          // { date, amount, currency, usdRate, amountUsd, client }
+  bears: [],         // bear-tab-only holdings, NOT counted in "All"
   sort: "value",
   market: "All",
   updatedAt: null,
 };
+
+const BEAR_TAB = "🐻";
 
 const $ = (id) => document.getElementById(id);
 
@@ -45,6 +53,37 @@ function logoEl(symbol, profile) {
     wrap.textContent = symbol.charAt(0);
   }
   return wrap;
+}
+
+function uniqueCurrencies() {
+  const out = new Set();
+  for (const r of state.rows) if (r.holding.currency) out.add(r.holding.currency);
+  for (const r of state.bears) if (r.holding.currency) out.add(r.holding.currency);
+  for (const c of state.cash) if (c.currency) out.add(c.currency);
+  out.delete("USD");
+  return [...out];
+}
+
+function applyFxRates(rates) {
+  if (!rates) return;
+  const enrich = (h) => {
+    if (h.currency === "USD") return;
+    const rate = rates[h.currency];
+    if (isFinite(rate) && rate > 0) {
+      h.usdRate = rate;
+      h.totalCostUsd = h.totalCostNative * rate;
+    }
+  };
+  for (const r of state.rows) enrich(r.holding);
+  for (const r of state.bears) enrich(r.holding);
+  for (const c of state.cash) {
+    if (isFinite(c.usdRate) && c.usdRate > 0) continue; // CSV had explicit rate
+    const rate = rates[c.currency];
+    if (isFinite(rate) && rate > 0) {
+      c.usdRate = rate;
+      c.amountUsd = c.amount * rate;
+    }
+  }
 }
 
 function rowMetrics(row) {
@@ -185,6 +224,53 @@ function renderRow(row) {
   return a;
 }
 
+function renderCashRow(cash) {
+  const a = document.createElement("div");
+  a.className = "row cash-row";
+
+  const logo = document.createElement("div");
+  logo.className = "logo cash-logo";
+  logo.textContent = "$";
+  a.appendChild(logo);
+
+  const meta = document.createElement("div");
+  meta.className = "meta";
+
+  const symbolLine = document.createElement("div");
+  symbolLine.className = "symbol-line";
+  const sym = document.createElement("span");
+  sym.className = "symbol";
+  sym.textContent = "Cash";
+  symbolLine.appendChild(sym);
+  const name = document.createElement("span");
+  name.className = "name";
+  name.textContent = cash.currency;
+  symbolLine.appendChild(name);
+  meta.appendChild(symbolLine);
+
+  const sub = document.createElement("div");
+  sub.className = "sub";
+  sub.textContent = "Available cash";
+  meta.appendChild(sub);
+
+  a.appendChild(meta);
+
+  const right = document.createElement("div");
+  right.className = "right";
+  const priceEl = document.createElement("div");
+  priceEl.className = "price";
+  priceEl.textContent = fmtNative(cash.amount, cash.currency);
+  right.appendChild(priceEl);
+  if (cash.currency !== "USD") {
+    const mvLine = document.createElement("div");
+    mvLine.className = "mv";
+    mvLine.textContent = `≈ ${fmtMoney(cash.amountUsd)}`;
+    right.appendChild(mvLine);
+  }
+  a.appendChild(right);
+  return a;
+}
+
 function sortRows(rows, sort) {
   const copy = [...rows];
   copy.sort((a, b) => {
@@ -202,21 +288,56 @@ function sortRows(rows, sort) {
 }
 
 function filteredRows() {
+  if (state.market === BEAR_TAB) return state.bears;
   if (state.market === "All") return state.rows;
-  if (state.market === "Client") return state.rows.filter((r) => r.holding.client);
+  if (state.market === "V") return state.rows.filter((r) => r.holding.client);
+  if (state.market === "Mike") return state.rows.filter((r) => !r.holding.client);
   return state.rows.filter((r) => r.holding.market === state.market);
+}
+
+function filteredCash() {
+  if (state.market === BEAR_TAB) return [];   // bear bucket has no cash
+  if (state.market === "All") return state.cash;
+  if (state.market === "V") return state.cash.filter((c) => c.client);
+  if (state.market === "Mike") return state.cash.filter((c) => !c.client);
+  // Market-specific tabs (US, Taiwan, etc.) don't carry a cash bucket — cash
+  // isn't tied to an exchange.
+  return [];
+}
+
+// Roll multiple CSV cash entries into one display row per currency.
+function consolidateCash(entries) {
+  const byCurrency = new Map();
+  for (const c of entries) {
+    const cur = byCurrency.get(c.currency) || {
+      currency: c.currency,
+      usdRate: c.usdRate,
+      amount: 0,
+      amountUsd: 0,
+    };
+    cur.amount += c.amount;
+    cur.amountUsd += c.amountUsd;
+    byCurrency.set(c.currency, cur);
+  }
+  return [...byCurrency.values()].sort((a, b) => b.amountUsd - a.amountUsd);
 }
 
 function renderHoldings() {
   const list = $("holdings");
   list.innerHTML = "";
   const sorted = sortRows(filteredRows(), state.sort);
-  if (!sorted.length) {
+  const cashRows = consolidateCash(filteredCash());
+
+  if (!sorted.length && !cashRows.length) {
     const empty = document.createElement("div");
     empty.className = "empty";
     empty.textContent = `No ${state.market} holdings.`;
     list.appendChild(empty);
     return;
+  }
+  // Cash sits at the top of the list.
+  for (const cash of cashRows) {
+    list.appendChild(renderCashRow(cash));
   }
   for (const row of sorted) {
     list.appendChild(renderRow(row));
@@ -224,38 +345,64 @@ function renderHoldings() {
 }
 
 function renderTabs() {
-  // Compute markets present + USD subtotal per market + client subtotal.
+  // Holdings subtotals (state.rows only — bears are tracked separately).
   const groups = new Map();
-  let totalUsd = 0;
-  let clientUsd = 0;
+  let totalHoldingsUsd = 0;
+  let clientHoldingsUsd = 0;
+  let nonClientHoldingsUsd = 0;
   let hasClient = false;
+  let hasNonClient = false;
   for (const r of state.rows) {
     const m = rowMetrics(r);
     const usd = m.hasQuote ? m.mvUsd : r.holding.totalCostUsd;
-    totalUsd += usd;
+    totalHoldingsUsd += usd;
     const k = r.holding.market;
     groups.set(k, (groups.get(k) || 0) + usd);
-    if (r.holding.client) {
-      hasClient = true;
-      clientUsd += usd;
-    }
+    if (r.holding.client) { hasClient = true; clientHoldingsUsd += usd; }
+    else { hasNonClient = true; nonClientHoldingsUsd += usd; }
   }
+
+  // Cash subtotals.
+  let totalCashUsd = 0, clientCashUsd = 0, nonClientCashUsd = 0;
+  for (const c of state.cash) {
+    totalCashUsd += c.amountUsd;
+    if (c.client) clientCashUsd += c.amountUsd;
+    else nonClientCashUsd += c.amountUsd;
+  }
+
+  // Bear subtotal — completely separate, NOT included in "All" / V / Mike.
+  let bearUsd = 0;
+  for (const r of state.bears) {
+    const m = rowMetrics(r);
+    bearUsd += m.hasQuote ? m.mvUsd : r.holding.totalCostUsd;
+  }
+
+  const totalUsd = totalHoldingsUsd + totalCashUsd;
+  const clientUsd = clientHoldingsUsd + clientCashUsd;
+  const nonClientUsd = nonClientHoldingsUsd + nonClientCashUsd;
+
   const markets = [...groups.keys()].sort((a, b) => groups.get(b) - groups.get(a));
   const tabs = ["All"];
-  if (hasClient) tabs.push("Client");
+  if (hasClient || clientCashUsd > 0) tabs.push("V");
+  if (hasNonClient || nonClientCashUsd > 0) tabs.push("Mike");
   tabs.push(...markets);
+  if (state.bears.length) tabs.push(BEAR_TAB);
 
   const tabsEl = $("tabs");
   tabsEl.innerHTML = "";
   for (const t of tabs) {
     const btn = document.createElement("button");
     btn.className = "tab" + (state.market === t ? " active" : "");
-    if (t === "Client") btn.classList.add("tab-client");
+    if (t === "V") btn.classList.add("tab-client");
     btn.dataset.market = t;
     const value =
-      t === "All" ? totalUsd : t === "Client" ? clientUsd : groups.get(t);
+      t === "All" ? totalUsd
+      : t === "V" ? clientUsd
+      : t === "Mike" ? nonClientUsd
+      : t === BEAR_TAB ? bearUsd
+      : groups.get(t);
     btn.innerHTML =
-      `<span class="t-label">${t}${t === "Client" ? VERIFIED_SVG : ""}</span>` +
+      `<span class="t-label">${t}${t === "V" ? VERIFIED_SVG : ""}</span>` +
       `<span class="t-value">${fmtMoney(value)}</span>`;
     tabsEl.appendChild(btn);
   }
@@ -289,6 +436,13 @@ function renderSummary() {
     } else {
       totalValueUsd += r.holding.totalCostUsd;
     }
+  }
+
+  // Cash counts as both cost and value at 1:1 — it doesn't appreciate so it
+  // contributes 0 to dayChange / totalChange.
+  for (const c of filteredCash()) {
+    totalCostUsd += c.amountUsd;
+    totalValueUsd += c.amountUsd;
   }
 
   const totalChangeUsd = totalValueUsd - totalCostUsd;
@@ -347,12 +501,16 @@ function rerender() {
 async function loadAllLive(force = true) {
   setRefreshing(true);
   try {
-    const allHoldings = state.rows.map((r) => r.holding);
+    const allRowsList = [...state.rows, ...state.bears];
+    const allHoldings = allRowsList.map((r) => r.holding);
     const usHoldings = allHoldings.filter((h) => !isInternational(h.symbol));
 
-    // Batch ALL symbols (US + international) through Yahoo Finance for quotes.
-    // One API call, and it returns extended-hours prices for all stocks.
-    const allSymbols = allHoldings.map((h) => h.symbol);
+    // Batch ALL stock symbols (main + bears) + FX symbols through Yahoo
+    // Finance in one call. Extended-hours prices come back for stocks
+    // and the meta also covers FX, so a single request refreshes everything.
+    const stockSymbols = [...new Set(allHoldings.map((h) => h.symbol))];
+    const fxSyms = fxSymbolsForCurrencies(uniqueCurrencies());
+    const allSymbols = [...stockSymbols, ...fxSyms];
     const quotesPromise = getQuotesBatch(allSymbols, { force });
 
     // US company profiles still come from Finnhub (richer: logo, sector, IPO).
@@ -365,24 +523,25 @@ async function loadAllLive(force = true) {
 
     const [quotes, usProfiles] = await Promise.all([quotesPromise, usProfilesPromise]);
 
+    // Pull FX rates out of the same response and refresh holdings/cash USD.
+    const rates = { USD: 1 };
+    for (const cur of uniqueCurrencies()) rates[cur] = rateFromQuotes(cur, quotes);
+    applyFxRates(rates);
+
     const usProfileMap = new Map(
       usHoldings.map((h, i) => [h.symbol, usProfiles[i]?.value || null]),
     );
 
-    const merged = allHoldings.map((holding) => {
+    const enrich = (r) => {
+      const holding = r.holding;
       const quote = quotes[holding.symbol] || null;
       const profile = isInternational(holding.symbol)
         ? (quote ? { name: quote.name, logo: null, exchange: quote.exchange, currency: quote.currency } : null)
         : (usProfileMap.get(holding.symbol) || null);
       return { holding, quote, profile };
-    });
-
-    const order = new Map(state.rows.map((r, i) => [r.holding.symbol, i]));
-    merged.sort(
-      (a, b) =>
-        (order.get(a.holding.symbol) ?? 0) - (order.get(b.holding.symbol) ?? 0),
-    );
-    state.rows = merged;
+    };
+    state.rows = state.rows.map(enrich);
+    state.bears = state.bears.map(enrich);
     state.updatedAt = new Date().toISOString();
     rerender();
   } finally {
@@ -407,35 +566,65 @@ function setRefreshing(on) {
 
 async function loadAllParse() {
   setParsing(true);
-  showBanner(`Parsing 0/${state.rows.length} from Yahoo Finance…`, "info");
   try {
-    const symbols = state.rows.map((r) => r.holding.symbol);
-    const quotes = await parseAllSymbols(symbols, ({ done, total, sym, ok, source }) => {
+    const stockSymbols = [
+      ...new Set([
+        ...state.rows.map((r) => r.holding.symbol),
+        ...state.bears.map((r) => r.holding.symbol),
+      ]),
+    ];
+    const fxSyms = fxSymbolsForCurrencies(uniqueCurrencies());
+    const symbols = [...stockSymbols, ...fxSyms];
+    showBanner(`Parsing 0/${symbols.length} from Yahoo Finance…`, "info");
+    const lastFailure = { sym: null, attempts: [] };
+    const quotes = await parseAllSymbols(symbols, ({ done, total, sym, ok, source, attempts }) => {
       const tag = ok ? `✓ ${source || ""}`.trim() : "✗";
       showBanner(`Parsing ${done}/${total} from Yahoo Finance — ${sym} ${tag}`, "info");
+      if (!ok) {
+        lastFailure.sym = sym;
+        lastFailure.attempts = attempts || [];
+      }
     });
 
-    let okCount = 0;
-    state.rows = state.rows.map((r) => {
+    // Apply FX first so cost/value totals are correct even if some stocks fail.
+    const rates = { USD: 1 };
+    for (const cur of uniqueCurrencies()) rates[cur] = rateFromQuotes(cur, quotes);
+    applyFxRates(rates);
+
+    const matched = new Set();
+    const enrich = (r) => {
       const q = quotes[r.holding.symbol];
       if (q) {
-        okCount++;
+        matched.add(r.holding.symbol);
         return { ...r, quote: q };
       }
       return r;
-    });
+    };
+    state.rows = state.rows.map(enrich);
+    state.bears = state.bears.map(enrich);
+    const okCount = matched.size;
     state.updatedAt = new Date().toISOString();
     rerender();
 
-    if (okCount === symbols.length) {
+    if (okCount === stockSymbols.length) {
       showBanner(`Parsed all ${okCount} symbols from Yahoo Finance ✓`, "info");
       setTimeout(() => {
         const el = $("banner");
         if (el) el.hidden = true;
       }, 4000);
+    } else if (okCount === 0) {
+      // Total failure — surface the last symbol's proxy attempts so the user
+      // can see what's blocked (especially useful on mobile where they don't
+      // have easy access to DevTools console).
+      const detail = lastFailure.attempts.length
+        ? ` Last (${lastFailure.sym}): ${lastFailure.attempts.slice(0, 3).join(" | ")}`
+        : "";
+      showBanner(
+        `Parsed 0/${stockSymbols.length} — all CORS proxies blocked.${detail}`,
+      );
     } else {
       showBanner(
-        `Parsed ${okCount}/${symbols.length}. Some symbols blocked by Cloudflare/proxy — try again or use Refresh.`,
+        `Parsed ${okCount}/${stockSymbols.length}. Some symbols blocked — try again or use Refresh.`,
       );
     }
   } finally {
@@ -524,19 +713,25 @@ function bindRowNavigation() {
 
 function applySnapshot(snapshot) {
   state.updatedAt = snapshot.updatedAt || null;
-  for (const r of state.rows) {
-    const sym = r.holding.symbol;
-    const q = snapshot.quotes?.[sym] || null;
-    const p = snapshot.profiles?.[sym] || null;
-    if (q) r.quote = q;
-    if (p) {
-      r.profile = p;
-    } else if (q && q.name) {
-      // Synthesize minimal profile from quote when full profile is absent
-      // (e.g. international rows where we store quote-only).
-      r.profile = { name: q.name, logo: null, exchange: q.exchange, currency: q.currency };
+  // FX rates from the cron snapshot — no extra API call on page load.
+  if (snapshot.fxRates) applyFxRates(snapshot.fxRates);
+  const fillFromSnapshot = (rows) => {
+    for (const r of rows) {
+      const sym = r.holding.symbol;
+      const q = snapshot.quotes?.[sym] || null;
+      const p = snapshot.profiles?.[sym] || null;
+      if (q) r.quote = q;
+      if (p) {
+        r.profile = p;
+      } else if (q && q.name) {
+        // Synthesize a minimal profile from quote when the full profile is
+        // absent (international rows store quote-only).
+        r.profile = { name: q.name, logo: null, exchange: q.exchange, currency: q.currency };
+      }
     }
-  }
+  };
+  fillFromSnapshot(state.rows);
+  fillFromSnapshot(state.bears);
 }
 
 async function main() {
@@ -554,7 +749,18 @@ async function main() {
     return;
   }
 
-  if (!holdings.length) {
+  // Cash is optional; treat any failure as "no cash entries".
+  const cash = await loadCash().catch((e) => {
+    console.warn("Cash CSV load failed:", e.message);
+    return [];
+  });
+  state.cash = cash;
+
+  // Bear-tab holdings are also optional (file may not exist).
+  const bears = await loadHoldings("data/bear_holding.csv").catch(() => []);
+  state.bears = bears.map((h) => ({ holding: h, quote: null, profile: null }));
+
+  if (!holdings.length && !cash.length && !bears.length) {
     $("empty").hidden = false;
     $("total-value").textContent = fmtMoney(0);
     $("total-value").classList.remove("skeleton");

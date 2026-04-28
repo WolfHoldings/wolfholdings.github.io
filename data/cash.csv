@@ -1,0 +1,3 @@
+date,amount,currency,is_client_cash
+2026-04-28,10,USD,true
+2026-04-28,9782.15,USD,false

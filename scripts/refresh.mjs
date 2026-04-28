@@ -20,6 +20,29 @@ if (!RAPIDAPI_KEY) {
   process.exit(1);
 }
 
+// Native currency → Yahoo FX symbol + multiplier. Mirrors js/fx.js so the
+// cron and the browser stay consistent. Add more currencies as holdings.csv
+// expands.
+const CURRENCY_FX = {
+  TWD: { symbol: "TWDUSD=X", multiplier: 1 },
+  EUR: { symbol: "EURUSD=X", multiplier: 1 },
+  SEK: { symbol: "SEKUSD=X", multiplier: 1 },
+  NOK: { symbol: "NOKUSD=X", multiplier: 1 },
+  DKK: { symbol: "DKKUSD=X", multiplier: 1 },
+  GBP: { symbol: "GBPUSD=X", multiplier: 1 },
+  GBp: { symbol: "GBPUSD=X", multiplier: 0.01 },
+  GBX: { symbol: "GBPUSD=X", multiplier: 0.01 },
+  JPY: { symbol: "JPYUSD=X", multiplier: 1 },
+  HKD: { symbol: "HKDUSD=X", multiplier: 1 },
+  CAD: { symbol: "CADUSD=X", multiplier: 1 },
+  AUD: { symbol: "AUDUSD=X", multiplier: 1 },
+  CHF: { symbol: "CHFUSD=X", multiplier: 1 },
+  CNY: { symbol: "CNYUSD=X", multiplier: 1 },
+  SGD: { symbol: "SGDUSD=X", multiplier: 1 },
+  KRW: { symbol: "KRWUSD=X", multiplier: 1 },
+  NZD: { symbol: "NZDUSD=X", multiplier: 1 },
+};
+
 function parseCSV(text) {
   const lines = text.replace(/\r/g, "").split("\n").filter(Boolean);
   if (!lines.length) return [];
@@ -141,24 +164,52 @@ function metricFromApidojo(quote) {
 async function main() {
   const csvText = readFileSync("data/holdings.csv", "utf-8");
   const rows = parseCSV(csvText);
-  const symbols = rows
-    .map((r) => (r.symbol || "").trim().toUpperCase())
-    .filter(Boolean);
+
+  // Bear-tab CSV is optional; a missing file is fine (the tab just won't show).
+  let bearRows = [];
+  try {
+    const bearText = readFileSync("data/bear_holding.csv", "utf-8");
+    bearRows = parseCSV(bearText);
+  } catch {
+    bearRows = [];
+  }
+
+  const allRows = [...rows, ...bearRows];
+  const symbols = [
+    ...new Set(
+      allRows.map((r) => (r.symbol || "").trim().toUpperCase()).filter(Boolean),
+    ),
+  ];
   if (!symbols.length) {
-    console.error("No symbols in holdings.csv");
+    console.error("No symbols in holdings.csv or bear_holding.csv");
     process.exit(1);
   }
 
-  console.log(`Refreshing ${symbols.length} symbols via Yahoo Finance`);
+  // Discover non-USD currencies in both CSVs + map to Yahoo FX symbols.
+  // Bundling FX into the same batch keeps this cron at one HTTP call total.
+  const currencies = [...new Set(allRows.map((r) => (r.currency || "USD").trim()))]
+    .filter((c) => c && c !== "USD");
+  const fxSymbolByCurrency = new Map();
+  for (const cur of currencies) {
+    const m = CURRENCY_FX[cur];
+    if (m) fxSymbolByCurrency.set(cur, m);
+  }
+  const fxSymbols = [...new Set([...fxSymbolByCurrency.values()].map((m) => m.symbol))];
+
+  const allSymbols = [...symbols, ...fxSymbols];
+  console.log(
+    `Refreshing ${symbols.length} stock symbols + ${fxSymbols.length} FX symbols via Yahoo Finance`,
+  );
 
   const quotes = {};
   const profiles = {};
   const metrics = {};
+  const fxRates = { USD: 1 };
 
   try {
     const raw = await rapidGet("/market/v2/get-quotes", {
       region: "US",
-      symbols: symbols.join(","),
+      symbols: allSymbols.join(","),
     });
     const results = raw?.quoteResponse?.result || [];
     const bySym = new Map(results.map((res) => [res.symbol, res]));
@@ -180,6 +231,18 @@ async function main() {
       const label = nq.extendedLabel ? ` [${nq.extendedLabel}]` : "";
       console.log(`  ${sym}: ${nq.currency} ${nq.c} (${nq.dp?.toFixed(2) ?? "?"}%)${label}`);
     }
+
+    // Extract FX rates per native currency.
+    for (const [cur, m] of fxSymbolByCurrency) {
+      const fxResult = bySym.get(m.symbol);
+      const price = fxResult ? Number(fxResult.regularMarketPrice) : NaN;
+      if (isFinite(price) && price > 0) {
+        fxRates[cur] = price * m.multiplier;
+        console.log(`  FX ${cur} via ${m.symbol}: 1 ${cur} = ${fxRates[cur]} USD`);
+      } else {
+        console.warn(`  FX ${cur} (${m.symbol}): missing or invalid price`);
+      }
+    }
   } catch (e) {
     console.error("Batch quote failed:", e.message);
     process.exit(1);
@@ -190,12 +253,15 @@ async function main() {
     quotes,
     profiles,
     metrics,
+    fxRates,
   };
 
   const out = "data/snapshot.json";
   if (!existsSync(dirname(out))) mkdirSync(dirname(out), { recursive: true });
   writeFileSync(out, JSON.stringify(snapshot, null, 2) + "\n");
-  console.log(`Wrote ${out} with ${Object.keys(quotes).length} quotes`);
+  console.log(
+    `Wrote ${out} with ${Object.keys(quotes).length} quotes + ${Object.keys(fxRates).length - 1} FX rates`,
+  );
 }
 
 main().catch((e) => {

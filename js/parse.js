@@ -21,36 +21,53 @@ const PROXIES = [
   (u) => `https://thingproxy.freeboard.io/fetch/${u}`,
 ];
 
-async function fetchJsonViaAnyProxy(url, timeoutMs = 4000) {
+function safeHost(u) {
+  try { return new URL(u).host; } catch { return u.slice(0, 30); }
+}
+
+async function fetchJsonViaAnyProxy(url, timeoutMs = 8000) {
+  const attempts = [];
   for (const wrap of PROXIES) {
     const target = wrap ? wrap(url) : url;
+    const name = wrap ? safeHost(target) : "direct";
     try {
       const ctrl = new AbortController();
       const t = setTimeout(() => ctrl.abort(), timeoutMs);
-      const res = await fetch(target, { signal: ctrl.signal });
+      const res = await fetch(target, {
+        signal: ctrl.signal,
+        credentials: "omit",
+        cache: "no-store",
+        redirect: "follow",
+      });
       clearTimeout(t);
-      if (!res.ok) continue;
-      const ct = res.headers.get("content-type") || "";
-      // Cloudflare challenges return text/html — content-type sniff catches them.
-      if (!ct.toLowerCase().includes("json")) {
-        // Some proxies (allorigins/raw) drop the content-type. Try parsing anyway.
-        try {
-          const text = await res.clone().text();
-          const j = JSON.parse(text);
-          if (j?.chart && !j.chart.error) {
-            return { json: j, proxy: wrap ? new URL(target).host : "direct" };
-          }
-        } catch { /* not JSON — next proxy */ }
+      if (!res.ok) {
+        attempts.push(`${name}: HTTP ${res.status}`);
         continue;
       }
-      const j = await res.json();
-      if (!j?.chart || j.chart.error) continue;
-      return { json: j, proxy: wrap ? new URL(target).host : "direct" };
-    } catch {
-      // CORS / timeout / network — next proxy
+      const ct = (res.headers.get("content-type") || "").toLowerCase();
+      let j;
+      if (ct.includes("json")) {
+        j = await res.json();
+      } else {
+        // Some proxies (allorigins/raw) drop the JSON content-type or wrap
+        // the body. Try parsing the text anyway; a Cloudflare HTML challenge
+        // will throw and fall through.
+        const text = await res.text();
+        try { j = JSON.parse(text); } catch {
+          attempts.push(`${name}: not-JSON (${text.slice(0, 40)})`);
+          continue;
+        }
+      }
+      if (!j?.chart || j.chart.error) {
+        attempts.push(`${name}: chart-${j?.chart?.error?.code || "missing"}`);
+        continue;
+      }
+      return { json: j, proxy: name, attempts };
+    } catch (e) {
+      attempts.push(`${name}: ${e.name || "Error"}`);
     }
   }
-  return null;
+  return { json: null, proxy: null, attempts };
 }
 
 function normalizeYahooChartMeta(meta) {
@@ -119,6 +136,11 @@ export async function parseAllSymbols(symbols, onProgress) {
       if (norm) norm.__source = got.proxy;
       out[sym] = norm;
       done++;
+      if (!norm) {
+        console.warn(`[parse] ${sym} failed:`, got.attempts.join(" | "));
+      } else {
+        console.log(`[parse] ${sym} ok via ${got.proxy} (after ${got.attempts.length} fallback${got.attempts.length === 1 ? "" : "s"})`);
+      }
       if (onProgress) {
         onProgress({
           done,
@@ -126,6 +148,7 @@ export async function parseAllSymbols(symbols, onProgress) {
           sym,
           ok: !!norm,
           source: got?.proxy || null,
+          attempts: got?.attempts || [],
         });
       }
       // Throttle ~300 ms to dodge Cloudflare 429s on shared proxy IPs.

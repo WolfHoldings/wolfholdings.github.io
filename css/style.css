@@ -565,6 +565,15 @@ button {
   color: #8fc7ff;
 }
 
+.cash-row { cursor: default; }
+.cash-row:hover { background: transparent; }
+.cash-row .cash-logo {
+  background: rgba(0, 200, 5, 0.12);
+  color: var(--up);
+  font-weight: 700;
+  font-size: 18px;
+}
+
 .skeleton {
   background: linear-gradient(
     90deg,

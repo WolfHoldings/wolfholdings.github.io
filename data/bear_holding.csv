@@ -1,0 +1,7 @@
+symbol,unit_cost,shares,currency,market,platform,note,link
+INTC,85,1,USD,US,,,https://au.finance.yahoo.com/quote/INTC/
+TSLA,390,1,USD,US,,,https://au.finance.yahoo.com/quote/TSLA/
+GOOG,300,1,USD,US,,,https://au.finance.yahoo.com/quote/GOOG/
+000333.SZ,75,1,CNY,China,,,https://au.finance.yahoo.com/quote/000333.SZ/
+300782.SZ,76,1,CNY,China,,,https://au.finance.yahoo.com/quote/300782.SZ/
+6451.TW,170,1,TWD,Taiwan,,,https://au.finance.yahoo.com/quote/6451.TW/

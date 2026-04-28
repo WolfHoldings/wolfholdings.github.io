@@ -1,4 +1,5 @@
 import { loadHoldings } from "./csv.js";
+import { loadSnapshot } from "./snapshot.js";
 import {
   getQuote,
   getProfile,
@@ -170,7 +171,9 @@ function renderPosition() {
 
   if (h.platform) items.push(["Platform", h.platform]);
   if (h.market && h.market !== "US") items.push(["Market", h.market]);
-  if (cur !== "USD") items.push(["FX rate (CSV)", `1 ${cur} = ${fmtNumber(h.usdRate, 4)} USD`]);
+  if (cur !== "USD" && isFinite(h.usdRate)) {
+    items.push(["FX rate", `1 ${cur} = ${fmtNumber(h.usdRate, 4)} USD`]);
+  }
   if (h.note) items.push(["Note", h.note]);
 
   const wrap = $("position-kv");
@@ -387,6 +390,8 @@ async function main() {
 
   // Load CSV in parallel so we can decorate position info if the symbol is held.
   const csvPromise = loadHoldings().catch(() => []);
+  // Pull FX rates out of the cron-refreshed snapshot — no extra API call here.
+  const snapshotPromise = loadSnapshot().catch(() => null);
 
   const onUpdate = () => {
     Promise.all([
@@ -407,16 +412,28 @@ async function main() {
   };
 
   try {
-    const [quote, profile, metric, holdings] = await Promise.all([
+    const [quote, profile, metric, holdings, snapshot] = await Promise.all([
       getQuote(state.symbol, { onUpdate }),
       getProfile(state.symbol, { onUpdate }),
       getMetric(state.symbol, { onUpdate }),
       csvPromise,
+      snapshotPromise,
     ]);
     state.quote = quote.value;
     state.profile = profile.value;
     state.metric = metric.value;
     state.holding = holdings.find((h) => h.symbol === state.symbol) || null;
+
+    // Fill in the holding's USD rate from the snapshot (cron-written) so
+    // P/L and "≈ $X USD" line up. No live FX call on stock-page load —
+    // FX only refreshes via cron / Refresh / Parse Data on the index page.
+    if (state.holding && state.holding.currency !== "USD") {
+      const rate = snapshot?.fxRates?.[state.holding.currency];
+      if (isFinite(rate) && rate > 0) {
+        state.holding.usdRate = rate;
+        state.holding.totalCostUsd = state.holding.totalCostNative * rate;
+      }
+    }
   } catch (e) {
     showBanner(`Failed to load ${state.symbol}: ${e.message}`);
   }
