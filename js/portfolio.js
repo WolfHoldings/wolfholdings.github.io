@@ -13,6 +13,7 @@ import {
   changeClass,
 } from "./format.js";
 import { loadSnapshot } from "./snapshot.js";
+import { parseAllSymbols } from "./parse.js";
 
 const VERIFIED_SVG = `<svg class="verified" viewBox="0 0 24 24" aria-label="bought for client" focusable="false"><rect x="3" y="3" width="18" height="18" rx="4" ry="4" fill="#1d9bf0"/><path d="M7.5 12.5l3 3 6-6.5" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>`;
 
@@ -402,6 +403,59 @@ function setRefreshing(on) {
   }
 }
 
+/* -------- manual Yahoo Finance parse path (Parse Data button) -------- */
+
+async function loadAllParse() {
+  setParsing(true);
+  showBanner(`Parsing 0/${state.rows.length} from Yahoo Finance…`, "info");
+  try {
+    const symbols = state.rows.map((r) => r.holding.symbol);
+    const quotes = await parseAllSymbols(symbols, ({ done, total, sym, ok, source }) => {
+      const tag = ok ? `✓ ${source || ""}`.trim() : "✗";
+      showBanner(`Parsing ${done}/${total} from Yahoo Finance — ${sym} ${tag}`, "info");
+    });
+
+    let okCount = 0;
+    state.rows = state.rows.map((r) => {
+      const q = quotes[r.holding.symbol];
+      if (q) {
+        okCount++;
+        return { ...r, quote: q };
+      }
+      return r;
+    });
+    state.updatedAt = new Date().toISOString();
+    rerender();
+
+    if (okCount === symbols.length) {
+      showBanner(`Parsed all ${okCount} symbols from Yahoo Finance ✓`, "info");
+      setTimeout(() => {
+        const el = $("banner");
+        if (el) el.hidden = true;
+      }, 4000);
+    } else {
+      showBanner(
+        `Parsed ${okCount}/${symbols.length}. Some symbols blocked by Cloudflare/proxy — try again or use Refresh.`,
+      );
+    }
+  } finally {
+    setParsing(false);
+  }
+}
+
+function setParsing(on) {
+  const btn = $("parse");
+  const icon = $("parse-icon");
+  if (!btn) return;
+  btn.disabled = on;
+  if (on) {
+    if (icon) icon.outerHTML = '<span class="spin" id="parse-icon"></span>';
+  } else {
+    const cur = $("parse-icon");
+    if (cur) cur.outerHTML = '<span id="parse-icon">⚡</span>';
+  }
+}
+
 function showBanner(message, kind = "warn") {
   const el = $("banner");
   el.hidden = false;
@@ -435,6 +489,11 @@ function bindTabs() {
 
 function bindRefresh() {
   $("refresh").addEventListener("click", () => loadAllLive(true));
+}
+
+function bindParse() {
+  const btn = $("parse");
+  if (btn) btn.addEventListener("click", loadAllParse);
 }
 
 function bindRowNavigation() {
@@ -484,6 +543,7 @@ async function main() {
   bindSort();
   bindTabs();
   bindRefresh();
+  bindParse();
   bindRowNavigation();
 
   let holdings;

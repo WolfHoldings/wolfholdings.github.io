@@ -86,9 +86,9 @@ button {
   box-shadow: 0 0 12px rgba(0, 200, 5, 0.7);
 }
 .nav .brand .brand-icon {
-  width: 24px;
-  height: 24px;
-  border-radius: 6px;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
   object-fit: cover;
   display: block;
   flex-shrink: 0;
@@ -103,6 +103,32 @@ button {
 }
 @media (max-width: 480px) {
   .updated-at { display: none; }
+
+  .app { padding: 14px; }
+  .nav { margin-bottom: 18px; }
+  .nav .brand { font-size: 16px; gap: 8px; }
+  .nav .brand .brand-icon { width: 28px; height: 28px; border-radius: 7px; }
+  .nav .actions { gap: 6px; }
+  .btn { padding: 6px 10px; font-size: 12px; gap: 4px; }
+
+  .summary { margin-bottom: 18px; }
+  .summary .value { font-size: 30px; }
+  .summary .changes { gap: 10px; font-size: 13px; }
+
+  .row {
+    grid-template-columns: 36px 1fr auto;
+    gap: 8px;
+    padding: 12px 4px;
+  }
+  .row .symbol-line { gap: 4px; }
+  .row .symbol { font-size: 14px; }
+  .row .sub { font-size: 11px; flex-wrap: wrap; row-gap: 2px; }
+  .row .right { min-width: 0; }
+  .row .right .price { font-size: 14px; }
+  .row .right .ch { font-size: 11px; }
+  .row .right .mv { font-size: 11px; white-space: nowrap; }
+  .quote-btn { display: none; }
+  .verified { width: 14px; height: 14px; }
 }
 
 .btn {
