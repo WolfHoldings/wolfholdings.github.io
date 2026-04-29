@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-04-29T08:14:02.128Z",
+  "updatedAt": "2026-04-29T10:20:25.701Z",
   "quotes": {
     "FLY": {
-      "c": 34.05,
-      "d": -0.16500092,
-      "dp": -0.4822473,
+      "c": 33.99,
+      "d": -0.22499847,
+      "dp": -0.65760183,
       "o": 33.79,
       "h": 34.845,
       "l": 32.79,
@@ -24,9 +24,9 @@
       "extendedLabel": "Pre-market"
     },
     "LAES": {
-      "c": 2.779,
-      "d": 0.009000063,
-      "dp": 0.324912,
+      "c": 2.78,
+      "d": 0.00999999,
+      "dp": 0.3610105,
       "o": 2.77,
       "h": 2.78,
       "l": 2.68,
@@ -36,7 +36,7 @@
       "exchange": "NasdaqGS",
       "fiftyTwoWeekHigh": 8.71,
       "fiftyTwoWeekLow": 1.99,
-      "volume": 5622854,
+      "volume": 5616011,
       "averageVolume": 9401222,
       "marketCap": 617083968,
       "peTTM": null,
@@ -46,9 +46,9 @@
       "extendedLabel": "Pre-market"
     },
     "PTIR": {
-      "c": 14.7679,
-      "d": -0.012099266,
-      "dp": -0.08186243,
+      "c": 14.71,
+      "d": -0.069999695,
+      "dp": -0.47361094,
       "o": 15.03,
       "h": 15.345,
       "l": 14.64,
@@ -68,9 +68,9 @@
       "extendedLabel": "Pre-market"
     },
     "RDW": {
-      "c": 9.0697,
-      "d": 0.034700394,
-      "dp": 0.38406634,
+      "c": 9.1,
+      "d": 0.065000534,
+      "dp": 0.7194304,
       "o": 9.11,
       "h": 9.24,
       "l": 8.83,
@@ -90,9 +90,9 @@
       "extendedLabel": "Pre-market"
     },
     "BABA": {
-      "c": 132.88,
-      "d": 2.050003,
-      "dp": 1.5669212,
+      "c": 132.58,
+      "d": 1.75,
+      "dp": 1.3376137,
       "o": 129.5,
       "h": 130.92,
       "l": 128.95,
@@ -200,11 +200,11 @@
       "extendedLabel": null
     },
     "SIVE.ST": {
-      "c": 34,
-      "d": 2.08,
-      "dp": 6.5162907,
+      "c": 35.02,
+      "d": 3.1000004,
+      "dp": 9.711781,
       "o": 33.6,
-      "h": 34.24,
+      "h": 35.18,
       "l": 31.08,
       "pc": 31.92,
       "currency": "SEK",
@@ -212,9 +212,9 @@
       "exchange": "Stockholm",
       "fiftyTwoWeekHigh": 39.1,
       "fiftyTwoWeekLow": 2.85,
-      "volume": 5017420,
+      "volume": 8320643,
       "averageVolume": 18527636,
-      "marketCap": 10082181120,
+      "marketCap": 10384647168,
       "peTTM": null,
       "eps": -0.69,
       "divYield": 0,
@@ -222,21 +222,21 @@
       "extendedLabel": null
     },
     "LPK.DE": {
-      "c": 18.75,
-      "d": 2.8000002,
-      "dp": 17.610064,
+      "c": 18.7,
+      "d": 2.750001,
+      "dp": 17.241385,
       "o": 17.15,
-      "h": 19.1,
+      "h": 19.2,
       "l": 17.1,
       "pc": 15.95,
       "currency": "EUR",
       "name": "LPKF Laser & Electronics SE   I",
       "exchange": "XETRA",
-      "fiftyTwoWeekHigh": 19.1,
+      "fiftyTwoWeekHigh": 19.2,
       "fiftyTwoWeekLow": 5.35,
-      "volume": 586838,
+      "volume": 827401,
       "averageVolume": 203049,
-      "marketCap": 459310240,
+      "marketCap": 458085440,
       "peTTM": null,
       "eps": -0.59,
       "divYield": 0,
@@ -244,9 +244,9 @@
       "extendedLabel": null
     },
     "IQE.L": {
-      "c": 40.65,
-      "d": 0.40000153,
-      "dp": 0.9937926,
+      "c": 39.7,
+      "d": -0.54999924,
+      "dp": -1.3664577,
       "o": 40,
       "h": 42.25,
       "l": 38.6,
@@ -256,9 +256,9 @@
       "exchange": "LSE",
       "fiftyTwoWeekHigh": 72.9,
       "fiftyTwoWeekLow": 4.655,
-      "volume": 4635434,
+      "volume": 11691640,
       "averageVolume": 30104872,
-      "marketCap": 398287872,
+      "marketCap": 388979744,
       "peTTM": null,
       "eps": -0.05,
       "divYield": 0,
@@ -288,9 +288,9 @@
       "extendedLabel": "Pre-market"
     },
     "ADBE": {
-      "c": 243.83,
-      "d": 0.7400055,
-      "dp": 0.30441627,
+      "c": 242.6,
+      "d": -0.48999023,
+      "dp": -0.20156743,
       "o": 242.13,
       "h": 245.26,
       "l": 241.215,
@@ -310,9 +310,9 @@
       "extendedLabel": "Pre-market"
     },
     "NVO": {
-      "c": 40.96,
-      "d": -0.20999908,
-      "dp": -0.51007795,
+      "c": 41.1003,
+      "d": -0.069698334,
+      "dp": -0.169294,
       "o": 41.3,
       "h": 42.075,
       "l": 41.1,
@@ -332,9 +332,9 @@
       "extendedLabel": "Pre-market"
     },
     "PFE": {
-      "c": 26.56,
-      "d": 0.084999084,
-      "dp": 0.32105413,
+      "c": 26.57,
+      "d": 0.09499931,
+      "dp": 0.3588265,
       "o": 27.53,
       "h": 27.53,
       "l": 26.32,
@@ -354,9 +354,9 @@
       "extendedLabel": "Pre-market"
     },
     "OXY": {
-      "c": 59.35,
-      "d": 0.75,
-      "dp": 1.2798635,
+      "c": 59.39,
+      "d": 0.7900009,
+      "dp": 1.3481245,
       "o": 58.1,
       "h": 59,
       "l": 57.93,
@@ -375,10 +375,32 @@
       "marketState": "PRE",
       "extendedLabel": "Pre-market"
     },
+    "USAR": {
+      "c": 23.1689,
+      "d": 0.39889908,
+      "dp": 1.7518624,
+      "o": 22.56,
+      "h": 23.41,
+      "l": 21.65,
+      "pc": 23.51,
+      "currency": "USD",
+      "name": "USA Rare Earth, Inc.",
+      "exchange": "NasdaqGM",
+      "fiftyTwoWeekHigh": 43.98,
+      "fiftyTwoWeekLow": 8,
+      "volume": 14782220,
+      "averageVolume": 16467185,
+      "marketCap": 4963532288,
+      "peTTM": null,
+      "eps": -3.31,
+      "divYield": 0,
+      "marketState": "PRE",
+      "extendedLabel": "Pre-market"
+    },
     "INTC": {
-      "c": 85.9691,
-      "d": 1.4190979,
-      "dp": 1.6784126,
+      "c": 87,
+      "d": 2.449997,
+      "dp": 2.89769,
       "o": 81.28,
       "h": 84.59,
       "l": 80.8,
@@ -398,9 +420,9 @@
       "extendedLabel": "Pre-market"
     },
     "TSLA": {
-      "c": 376,
-      "d": -0.019989014,
-      "dp": -0.0053159446,
+      "c": 377.22,
+      "d": 1.2000122,
+      "dp": 0.31913522,
       "o": 374.625,
       "h": 382.29,
       "l": 372.54,
@@ -420,9 +442,9 @@
       "extendedLabel": "Pre-market"
     },
     "GOOG": {
-      "c": 347.648,
-      "d": 0.14801025,
-      "dp": 0.04259288,
+      "c": 345.63,
+      "d": -1.8699951,
+      "dp": -0.5381281,
       "o": 346.93,
       "h": 349.9,
       "l": 344.28,
@@ -613,7 +635,7 @@
       "exchange": "Stockholm",
       "weburl": null,
       "currency": "SEK",
-      "marketCap": 10082181120,
+      "marketCap": 10384647168,
       "ipo": null,
       "ticker": null
     },
@@ -626,7 +648,7 @@
       "exchange": "XETRA",
       "weburl": null,
       "currency": "EUR",
-      "marketCap": 459310240,
+      "marketCap": 458085440,
       "ipo": null,
       "ticker": null
     },
@@ -639,7 +661,7 @@
       "exchange": "LSE",
       "weburl": null,
       "currency": "GBp",
-      "marketCap": 398287872,
+      "marketCap": 388979744,
       "ipo": null,
       "ticker": null
     },
@@ -705,6 +727,19 @@
       "weburl": null,
       "currency": "USD",
       "marketCap": 58123255808,
+      "ipo": null,
+      "ticker": null
+    },
+    "USAR": {
+      "name": "USA Rare Earth, Inc.",
+      "logo": null,
+      "sector": null,
+      "industry": null,
+      "country": null,
+      "exchange": "NasdaqGM",
+      "weburl": null,
+      "currency": "USD",
+      "marketCap": 4963532288,
       "ipo": null,
       "ticker": null
     },
@@ -794,7 +829,7 @@
       "divYield": 0,
       "beta": null,
       "eps": -0.24,
-      "volume": 5622854,
+      "volume": 5616011,
       "averageVolume": 9401222
     },
     "PTIR": {
@@ -882,18 +917,18 @@
       "divYield": 0,
       "beta": null,
       "eps": -0.69,
-      "volume": 5017420,
+      "volume": 8320643,
       "averageVolume": 18527636
     },
     "LPK.DE": {
       "peTTM": null,
       "pbAnnual": null,
-      "fiftyTwoWeekHigh": 19.1,
+      "fiftyTwoWeekHigh": 19.2,
       "fiftyTwoWeekLow": 5.35,
       "divYield": 0,
       "beta": null,
       "eps": -0.59,
-      "volume": 586838,
+      "volume": 827401,
       "averageVolume": 203049
     },
     "IQE.L": {
@@ -904,7 +939,7 @@
       "divYield": 0,
       "beta": null,
       "eps": -0.05,
-      "volume": 4635434,
+      "volume": 11691640,
       "averageVolume": 30104872
     },
     "VITL": {
@@ -961,6 +996,17 @@
       "eps": 1.35,
       "volume": 10417943,
       "averageVolume": 16934991
+    },
+    "USAR": {
+      "peTTM": null,
+      "pbAnnual": null,
+      "fiftyTwoWeekHigh": 43.98,
+      "fiftyTwoWeekLow": 8,
+      "divYield": 0,
+      "beta": null,
+      "eps": -3.31,
+      "volume": 14782220,
+      "averageVolume": 16467185
     },
     "INTC": {
       "peTTM": null,
@@ -1021,9 +1067,9 @@
   "fxRates": {
     "USD": 1,
     "TWD": 0.031660598,
-    "SEK": 0.10785206,
-    "EUR": 1.1698643,
-    "GBp": 0.013496006000000001,
-    "CNY": 0.14637002
+    "SEK": 0.10784205,
+    "EUR": 1.170686,
+    "GBp": 0.013508767,
+    "CNY": 0.14635074
   }
 }
