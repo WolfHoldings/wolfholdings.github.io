@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-04-29T21:58:05.330Z",
+  "updatedAt": "2026-04-29T23:49:06.473Z",
   "quotes": {
     "FLY": {
-      "c": 33.3,
-      "d": -0.19000244,
-      "dp": -0.5673408,
+      "c": 33.43,
+      "d": -0.060001373,
+      "dp": -0.17916206,
       "o": 33.65,
       "h": 33.7,
       "l": 31.2355,
@@ -24,9 +24,9 @@
       "extendedLabel": "After hours"
     },
     "LAES": {
-      "c": 2.6389,
-      "d": -0.0011000633,
-      "dp": -0.041669063,
+      "c": 2.63,
+      "d": -0.00999999,
+      "dp": -0.3787875,
       "o": 2.76,
       "h": 2.77,
       "l": 2.61,
@@ -46,9 +46,9 @@
       "extendedLabel": "After hours"
     },
     "PTIR": {
-      "c": 13.85,
-      "d": -0.27999973,
-      "dp": -1.9815975,
+      "c": 14.2474,
+      "d": 0.11740017,
+      "dp": 0.8308575,
       "o": 14.42,
       "h": 14.44,
       "l": 13.43,
@@ -68,9 +68,9 @@
       "extendedLabel": "After hours"
     },
     "RDW": {
-      "c": 8.63,
-      "d": 0.029999733,
-      "dp": 0.3488341,
+      "c": 8.75,
+      "d": 0.14999962,
+      "dp": 1.7441815,
       "o": 8.98,
       "h": 8.99,
       "l": 8.47,
@@ -90,9 +90,9 @@
       "extendedLabel": "After hours"
     },
     "BABA": {
-      "c": 130.31,
-      "d": -0.11999512,
-      "dp": -0.091999635,
+      "c": 130.73,
+      "d": 0.30000305,
+      "dp": 0.2300108,
       "o": 131.95,
       "h": 132.03,
       "l": 129.98,
@@ -218,7 +218,7 @@
       "peTTM": null,
       "eps": -0.69,
       "divYield": 0,
-      "marketState": "POSTPOST",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "LPK.DE": {
@@ -240,35 +240,35 @@
       "peTTM": null,
       "eps": -0.59,
       "divYield": 0,
-      "marketState": "POSTPOST",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "IQE.L": {
       "c": 40.4,
       "d": 0.15000153,
       "dp": 0.37267458,
-      "o": 40,
-      "h": 42.25,
-      "l": 36.9,
+      "o": 0,
+      "h": 0,
+      "l": 0,
       "pc": 40.25,
       "currency": "GBp",
       "name": "IQE PLC ORD 1P",
       "exchange": "LSE",
       "fiftyTwoWeekHigh": 72.9,
-      "fiftyTwoWeekLow": 4.655,
-      "volume": 38605604,
+      "fiftyTwoWeekLow": 0,
+      "volume": 0,
       "averageVolume": 30104872,
       "marketCap": 395838368,
       "peTTM": null,
       "eps": -0.05,
       "divYield": 0,
-      "marketState": "POSTPOST",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "VITL": {
-      "c": 12.19,
-      "d": 0.0899992,
-      "dp": 0.74379504,
+      "c": 12.13,
+      "d": 0.029999733,
+      "dp": 0.24793167,
       "o": 12.94,
       "h": 13.04,
       "l": 11.8,
@@ -288,9 +288,9 @@
       "extendedLabel": "After hours"
     },
     "ADBE": {
-      "c": 241.4,
-      "d": -2.1700134,
-      "dp": -0.8909198,
+      "c": 241.785,
+      "d": -1.7850037,
+      "dp": -0.7328504,
       "o": 240.97,
       "h": 243.615,
       "l": 238.67,
@@ -310,9 +310,9 @@
       "extendedLabel": "After hours"
     },
     "NVO": {
-      "c": 40.07,
-      "d": -0.22000122,
-      "dp": -0.54604423,
+      "c": 40.2636,
+      "d": -0.02640152,
+      "dp": -0.06552871,
       "o": 40.76,
       "h": 40.78,
       "l": 39.7,
@@ -332,9 +332,9 @@
       "extendedLabel": "After hours"
     },
     "PFE": {
-      "c": 26.2491,
-      "d": -0.010900497,
-      "dp": -0.04150989,
+      "c": 26.2467,
+      "d": -0.013299942,
+      "dp": -0.05064715,
       "o": 26.36,
       "h": 26.55,
       "l": 26.2,
@@ -354,9 +354,9 @@
       "extendedLabel": "After hours"
     },
     "OXY": {
-      "c": 60.73,
-      "d": -0.02999878,
-      "dp": -0.04937258,
+      "c": 60.46,
+      "d": -0.29999924,
+      "dp": -0.49374464,
       "o": 59.34,
       "h": 60.78,
       "l": 58.61,
@@ -376,9 +376,9 @@
       "extendedLabel": "After hours"
     },
     "USAR": {
-      "c": 21.91,
-      "d": -0.12000084,
-      "dp": -0.5447155,
+      "c": 22.1,
+      "d": 0.069999695,
+      "dp": 0.31774712,
       "o": 22.96,
       "h": 23.09,
       "l": 21.47,
@@ -398,9 +398,9 @@
       "extendedLabel": "After hours"
     },
     "INTC": {
-      "c": 94.738,
-      "d": -0.012001038,
-      "dp": -0.012666003,
+      "c": 98.7987,
+      "d": 4.0486984,
+      "dp": 4.2730327,
       "o": 86.14,
       "h": 94.95,
       "l": 85.87,
@@ -420,9 +420,9 @@
       "extendedLabel": "After hours"
     },
     "TSLA": {
-      "c": 372.05,
-      "d": -0.75,
-      "dp": -0.20118026,
+      "c": 373.14,
+      "d": 0.34002686,
+      "dp": 0.09120892,
       "o": 375.39,
       "h": 376.4,
       "l": 370.04,
@@ -442,9 +442,9 @@
       "extendedLabel": "After hours"
     },
     "GOOG": {
-      "c": 368.88,
-      "d": 21.570007,
-      "dp": 6.2105923,
+      "c": 371.6988,
+      "d": 24.388794,
+      "dp": 7.0221977,
       "o": 345.48,
       "h": 353.39,
       "l": 342.43,
@@ -511,7 +511,7 @@
   "profiles": {
     "FLY": {
       "name": "Firefly Aerospace Inc.",
-      "logo": null,
+      "logo": "https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/FLY.png",
       "sector": null,
       "industry": null,
       "country": null,
@@ -524,7 +524,7 @@
     },
     "LAES": {
       "name": "SEALSQ Corp",
-      "logo": null,
+      "logo": "https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/LAES.png",
       "sector": null,
       "industry": null,
       "country": null,
@@ -537,7 +537,7 @@
     },
     "PTIR": {
       "name": "GraniteShares 2x Long PLTR Dail",
-      "logo": null,
+      "logo": "https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/PTIR.png",
       "sector": null,
       "industry": null,
       "country": null,
@@ -550,7 +550,7 @@
     },
     "RDW": {
       "name": "Redwire Corporation",
-      "logo": null,
+      "logo": "https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/RDW.png",
       "sector": null,
       "industry": null,
       "country": null,
@@ -563,7 +563,7 @@
     },
     "BABA": {
       "name": "Alibaba Group Holding Limited",
-      "logo": null,
+      "logo": "https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/BABA.png",
       "sector": null,
       "industry": null,
       "country": null,
@@ -667,7 +667,7 @@
     },
     "VITL": {
       "name": "Vital Farms, Inc.",
-      "logo": null,
+      "logo": "https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/VITL.png",
       "sector": null,
       "industry": null,
       "country": null,
@@ -680,7 +680,7 @@
     },
     "ADBE": {
       "name": "Adobe Inc.",
-      "logo": null,
+      "logo": "https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/ADBE.png",
       "sector": null,
       "industry": null,
       "country": null,
@@ -693,7 +693,7 @@
     },
     "NVO": {
       "name": "Novo Nordisk A/S",
-      "logo": null,
+      "logo": "https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/NVO.png",
       "sector": null,
       "industry": null,
       "country": null,
@@ -706,7 +706,7 @@
     },
     "PFE": {
       "name": "Pfizer, Inc.",
-      "logo": null,
+      "logo": "https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/PFE.png",
       "sector": null,
       "industry": null,
       "country": null,
@@ -719,7 +719,7 @@
     },
     "OXY": {
       "name": "Occidental Petroleum Corporatio",
-      "logo": null,
+      "logo": "https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/OXY.png",
       "sector": null,
       "industry": null,
       "country": null,
@@ -732,7 +732,7 @@
     },
     "USAR": {
       "name": "USA Rare Earth, Inc.",
-      "logo": null,
+      "logo": "https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/USAR.png",
       "sector": null,
       "industry": null,
       "country": null,
@@ -745,7 +745,7 @@
     },
     "INTC": {
       "name": "Intel Corporation",
-      "logo": null,
+      "logo": "https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/INTC.png",
       "sector": null,
       "industry": null,
       "country": null,
@@ -758,7 +758,7 @@
     },
     "TSLA": {
       "name": "Tesla, Inc.",
-      "logo": null,
+      "logo": "https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/TSLA.png",
       "sector": null,
       "industry": null,
       "country": null,
@@ -771,7 +771,7 @@
     },
     "GOOG": {
       "name": "Alphabet Inc.",
-      "logo": null,
+      "logo": "https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/GOOG.png",
       "sector": null,
       "industry": null,
       "country": null,
@@ -935,11 +935,11 @@
       "peTTM": null,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 72.9,
-      "fiftyTwoWeekLow": 4.655,
+      "fiftyTwoWeekLow": 0,
       "divYield": 0,
       "beta": null,
       "eps": -0.05,
-      "volume": 38605604,
+      "volume": 0,
       "averageVolume": 30104872
     },
     "VITL": {
@@ -1067,9 +1067,9 @@
   "fxRates": {
     "USD": 1,
     "TWD": 0.031619553,
-    "SEK": 0.10745882,
-    "EUR": 1.1679515,
-    "GBp": 0.013478543,
+    "SEK": 0.10748238,
+    "EUR": 1.168907,
+    "GBp": 0.013489451,
     "CNY": 0.14626299
   }
 }
