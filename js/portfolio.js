@@ -1,8 +1,6 @@
 import { loadHoldings, loadCash } from "./csv.js";
 import {
-  getProfile,
   getQuotesBatch,
-  isInternational,
 } from "./api.js";
 import {
   fxSymbolsForCurrencies,
@@ -654,41 +652,34 @@ async function loadAllLive(force = true) {
   try {
     const allRowsList = [...state.rows, ...state.bears];
     const allHoldings = allRowsList.map((r) => r.holding);
-    const usHoldings = allHoldings.filter((h) => !isInternational(h.symbol));
 
     // Batch ALL stock symbols (main + bears) + FX symbols through Yahoo
     // Finance in one call. Extended-hours prices come back for stocks
     // and the meta also covers FX, so a single request refreshes everything.
     const stockSymbols = [...new Set(allHoldings.map((h) => h.symbol))];
     const fxSyms = fxSymbolsForCurrencies(uniqueCurrencies());
-    const allSymbols = [...stockSymbols, ...fxSyms];
-    const quotesPromise = getQuotesBatch(allSymbols, { force });
-
-    // US company profiles still come from Finnhub (richer: logo, sector, IPO).
-    // Cached 24 h so this rarely hits the network on a manual Refresh.
-    const usProfilesPromise = Promise.all(
-      usHoldings.map((h) =>
-        getProfile(h.symbol, { force }).catch(() => ({ value: null })),
-      ),
-    );
-
-    const [quotes, usProfiles] = await Promise.all([quotesPromise, usProfilesPromise]);
+    const quotes = await getQuotesBatch([...stockSymbols, ...fxSyms], { force });
 
     // Pull FX rates out of the same response and refresh holdings/cash USD.
     const rates = { USD: 1 };
     for (const cur of uniqueCurrencies()) rates[cur] = rateFromQuotes(cur, quotes);
     applyFxRates(rates);
 
-    const usProfileMap = new Map(
-      usHoldings.map((h, i) => [h.symbol, usProfiles[i]?.value || null]),
-    );
-
+    // Build profiles from the Yahoo quote — same approach as the snapshot path.
+    // Logo URLs are inferred via inferLogoUrl (Finnhub CDN for US, FMP for
+    // international); no extra API call needed just to show an icon.
     const enrich = (r) => {
       const holding = r.holding;
       const quote = quotes[holding.symbol] || null;
-      const profile = isInternational(holding.symbol)
-        ? (quote ? { name: quote.name, logo: null, exchange: quote.exchange, currency: quote.currency } : null)
-        : (usProfileMap.get(holding.symbol) || null);
+      const profile = quote
+        ? {
+            name: quote.name,
+            logo: inferLogoUrl(holding.symbol),
+            exchange: quote.exchange,
+            currency: quote.currency,
+            marketCap: quote.marketCap,
+          }
+        : null;
       return { holding, quote, profile };
     };
     state.rows = state.rows.map(enrich);
