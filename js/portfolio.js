@@ -29,19 +29,33 @@ const state = {
   bears: [],         // bear-tab-only holdings, NOT counted in "All"
   sort: "value",
   market: "All",
+  overviewOpen: false,
   updatedAt: null,
 };
 
 const BEAR_TAB = "🐻";
 
+
 const $ = (id) => document.getElementById(id);
+
+// Derive a public-CDN logo URL from a ticker. Used when the snapshot doesn't
+// carry a logo URL (Yahoo Finance's quote endpoint doesn't return one).
+// Financial Modeling Prep's image endpoint is the best free option — works
+// for most US tickers, and the bare ticker (suffix stripped) often resolves
+// for non-US listings too. Failures fall through to the letter via onerror.
+function inferLogoUrl(symbol) {
+  const base = symbol.split(".")[0];
+  if (!base) return null;
+  return `https://financialmodelingprep.com/image-stock/${encodeURIComponent(base)}.png`;
+}
 
 function logoEl(symbol, profile) {
   const wrap = document.createElement("div");
   wrap.className = "logo";
-  if (profile && profile.logo) {
+  const url = profile?.logo || inferLogoUrl(symbol);
+  if (url) {
     const img = document.createElement("img");
-    img.src = profile.logo;
+    img.src = url;
     img.alt = `${symbol} logo`;
     img.loading = "lazy";
     img.onerror = () => {
@@ -489,11 +503,142 @@ function renderUpdatedAt() {
   el.title = new Date(state.updatedAt).toLocaleString();
 }
 
+// Combine duplicate-symbol rows into one position. Holdings list still shows
+// every CSV row separately (so platform-level cost basis is preserved) — the
+// aggregation only affects the overview bar chart.
+function aggregateBySymbol(rows) {
+  const byKey = new Map();
+  for (const r of rows) {
+    const m = rowMetrics(r);
+    const usd = m.hasQuote ? m.mvUsd : r.holding.totalCostUsd;
+    if (!isFinite(usd) || usd <= 0) continue;
+    const key = r.holding.symbol;
+    const cur = byKey.get(key) || { label: key, usd: 0, costUsd: 0, kind: "stock" };
+    cur.usd += usd;
+    if (isFinite(r.holding.totalCostUsd)) cur.costUsd += r.holding.totalCostUsd;
+    byKey.set(key, cur);
+  }
+  return [...byKey.values()];
+}
+
+function shortLabel(label) {
+  if (label.startsWith("Cash")) return "Cash";
+  // Keep up to the first 6 chars before any exchange suffix (e.g. 6488.TWO → 6488).
+  const base = label.split(".")[0];
+  return base.length > 6 ? base.slice(0, 6) : base;
+}
+
+function escapeText(s) {
+  return String(s)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
+function renderOverview() {
+  const panel = $("overview");
+  if (!panel) return;
+  if (!state.overviewOpen || state.market === BEAR_TAB) {
+    panel.hidden = true;
+    panel.innerHTML = "";
+    panel.classList.remove("has-highlight");
+    return;
+  }
+
+  // 1) Aggregate same-symbol rows + add one bar per cash currency.
+  const items = aggregateBySymbol(filteredRows());
+  for (const c of consolidateCash(filteredCash())) {
+    if (isFinite(c.amountUsd) && c.amountUsd > 0) {
+      // Cash never has a P/L, so cost === value → neutral dot in the legend.
+      items.push({
+        label: `Cash (${c.currency})`,
+        usd: c.amountUsd,
+        costUsd: c.amountUsd,
+        kind: "cash",
+      });
+    }
+  }
+  items.sort((a, b) => b.usd - a.usd); // largest left, smallest right
+  const total = items.reduce((s, x) => s + x.usd, 0);
+
+  if (!items.length || total <= 0) {
+    panel.hidden = false;
+    panel.classList.remove("has-highlight");
+    panel.innerHTML = `<div class="overview-empty">No positions to display.</div>`;
+    return;
+  }
+
+  // 2) Layout — SVG viewBox auto-scales to the card width.
+  const W = 600, H = 260;
+  const PAD_T = 8, PAD_B = 36;
+  const innerH = H - PAD_T - PAD_B;
+  const n = items.length;
+  const minGap = 6, idealBar = 44;
+  const totalGapMax = Math.max(0, (n - 1) * minGap);
+  const barW = Math.max(14, Math.min(idealBar, (W - totalGapMax) / n));
+  const gap = n > 1 ? (W - barW * n) / (n - 1) : 0;
+  const maxUsd = items[0].usd;
+
+  // 3) Bars.
+  const bars = items.map((it, i) => {
+    const h = (it.usd / maxUsd) * innerH;
+    const x = i * (barW + gap);
+    const y = PAD_T + (innerH - h);
+    const pct = (it.usd / total) * 100;
+    return (
+      `<g data-idx="${i}" class="bar-group">` +
+        `<rect class="bar" x="${x}" y="${y}" width="${barW}" height="${h}" rx="3"/>` +
+        `<text class="bar-label" x="${x + barW / 2}" y="${H - 14}" text-anchor="middle">` +
+          escapeText(shortLabel(it.label)) +
+        `</text>` +
+        `<title>${escapeText(it.label)} — ${fmtMoney(it.usd)} (${pct.toFixed(1)}%)</title>` +
+      `</g>`
+    );
+  }).join("");
+
+  // 4) Header — Robinhood-style label-over-price hierarchy.
+  const tabName = state.market === "All" ? "All positions" : state.market;
+  const header =
+    `<div class="overview-header">` +
+      `<div class="overview-tab">${escapeText(tabName)}</div>` +
+      `<div class="overview-total">${fmtMoney(total)}</div>` +
+    `</div>`;
+
+  // 5) Sorted legend list — gives precise USD + % per position and reuses
+  // the same data-idx so hovering it lights up the matching bar. Each row
+  // also gets a P/L dot (green up, red down, gray neutral for cash).
+  const legend = items.map((it, i) => {
+    const pct = (it.usd / total) * 100;
+    const ret = isFinite(it.costUsd) ? it.usd - it.costUsd : 0;
+    const cls = it.kind === "cash" || ret === 0 ? "neutral" : ret > 0 ? "up" : "down";
+    return (
+      `<li data-idx="${i}">` +
+        `<span class="ret-dot ${cls}"></span>` +
+        `<span class="lbl">${escapeText(it.label)}</span>` +
+        `<span class="val">${fmtMoney(it.usd)}</span>` +
+        `<span class="pct">${pct.toFixed(1)}%</span>` +
+      `</li>`
+    );
+  }).join("");
+
+  panel.hidden = false;
+  panel.classList.remove("has-highlight");
+  panel.innerHTML =
+    header +
+    `<svg class="overview-chart" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" role="img" aria-label="Position breakdown by symbol">` +
+      bars +
+    `</svg>` +
+    `<ol class="overview-legend">${legend}</ol>`;
+  // Hover wiring lives in bindOverview() — attached once, survives innerHTML
+  // rewrites here.
+}
+
 function rerender() {
   renderTabs();
   renderHoldings();
   renderSummary();
   renderUpdatedAt();
+  renderOverview();
 }
 
 /* -------- live API path (Refresh button only) -------- */
@@ -670,9 +815,46 @@ function bindTabs() {
     const btn = e.target.closest("button[data-market]");
     if (!btn) return;
     state.market = btn.dataset.market;
+    if (state.market === BEAR_TAB) {
+      // Overview doesn't apply on bear tab — collapse it visually too.
+      state.overviewOpen = false;
+      $("holdings-title")?.classList.remove("open");
+    }
     renderTabs();
     renderHoldings();
     renderSummary();
+    renderOverview();
+  });
+}
+
+function bindOverview() {
+  const title = $("holdings-title");
+  if (title) {
+    title.addEventListener("click", () => {
+      if (state.market === BEAR_TAB) return;   // disabled on 🐻 tab
+      state.overviewOpen = !state.overviewOpen;
+      title.classList.toggle("open", state.overviewOpen);
+      renderOverview();
+    });
+  }
+
+  // Delegated bidirectional hover — bar ↔ legend row, both keyed on data-idx.
+  // Attached once; `renderOverview()` rewrites innerHTML but the panel node
+  // (and these listeners) stay live across renders.
+  const panel = $("overview");
+  if (!panel) return;
+  panel.addEventListener("mouseover", (e) => {
+    const el = e.target.closest("[data-idx]");
+    if (!el) return;
+    const idx = el.dataset.idx;
+    panel.classList.add("has-highlight");
+    panel.querySelectorAll("[data-idx]").forEach((n) => {
+      n.classList.toggle("highlighted", n.dataset.idx === idx);
+    });
+  });
+  panel.addEventListener("mouseleave", () => {
+    panel.classList.remove("has-highlight");
+    panel.querySelectorAll(".highlighted").forEach((n) => n.classList.remove("highlighted"));
   });
 }
 
@@ -739,6 +921,7 @@ async function main() {
   bindTabs();
   bindRefresh();
   bindParse();
+  bindOverview();
   bindRowNavigation();
 
   let holdings;

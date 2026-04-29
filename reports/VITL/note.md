@@ -1,0 +1,2 @@
+- Low PE with a growth story
+- $2 Billion Net Revenue Target for 2030

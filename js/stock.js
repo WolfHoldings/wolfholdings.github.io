@@ -59,13 +59,20 @@ function effectiveCurrency() {
   );
 }
 
+function inferLogoUrl(symbol) {
+  const base = symbol.split(".")[0];
+  if (!base) return null;
+  return `https://financialmodelingprep.com/image-stock/${encodeURIComponent(base)}.png`;
+}
+
 function setLogo(profile) {
   const wrap = $("logo");
   wrap.classList.remove("skeleton");
   wrap.innerHTML = "";
-  if (profile && profile.logo) {
+  const url = profile?.logo || inferLogoUrl(state.symbol);
+  if (url) {
     const img = document.createElement("img");
-    img.src = profile.logo;
+    img.src = url;
     img.alt = `${state.symbol} logo`;
     img.onerror = () => {
       wrap.textContent = state.symbol.charAt(0);
@@ -382,6 +389,85 @@ function bindTimeframes() {
   });
 }
 
+/* ------------------------- reports (note + attachments) ------------------------- */
+
+const FILE_ICON_SVG = `<svg class="attachment-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm-1 7V3.5L18.5 9H13z"/></svg>`;
+
+function escapeText(s) {
+  return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+function formatBytes(n) {
+  if (!isFinite(n) || n <= 0) return "";
+  if (n < 1024) return `${n} B`;
+  if (n < 1024 * 1024) return `${(n / 1024).toFixed(1)} KB`;
+  return `${(n / 1024 / 1024).toFixed(1)} MB`;
+}
+
+// List the files inside `reports/{symbol}/` for the current page.
+//
+// On a public github.io site the GitHub Contents API gives us a directory
+// listing without auth. CORS works, 60 req/hour unauth — fine for personal
+// browsing.
+//
+// On localhost / non-pages hosts we can't list; instead we just probe
+// note.md so the Note section still renders during local dev.
+async function loadReports(sym) {
+  const host = window.location.hostname;
+  if (host.endsWith(".github.io")) {
+    const owner = host.replace(/\.github\.io$/, "");
+    const url = `https://api.github.com/repos/${owner}/${owner}.github.io/contents/reports/${encodeURIComponent(sym)}`;
+    try {
+      const res = await fetch(url, { headers: { Accept: "application/vnd.github+json" } });
+      if (res.ok) {
+        const items = await res.json();
+        return items
+          .filter((it) => it.type === "file")
+          .map((it) => ({ name: it.name, size: it.size }));
+      }
+    } catch { /* fall through to local probe */ }
+  }
+  try {
+    const probe = await fetch(`reports/${encodeURIComponent(sym)}/note.md`, { method: "HEAD" });
+    if (probe.ok) return [{ name: "note.md", size: 0 }];
+  } catch {}
+  return [];
+}
+
+async function renderNote(sym, files) {
+  const section = $("note");
+  const body = $("note-body");
+  const note = files.find((f) => f.name === "note.md");
+  if (!note) { section.hidden = true; return; }
+  try {
+    const res = await fetch(`reports/${encodeURIComponent(sym)}/note.md?t=${Date.now()}`, { cache: "no-cache" });
+    if (!res.ok) throw new Error(res.status);
+    body.textContent = (await res.text()).trim();
+    section.hidden = false;
+  } catch {
+    section.hidden = true;
+  }
+}
+
+function renderAttachments(sym, files) {
+  const section = $("attachments");
+  const list = $("attachments-list");
+  const attachments = files.filter((f) => f.name !== "note.md");
+  if (!attachments.length) { section.hidden = true; return; }
+  list.innerHTML = attachments.map((f) => {
+    const href = `reports/${encodeURIComponent(sym)}/${encodeURIComponent(f.name)}`;
+    const sizeText = formatBytes(f.size);
+    return (
+      `<li><a href="${href}" target="_blank" rel="noopener noreferrer">` +
+        FILE_ICON_SVG +
+        `<span class="attachment-name">${escapeText(f.name)}</span>` +
+        (sizeText ? `<span class="attachment-size">${sizeText}</span>` : "") +
+      `</a></li>`
+    );
+  }).join("");
+  section.hidden = false;
+}
+
 /* ------------------------- main ------------------------- */
 
 async function main() {
@@ -443,4 +529,11 @@ async function main() {
   renderAbout();
   renderStats();
   loadChart(state.timeframe);
+
+  // Note + Attachments — load reports/{symbol}/ contents in the background;
+  // sections stay hidden if the folder doesn't exist or returns no files.
+  loadReports(state.symbol).then(async (files) => {
+    await renderNote(state.symbol, files);
+    renderAttachments(state.symbol, files);
+  }).catch(() => { /* silent: empty folder, rate limit, etc. */ });
 }

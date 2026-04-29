@@ -67,7 +67,10 @@
       <div id="tabs" class="tabs"></div>
 
       <div class="section-header">
-        <h2>Holdings</h2>
+        <h2 id="holdings-title">
+          <span>Holdings</span>
+          <span class="caret" aria-hidden="true">▾</span>
+        </h2>
         <div class="sort" id="sort">
           <button data-sort="value" class="active">Value</button>
           <button data-sort="change">% Change</button>
@@ -75,6 +78,7 @@
         </div>
       </div>
 
+      <section id="overview" class="section overview" hidden></section>
       <div id="holdings" class="holdings"></div>
       <div id="empty" class="empty" hidden>No holdings found in data/holdings.csv.</div>
     </div>
