@@ -127,11 +127,22 @@ function normalizeApidojoQuote(r) {
   };
 }
 
-function profileFromApidojo(quote) {
+// Returns a Finnhub static-CDN logo URL for US tickers (no exchange suffix).
+// These URLs mirror what Finnhub's /stock/profile2 API returns and are publicly
+// accessible without auth. Saves an API round-trip at page-load time because
+// the URL goes straight into snapshot.profiles.
+function inferLogoUrl(symbol) {
+  if (!symbol.includes(".")) {
+    return `https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/${symbol}.png`;
+  }
+  return null;
+}
+
+function profileFromApidojo(quote, symbol) {
   if (!quote) return null;
   return {
     name: quote.name,
-    logo: null,
+    logo: inferLogoUrl(symbol),
     sector: null,
     industry: null,
     country: null,
@@ -226,7 +237,7 @@ async function main() {
         continue;
       }
       quotes[sym] = nq;
-      profiles[sym] = profileFromApidojo(nq);
+      profiles[sym] = profileFromApidojo(nq, sym);
       metrics[sym] = metricFromApidojo(nq);
       const label = nq.extendedLabel ? ` [${nq.extendedLabel}]` : "";
       console.log(`  ${sym}: ${nq.currency} ${nq.c} (${nq.dp?.toFixed(2) ?? "?"}%)${label}`);

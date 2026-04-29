@@ -60,8 +60,11 @@ function effectiveCurrency() {
 }
 
 function inferLogoUrl(symbol) {
-  const base = symbol.split(".")[0];
+  const base = symbol.split(".")[0].toUpperCase();
   if (!base) return null;
+  if (!symbol.includes(".")) {
+    return `https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/${encodeURIComponent(base)}.png`;
+  }
   return `https://financialmodelingprep.com/image-stock/${encodeURIComponent(base)}.png`;
 }
 

@@ -38,14 +38,20 @@ const BEAR_TAB = "🐻";
 
 const $ = (id) => document.getElementById(id);
 
-// Derive a public-CDN logo URL from a ticker. Used when the snapshot doesn't
-// carry a logo URL (Yahoo Finance's quote endpoint doesn't return one).
-// Financial Modeling Prep's image endpoint is the best free option — works
-// for most US tickers, and the bare ticker (suffix stripped) often resolves
-// for non-US listings too. Failures fall through to the letter via onerror.
+// Derive a public-CDN logo URL from a ticker symbol.
+// US stocks (no exchange suffix): Finnhub's static asset CDN has the broadest
+// coverage for US-listed companies including small-caps. The URL pattern
+// mirrors what Finnhub returns from its /stock/profile2 endpoint and is
+// served publicly without auth.
+// International stocks (suffix like .TW, .L): FMP's image CDN resolves many
+// global tickers by stripping the suffix. Both fall back to the first letter
+// via onerror when the image doesn't exist.
 function inferLogoUrl(symbol) {
-  const base = symbol.split(".")[0];
+  const base = symbol.split(".")[0].toUpperCase();
   if (!base) return null;
+  if (!symbol.includes(".")) {
+    return `https://static2.finnhub.io/file/publicdatany/finnhubimage/stock_logo/${encodeURIComponent(base)}.png`;
+  }
   return `https://financialmodelingprep.com/image-stock/${encodeURIComponent(base)}.png`;
 }
 
