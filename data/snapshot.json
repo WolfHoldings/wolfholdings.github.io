@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-05-01T02:52:36.777Z",
+  "updatedAt": "2026-05-01T06:15:28.613Z",
   "quotes": {
     "FLY": {
-      "c": 34.5347,
-      "d": -0.06529999,
-      "dp": -0.1887283,
+      "c": 34.6,
+      "d": 1.11,
+      "dp": 3.31441,
       "o": 33.75,
       "h": 35.45,
       "l": 33.1,
@@ -20,13 +20,13 @@
       "peTTM": null,
       "eps": -4.83,
       "divYield": 0,
-      "marketState": "POSTPOST",
-      "extendedLabel": "After hours"
+      "marketState": "PREPRE",
+      "extendedLabel": null
     },
     "LAES": {
-      "c": 2.8397,
-      "d": -0.06030011,
-      "dp": -2.0793142,
+      "c": 2.9,
+      "d": 0.26,
+      "dp": 9.84848,
       "o": 2.63,
       "h": 2.92,
       "l": 2.625,
@@ -42,13 +42,13 @@
       "peTTM": null,
       "eps": -0.24,
       "divYield": 0,
-      "marketState": "POSTPOST",
-      "extendedLabel": "After hours"
+      "marketState": "PREPRE",
+      "extendedLabel": null
     },
     "PTIR": {
-      "c": 14.75,
-      "d": 0.4300003,
-      "dp": 3.0027955,
+      "c": 14.32,
+      "d": 0.19,
+      "dp": 1.34465,
       "o": 14.165,
       "h": 14.56,
       "l": 13.84,
@@ -64,13 +64,13 @@
       "peTTM": 3.032435,
       "eps": 4.7222776,
       "divYield": 0,
-      "marketState": "POSTPOST",
-      "extendedLabel": "After hours"
+      "marketState": "PREPRE",
+      "extendedLabel": null
     },
     "RDW": {
-      "c": 9.25,
-      "d": 0.06000042,
-      "dp": 0.6528882,
+      "c": 9.19,
+      "d": 0.589999,
+      "dp": 6.86046,
       "o": 8.805,
       "h": 9.39,
       "l": 8.69,
@@ -86,13 +86,13 @@
       "peTTM": null,
       "eps": -2.28,
       "divYield": 0,
-      "marketState": "POSTPOST",
-      "extendedLabel": "After hours"
+      "marketState": "PREPRE",
+      "extendedLabel": null
     },
     "BABA": {
-      "c": 132.06,
-      "d": 0.17999268,
-      "dp": 0.13648216,
+      "c": 131.88,
+      "d": 1.45001,
+      "dp": 1.11172,
       "o": 130.15,
       "h": 132.64,
       "l": 129.36,
@@ -108,8 +108,8 @@
       "peTTM": 23.300354,
       "eps": 5.66,
       "divYield": 0,
-      "marketState": "POSTPOST",
-      "extendedLabel": "After hours"
+      "marketState": "PREPRE",
+      "extendedLabel": null
     },
     "6488.TWO": {
       "c": 580,
@@ -240,13 +240,13 @@
       "peTTM": null,
       "eps": -0.05,
       "divYield": 0,
-      "marketState": "PREPRE",
+      "marketState": "PRE",
       "extendedLabel": null
     },
     "VITL": {
-      "c": 13.62,
-      "d": -0.029999733,
-      "dp": -0.21977827,
+      "c": 13.65,
+      "d": 1.55,
+      "dp": 12.8099,
       "o": 12.25,
       "h": 13.79,
       "l": 12.25,
@@ -262,13 +262,13 @@
       "peTTM": 9.479166,
       "eps": 1.44,
       "divYield": 0,
-      "marketState": "POSTPOST",
-      "extendedLabel": "After hours"
+      "marketState": "PREPRE",
+      "extendedLabel": null
     },
     "ADBE": {
-      "c": 249.6,
-      "d": 3.5,
-      "dp": 1.422186,
+      "c": 246.1,
+      "d": 2.53,
+      "dp": 1.03872,
       "o": 240.11,
       "h": 246.68,
       "l": 236.315,
@@ -281,16 +281,16 @@
       "volume": 5104010,
       "averageVolume": 5987011,
       "marketCap": 99473620992,
-      "peTTM": 14.333139,
-      "eps": 17.17,
+      "peTTM": 14.349854,
+      "eps": 17.15,
       "divYield": 0,
-      "marketState": "POSTPOST",
-      "extendedLabel": "After hours"
+      "marketState": "PREPRE",
+      "extendedLabel": null
     },
     "NVO": {
-      "c": 42.4379,
-      "d": 0.21789932,
-      "dp": 0.5161045,
+      "c": 42.22,
+      "d": 1.93,
+      "dp": 4.79027,
       "o": 41.85,
       "h": 42.855,
       "l": 41.65,
@@ -306,13 +306,13 @@
       "peTTM": 11.6952915,
       "eps": 3.61,
       "divYield": 0.29039463,
-      "marketState": "POSTPOST",
-      "extendedLabel": "After hours"
+      "marketState": "PREPRE",
+      "extendedLabel": null
     },
     "PFE": {
-      "c": 26.7005,
-      "d": 0.00049972534,
-      "dp": 0.0018716304,
+      "c": 26.7,
+      "d": 0.440001,
+      "dp": 1.67555,
       "o": 26.389,
       "h": 26.91,
       "l": 26.275,
@@ -328,13 +328,13 @@
       "peTTM": 19.632353,
       "eps": 1.36,
       "divYield": 0.06549886,
-      "marketState": "POSTPOST",
-      "extendedLabel": "After hours"
+      "marketState": "PREPRE",
+      "extendedLabel": null
     },
     "OXY": {
-      "c": 60.44,
-      "d": -0.1400032,
-      "dp": -0.23110466,
+      "c": 60.58,
+      "d": -0.179996,
+      "dp": -0.296242,
       "o": 59.59,
       "h": 60.75,
       "l": 58.93,
@@ -350,13 +350,13 @@
       "peTTM": 44.874073,
       "eps": 1.35,
       "divYield": 0.015799869,
-      "marketState": "POSTPOST",
-      "extendedLabel": "After hours"
+      "marketState": "PREPRE",
+      "extendedLabel": null
     },
     "USAR": {
-      "c": 25.87,
-      "d": -0.099998474,
-      "dp": -0.3850538,
+      "c": 25.97,
+      "d": 3.94,
+      "dp": 17.8847,
       "o": 22.6,
       "h": 26.02,
       "l": 22.6,
@@ -372,8 +372,8 @@
       "peTTM": null,
       "eps": -3.31,
       "divYield": 0,
-      "marketState": "POSTPOST",
-      "extendedLabel": "After hours"
+      "marketState": "PREPRE",
+      "extendedLabel": null
     },
     "SMHN.DE": {
       "c": 76.2,
@@ -398,9 +398,9 @@
       "extendedLabel": null
     },
     "INTC": {
-      "c": 93.55,
-      "d": -0.9300003,
-      "dp": -0.9843356,
+      "c": 94.48,
+      "d": -0.269997,
+      "dp": -0.284957,
       "o": 95.654,
       "h": 95.654,
       "l": 91.5,
@@ -416,13 +416,13 @@
       "peTTM": null,
       "eps": -0.6,
       "divYield": 0,
-      "marketState": "POSTPOST",
-      "extendedLabel": "After hours"
+      "marketState": "PREPRE",
+      "extendedLabel": null
     },
     "TSLA": {
-      "c": 381.38,
-      "d": -0.25,
-      "dp": -0.06550848,
+      "c": 381.63,
+      "d": 8.83002,
+      "dp": 2.36857,
       "o": 372.07,
       "h": 384.75,
       "l": 368.17,
@@ -438,13 +438,13 @@
       "peTTM": 343.81082,
       "eps": 1.11,
       "divYield": 0,
-      "marketState": "POSTPOST",
-      "extendedLabel": "After hours"
+      "marketState": "PREPRE",
+      "extendedLabel": null
     },
     "GOOG": {
-      "c": 382.45,
-      "d": 0.51000977,
-      "dp": 0.13353138,
+      "c": 381.94,
+      "d": 34.63,
+      "dp": 9.97092,
       "o": 371.255,
       "h": 382.63,
       "l": 363.09,
@@ -460,8 +460,8 @@
       "peTTM": 29.155725,
       "eps": 13.1,
       "divYield": 0,
-      "marketState": "POSTPOST",
-      "extendedLabel": "After hours"
+      "marketState": "PREPRE",
+      "extendedLabel": null
     },
     "000333.SZ": {
       "c": 81.1,
@@ -943,13 +943,13 @@
       "averageVolume": 2557133
     },
     "ADBE": {
-      "peTTM": 14.333139,
+      "peTTM": 14.349854,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 422.95,
       "fiftyTwoWeekLow": 224.13,
       "divYield": 0,
       "beta": null,
-      "eps": 17.17,
+      "eps": 17.15,
       "volume": 5104010,
       "averageVolume": 5987011
     },
@@ -1066,10 +1066,10 @@
   },
   "fxRates": {
     "USD": 1,
-    "TWD": 0.031715825,
-    "SEK": 0.10826085,
-    "GBp": 0.013601555999999999,
-    "EUR": 1.1734335,
+    "TWD": 0.03165158,
+    "SEK": 0.10815967,
+    "GBp": 0.013590466,
+    "EUR": 1.1726079,
     "CNY": 0.14648151
   }
 }
