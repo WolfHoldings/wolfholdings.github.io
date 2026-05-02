@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-02T07:41:33.425Z",
+  "updatedAt": "2026-05-02T09:57:17.417Z",
   "quotes": {
     "FLY": {
       "c": 33.8,
@@ -256,7 +256,7 @@
       "exchange": "NasdaqGM",
       "fiftyTwoWeekHigh": 53.125,
       "fiftyTwoWeekLow": 11.8,
-      "volume": 3154784,
+      "volume": 3156649,
       "averageVolume": 2590608,
       "marketCap": 607591104,
       "peTTM": 9.847222,
@@ -459,7 +459,7 @@
       "marketCap": 4635812691968,
       "peTTM": 29.231123,
       "eps": 13.11,
-      "divYield": 0,
+      "divYield": 0.0021992982,
       "marketState": "CLOSED",
       "extendedLabel": null
     },
@@ -481,7 +481,7 @@
       "marketCap": 616882176000,
       "peTTM": 13.934708,
       "eps": 5.82,
-      "divYield": 0,
+      "divYield": 0.052884027,
       "marketState": "CLOSED",
       "extendedLabel": null
     },
@@ -939,7 +939,7 @@
       "divYield": 0,
       "beta": null,
       "eps": 1.44,
-      "volume": 3154784,
+      "volume": 3156649,
       "averageVolume": 2590608
     },
     "ADBE": {
@@ -1035,7 +1035,7 @@
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 383.39,
       "fiftyTwoWeekLow": 149.49,
-      "divYield": 0,
+      "divYield": 0.21992982000000003,
       "beta": null,
       "eps": 13.11,
       "volume": 27930335,
@@ -1046,7 +1046,7 @@
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 83.17,
       "fiftyTwoWeekLow": 69.88,
-      "divYield": 0,
+      "divYield": 5.2884027,
       "beta": null,
       "eps": 5.82,
       "volume": 35443269,
