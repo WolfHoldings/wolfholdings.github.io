@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-02T15:43:25.546Z",
+  "updatedAt": "2026-05-02T18:56:54.805Z",
   "quotes": {
     "FLY": {
       "c": 33.8,
@@ -256,7 +256,7 @@
       "exchange": "NasdaqGM",
       "fiftyTwoWeekHigh": 53.125,
       "fiftyTwoWeekLow": 11.8,
-      "volume": 3154784,
+      "volume": 3156649,
       "averageVolume": 2590608,
       "marketCap": 607591104,
       "peTTM": 9.847222,
@@ -939,7 +939,7 @@
       "divYield": 0,
       "beta": null,
       "eps": 1.44,
-      "volume": 3154784,
+      "volume": 3156649,
       "averageVolume": 2590608
     },
     "ADBE": {
