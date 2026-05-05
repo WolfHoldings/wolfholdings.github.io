@@ -1,0 +1,3 @@
+name = "wolfholdings-yahoo-proxy"
+main = "yahoo-proxy.js"
+compatibility_date = "2026-01-01"

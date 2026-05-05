@@ -1,35 +1,31 @@
 // js/parse.js
 //
 // Manual fallback for fetching stock quotes when the RapidAPI quota is
-// exhausted. Reads Yahoo Finance's unauthenticated v8 chart endpoint
-// through a chain of public CORS proxies (the endpoint itself does not
-// send Access-Control-Allow-Origin, so direct browser fetch fails).
+// exhausted. Reads Yahoo Finance's unauthenticated v8 chart endpoint via a
+// self-hosted Cloudflare Worker (see /worker) that adds CORS headers, with
+// one public CORS proxy as defense-in-depth if the Worker is down.
 //
 // Returns quotes in the same shape as `normalizeApidojoQuote` in api.js,
 // so the existing render pipeline consumes them without changes.
 
-const ENDPOINT = (sym) =>
+// Deployed Cloudflare Worker — see worker/README.md to (re)deploy.
+const WORKER_BASE = "https://wolfholdings-yahoo-proxy.wolfholdings-yahoo-proxy.workers.dev";
+
+const YAHOO_DIRECT = (sym) =>
   `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(sym)}` +
   `?interval=1d&range=1d&includePrePost=true`;
 
-const PROXIES = [
-  null, // direct first — succeeds in browser extensions / dev envs
-  (u) => `https://corsproxy.io/?url=${encodeURIComponent(u)}`,
-  (u) => `https://api.allorigins.win/raw?url=${encodeURIComponent(u)}`,
-  (u) => `https://api.codetabs.com/v1/proxy/?quest=${encodeURIComponent(u)}`,
-  (u) => `https://cors.x2u.in/${u}`,
-  (u) => `https://thingproxy.freeboard.io/fetch/${u}`,
+// Each entry builds a fully-formed request URL from a symbol. The Worker is
+// tried first; the public proxy only runs if the Worker errors out.
+const SOURCES = [
+  { name: "worker", url: (sym) => `${WORKER_BASE}/?symbol=${encodeURIComponent(sym)}&interval=1d&range=1d` },
+  { name: "cors.lol", url: (sym) => `https://api.cors.lol/?url=${encodeURIComponent(YAHOO_DIRECT(sym))}` },
 ];
 
-function safeHost(u) {
-  try { return new URL(u).host; } catch { return u.slice(0, 30); }
-}
-
-async function fetchJsonViaAnyProxy(url, timeoutMs = 8000) {
+async function fetchYahooChart(sym, timeoutMs = 8000) {
   const attempts = [];
-  for (const wrap of PROXIES) {
-    const target = wrap ? wrap(url) : url;
-    const name = wrap ? safeHost(target) : "direct";
+  for (const src of SOURCES) {
+    const target = src.url(sym);
     try {
       const ctrl = new AbortController();
       const t = setTimeout(() => ctrl.abort(), timeoutMs);
@@ -41,7 +37,7 @@ async function fetchJsonViaAnyProxy(url, timeoutMs = 8000) {
       });
       clearTimeout(t);
       if (!res.ok) {
-        attempts.push(`${name}: HTTP ${res.status}`);
+        attempts.push(`${src.name}: HTTP ${res.status}`);
         continue;
       }
       const ct = (res.headers.get("content-type") || "").toLowerCase();
@@ -49,22 +45,19 @@ async function fetchJsonViaAnyProxy(url, timeoutMs = 8000) {
       if (ct.includes("json")) {
         j = await res.json();
       } else {
-        // Some proxies (allorigins/raw) drop the JSON content-type or wrap
-        // the body. Try parsing the text anyway; a Cloudflare HTML challenge
-        // will throw and fall through.
         const text = await res.text();
         try { j = JSON.parse(text); } catch {
-          attempts.push(`${name}: not-JSON (${text.slice(0, 40)})`);
+          attempts.push(`${src.name}: not-JSON (${text.slice(0, 40)})`);
           continue;
         }
       }
       if (!j?.chart || j.chart.error) {
-        attempts.push(`${name}: chart-${j?.chart?.error?.code || "missing"}`);
+        attempts.push(`${src.name}: chart-${j?.chart?.error?.code || "missing"}`);
         continue;
       }
-      return { json: j, proxy: name, attempts };
+      return { json: j, proxy: src.name, attempts };
     } catch (e) {
-      attempts.push(`${name}: ${e.name || "Error"}`);
+      attempts.push(`${src.name}: ${e.name || "Error"}`);
     }
   }
   return { json: null, proxy: null, attempts };
@@ -130,7 +123,7 @@ export async function parseAllSymbols(symbols, onProgress) {
   async function worker() {
     while (queue.length) {
       const sym = queue.shift();
-      const got = await fetchJsonViaAnyProxy(ENDPOINT(sym));
+      const got = await fetchYahooChart(sym);
       const meta = got?.json?.chart?.result?.[0]?.meta;
       const norm = meta ? normalizeYahooChartMeta(meta) : null;
       if (norm) norm.__source = got.proxy;
