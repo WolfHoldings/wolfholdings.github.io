@@ -11,6 +11,7 @@
 
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
 import { dirname } from "node:path";
+import { pickSession } from "../js/session.js";
 
 const RAPIDAPI_KEY = process.env.RAPIDAPI_KEY;
 const RAPIDAPI_HOST = "apidojo-yahoo-finance-v1.p.rapidapi.com";
@@ -89,18 +90,14 @@ function normalizeApidojoQuote(r) {
   let dp = num(r.regularMarketChangePercent);
   let extendedLabel = null;
 
-  if (marketState === "POST" || marketState === "POSTPOST") {
-    const pp = num(r.postMarketPrice);
-    if (isFinite(pp) && pp > 0) {
-      c = pp; d = num(r.postMarketChange); dp = num(r.postMarketChangePercent);
-      extendedLabel = "After hours";
-    }
-  } else if (marketState === "PRE" || marketState === "PREPRE") {
-    const pp = num(r.preMarketPrice);
-    if (isFinite(pp) && pp > 0) {
-      c = pp; d = num(r.preMarketChange); dp = num(r.preMarketChangePercent);
-      extendedLabel = "Pre-market";
-    }
+  const ext = pickSession(r);
+  if (ext) {
+    c = ext.price;
+    extendedLabel = ext.label;
+    d = isFinite(ext.change) ? ext.change : (isFinite(pc) ? c - pc : NaN);
+    dp = isFinite(ext.pct)
+      ? ext.pct
+      : isFinite(pc) && pc !== 0 ? ((c - pc) / pc) * 100 : NaN;
   }
 
   return {

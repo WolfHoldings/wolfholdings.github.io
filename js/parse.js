@@ -7,18 +7,25 @@
 //
 // Returns quotes in the same shape as `normalizeApidojoQuote` in api.js,
 // so the existing render pipeline consumes them without changes.
+//
+// Note: Yahoo's chart `meta` does NOT carry `marketState` / `preMarketPrice` /
+// `postMarketPrice` — those live only on the apidojo /get-quotes endpoint used
+// by api.js. To support pre / regular / post sessions here we request 1-minute
+// candles (which include extended-hours bars when `includePrePost=true`) and
+// derive the session from the latest candle's timestamp vs the meta's
+// `currentTradingPeriod` windows.
 
 // Deployed Cloudflare Worker — see worker/README.md to (re)deploy.
 const WORKER_BASE = "https://wolfholdings-yahoo-proxy.wolfholdings-yahoo-proxy.workers.dev";
 
 const YAHOO_DIRECT = (sym) =>
   `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(sym)}` +
-  `?interval=1d&range=1d&includePrePost=true`;
+  `?interval=1m&range=1d&includePrePost=true`;
 
 // Each entry builds a fully-formed request URL from a symbol. The Worker is
 // tried first; the public proxy only runs if the Worker errors out.
 const SOURCES = [
-  { name: "worker", url: (sym) => `${WORKER_BASE}/?symbol=${encodeURIComponent(sym)}&interval=1d&range=1d` },
+  { name: "worker", url: (sym) => `${WORKER_BASE}/?symbol=${encodeURIComponent(sym)}&interval=1m&range=1d` },
   { name: "cors.lol", url: (sym) => `https://api.cors.lol/?url=${encodeURIComponent(YAHOO_DIRECT(sym))}` },
 ];
 
@@ -63,39 +70,87 @@ async function fetchYahooChart(sym, timeoutMs = 8000) {
   return { json: null, proxy: null, attempts };
 }
 
-function normalizeYahooChartMeta(meta) {
+function inWindow(w, t) {
+  if (!w) return false;
+  const start = +w.start, end = +w.end;
+  return Number.isFinite(start) && Number.isFinite(end) && t >= start && t < end;
+}
+
+function normalizeYahooChartResult(r) {
+  if (!r) return null;
+  const meta = r.meta;
   if (!meta) return null;
-  const reg = +meta.regularMarketPrice;
+  const ts = r.timestamp || [];
+  const closes = r.indicators?.quote?.[0]?.close || [];
+  const period = meta.currentTradingPeriod || {};
   const pc = +(meta.chartPreviousClose ?? meta.previousClose);
-  if (!isFinite(reg)) return null;
 
-  // Match the extended-hours rules used by api.js / refresh.mjs.
-  let c = reg;
-  let d = isFinite(pc) ? reg - pc : 0;
-  let dp = isFinite(pc) && pc !== 0 ? (d / pc) * 100 : 0;
-  let extendedLabel = null;
-
-  const ms = meta.marketState || null;
-  const post = +meta.postMarketPrice;
-  const pre = +meta.preMarketPrice;
-
-  if ((ms === "POST" || ms === "POSTPOST") && isFinite(post) && post > 0) {
-    c = post;
-    d = post - reg;
-    dp = reg ? (d / reg) * 100 : 0;
-    extendedLabel = "After hours";
-  } else if ((ms === "PRE" || ms === "PREPRE") && isFinite(pre) && pre > 0) {
-    c = pre;
-    d = isFinite(pc) ? pre - pc : 0;
-    dp = isFinite(pc) && pc !== 0 ? (d / pc) * 100 : 0;
-    extendedLabel = "Pre-market";
+  // Walk back from the end to find the most recent non-null close.
+  let latestIdx = -1;
+  for (let i = ts.length - 1; i >= 0; i--) {
+    if (Number.isFinite(closes[i])) { latestIdx = i; break; }
   }
+
+  let c, latestTs;
+  if (latestIdx >= 0) {
+    c = +closes[latestIdx];
+    latestTs = +ts[latestIdx];
+  } else {
+    // No candles at all — fall back to whatever the meta carries so the row
+    // is still populated with the previous close.
+    c = +meta.regularMarketPrice;
+    latestTs = +meta.regularMarketTime || 0;
+    if (!Number.isFinite(c) && Number.isFinite(pc)) c = pc;
+  }
+  if (!Number.isFinite(c)) return null;
+
+  // Determine session from where the latest candle falls.
+  let marketState = null;
+  let extendedLabel = null;
+  let baseline = pc;
+
+  if (inWindow(period.pre, latestTs)) {
+    marketState = "PRE";
+    extendedLabel = "Pre-market";
+  } else if (inWindow(period.regular, latestTs)) {
+    marketState = "REGULAR";
+  } else if (inWindow(period.post, latestTs)) {
+    marketState = "POST";
+    extendedLabel = "After hours";
+    // After-hours change is measured against today's regular session close,
+    // i.e. the last candle that closed before regular.end.
+    const regEnd = +period.regular?.end;
+    if (Number.isFinite(regEnd)) {
+      for (let i = ts.length - 1; i >= 0; i--) {
+        if (Number.isFinite(closes[i]) && +ts[i] < regEnd) { baseline = +closes[i]; break; }
+      }
+    }
+  } else {
+    // Latest candle is outside today's pre/regular/post windows. If wall-clock
+    // time is between today's post.end and tomorrow's pre.start, we're in the
+    // overnight ATS window — Yahoo doesn't return overnight candles, so c is
+    // the last after-hours close, but the user-visible label should reflect
+    // that the regular sessions have all wrapped.
+    const postEnd = +period.post?.end;
+    const preStart = +period.pre?.start;
+    const nowSec = Date.now() / 1000;
+    if (Number.isFinite(postEnd) && nowSec > postEnd) {
+      marketState = "OVERNIGHT";
+      extendedLabel = "Overnight";
+    } else if (Number.isFinite(preStart) && nowSec < preStart) {
+      // Before today's pre opens — show previous close, no extended label.
+      marketState = "CLOSED";
+    }
+  }
+
+  const d = Number.isFinite(baseline) ? c - baseline : 0;
+  const dp = Number.isFinite(baseline) && baseline !== 0 ? (d / baseline) * 100 : 0;
 
   return {
     c,
     d,
     dp,
-    pc: isFinite(pc) ? pc : NaN,
+    pc: Number.isFinite(pc) ? pc : NaN,
     o: NaN,
     h: NaN,
     l: NaN,
@@ -110,7 +165,7 @@ function normalizeYahooChartMeta(meta) {
     peTTM: NaN,
     eps: NaN,
     divYield: NaN,
-    marketState: ms,
+    marketState,
     extendedLabel,
   };
 }
@@ -124,8 +179,8 @@ export async function parseAllSymbols(symbols, onProgress) {
     while (queue.length) {
       const sym = queue.shift();
       const got = await fetchYahooChart(sym);
-      const meta = got?.json?.chart?.result?.[0]?.meta;
-      const norm = meta ? normalizeYahooChartMeta(meta) : null;
+      const result = got?.json?.chart?.result?.[0];
+      const norm = result ? normalizeYahooChartResult(result) : null;
       if (norm) norm.__source = got.proxy;
       out[sym] = norm;
       done++;
