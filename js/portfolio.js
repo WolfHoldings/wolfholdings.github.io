@@ -33,6 +33,14 @@ const state = {
 
 const BEAR_TAB = "🐻";
 
+// European holdings collapse into a single tab. Includes UK / Switzerland
+// even though they're not in the political EU — the tab is "European
+// markets" in spirit, just labelled "EU" for brevity.
+const EU_TAB = "EU";
+const EU_MARKETS = new Set([
+  "Sweden", "UK", "Germany", "Italy", "France", "Netherlands", "Switzerland",
+]);
+
 
 const $ = (id) => document.getElementById(id);
 
@@ -310,6 +318,7 @@ function filteredRows() {
   if (state.market === "All") return state.rows;
   if (state.market === "V") return state.rows.filter((r) => r.holding.client);
   if (state.market === "Mike") return state.rows.filter((r) => !r.holding.client);
+  if (state.market === EU_TAB) return state.rows.filter((r) => EU_MARKETS.has(r.holding.market));
   return state.rows.filter((r) => r.holding.market === state.market);
 }
 
@@ -374,7 +383,7 @@ function renderTabs() {
     const m = rowMetrics(r);
     const usd = m.hasQuote ? m.mvUsd : r.holding.totalCostUsd;
     totalHoldingsUsd += usd;
-    const k = r.holding.market;
+    const k = EU_MARKETS.has(r.holding.market) ? EU_TAB : r.holding.market;
     groups.set(k, (groups.get(k) || 0) + usd);
     if (r.holding.client) { hasClient = true; clientHoldingsUsd += usd; }
     else { hasNonClient = true; nonClientHoldingsUsd += usd; }
@@ -399,7 +408,12 @@ function renderTabs() {
   const clientUsd = clientHoldingsUsd + clientCashUsd;
   const nonClientUsd = nonClientHoldingsUsd + nonClientCashUsd;
 
-  const markets = [...groups.keys()].sort((a, b) => groups.get(b) - groups.get(a));
+  // Sort markets by descending USD value, but pin EU last so it sits
+  // immediately to the left of the bear tab.
+  const marketKeys = [...groups.keys()].filter((k) => k !== EU_TAB);
+  marketKeys.sort((a, b) => groups.get(b) - groups.get(a));
+  if (groups.has(EU_TAB)) marketKeys.push(EU_TAB);
+  const markets = marketKeys;
   const tabs = ["All"];
   if (hasClient || clientCashUsd > 0) tabs.push("V");
   if (hasNonClient || nonClientCashUsd > 0) tabs.push("Mike");
