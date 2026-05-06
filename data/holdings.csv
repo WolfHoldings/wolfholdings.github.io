@@ -1,13 +1,11 @@
 symbol,unit_cost,shares,currency,market,client,platform,note,link
-FLY,27.70,37,USD,US,true,,,https://au.finance.yahoo.com/quote/FLY/
-LAES,2.73,1100,USD,US,true,,,https://au.finance.yahoo.com/quote/LAES/
 LAES,2.73,634,USD,US,true,,,https://au.finance.yahoo.com/quote/LAES/
-PTIR,12.41,165,USD,US,true,,,https://au.finance.yahoo.com/quote/PTIR/
-RDW,9.32,162,USD,US,true,,,https://au.finance.yahoo.com/quote/RDW/
+COHX,48.95,164,USD,US,true,,,https://au.finance.yahoo.com/quote/COHX/
 BABA,74.20,80,USD,US,false,,,https://au.finance.yahoo.com/quote/BABA/
 6488.TWO,443.63,156,TWD,Taiwan,true,,,https://au.finance.yahoo.com/quote/6488.TWO/
 6634.TWO,51.65,6000,TWD,Taiwan,false,,,https://au.finance.yahoo.com/quote/6634.TWO/
-4977.TW,240.76,413,TWD,Taiwan,true,,,https://au.finance.yahoo.com/quote/4977.TW/
+1560.TW,580.00,78,TWD,Taiwan,true,,,https://au.finance.yahoo.com/quote/1560.TW/
+3105.TWO,507.00,88,TWD,Taiwan,true,,,https://au.finance.yahoo.com/quote/3105.TWO/
 6451.TW,215.15,550,TWD,Taiwan,false,,,https://au.finance.yahoo.com/quote/6451.TW/
 6451.TW,199.97,623,TWD,Taiwan,false,,,https://au.finance.yahoo.com/quote/6451.TW/
 SIVE.ST,28.10,728,SEK,Sweden,false,,,https://au.finance.yahoo.com/quote/SIVE.ST/
@@ -19,5 +17,7 @@ NVO,48.72,120,USD,US,false,,,https://au.finance.yahoo.com/quote/NVO/
 PFE,24.52,150,USD,US,false,,,https://au.finance.yahoo.com/quote/PFE/
 OXY,38.00,85,USD,US,false,,,https://au.finance.yahoo.com/quote/OXY/
 OXY,49.58,155,USD,US,false,,,https://au.finance.yahoo.com/quote/OXY/
+LWLG,16.80,60,USD,US,false,,,https://au.finance.yahoo.com/quote/LWLG/
+TPRO.MI,19.50,100,EUR,US,false,,,https://au.finance.yahoo.com/quote/TPRO.MI/
 USAR,32.04,25,USD,US,false,,,https://au.finance.yahoo.com/quote/USAR/
 SMHN.DE,70.62,13,EUR,Germany,false,,,https://au.finance.yahoo.com/quote/SMHN.DE/
