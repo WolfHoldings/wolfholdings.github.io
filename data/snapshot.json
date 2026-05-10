@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-10T13:14:37.558Z",
+  "updatedAt": "2026-05-10T15:52:26.777Z",
   "quotes": {
     "LAES": {
       "c": 2.92,
@@ -190,7 +190,7 @@
       "exchange": "Stockholm",
       "fiftyTwoWeekHigh": 59.1,
       "fiftyTwoWeekLow": 2.85,
-      "volume": 18295009,
+      "volume": 18292265,
       "averageVolume": 22271613,
       "marketCap": 12905192448,
       "peTTM": null,
@@ -454,7 +454,7 @@
       "exchange": "NasdaqGS",
       "fiftyTwoWeekHigh": 498.83,
       "fiftyTwoWeekLow": 273.21,
-      "volume": 63489555,
+      "volume": 63479076,
       "averageVolume": 62332293,
       "marketCap": 1608764358656,
       "peTTM": 400.3271,
@@ -468,7 +468,7 @@
       "d": 1.75,
       "dp": 0.442702,
       "o": 394.4175,
-      "h": 398.37,
+      "h": 398.35,
       "l": 393.68,
       "pc": 395.3,
       "currency": "USD",
@@ -941,7 +941,7 @@
       "divYield": 0,
       "beta": null,
       "eps": -0.69,
-      "volume": 18295009,
+      "volume": 18292265,
       "averageVolume": 22271613
     },
     "IQE.L": {
@@ -1073,7 +1073,7 @@
       "divYield": 0,
       "beta": null,
       "eps": 1.07,
-      "volume": 63489555,
+      "volume": 63479076,
       "averageVolume": 62332293
     },
     "GOOG": {
