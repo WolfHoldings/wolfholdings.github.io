@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-05-22T08:58:45.006Z",
+  "updatedAt": "2026-05-22T11:51:06.080Z",
   "quotes": {
     "LAES": {
-      "c": 3.3995,
-      "d": 0.12949991,
-      "dp": 3.960242,
+      "c": 3.29,
+      "d": 0.01999998,
+      "dp": 0.6116202,
       "o": 2.93,
       "h": 3.37,
       "l": 2.915,
@@ -24,9 +24,9 @@
       "extendedLabel": "Pre-market"
     },
     "COHX": {
-      "c": 59.7,
-      "d": 1.670002,
-      "dp": 2.8778253,
+      "c": 58.12,
+      "d": 0.09000015,
+      "dp": 0.15509246,
       "o": 52.03,
       "h": 59.28,
       "l": 52.34,
@@ -46,9 +46,9 @@
       "extendedLabel": "Pre-market"
     },
     "BABA": {
-      "c": 125.83,
-      "d": -5.619995,
-      "dp": -4.2753863,
+      "c": 126.37,
+      "d": -5.079994,
+      "dp": -3.864583,
       "o": 129.55,
       "h": 131.75,
       "l": 128.09,
@@ -178,21 +178,21 @@
       "extendedLabel": null
     },
     "SIVE.ST": {
-      "c": 67.25,
-      "d": 8.200001,
-      "dp": 13.8865385,
+      "c": 67.8,
+      "d": 8.750004,
+      "dp": 14.817957,
       "o": 60,
-      "h": 67.55,
+      "h": 67.8,
       "l": 60,
       "pc": 59.05,
       "currency": "SEK",
       "name": "Sivers Semiconductors AB",
       "exchange": "Stockholm",
-      "fiftyTwoWeekHigh": 67.55,
+      "fiftyTwoWeekHigh": 67.8,
       "fiftyTwoWeekLow": 2.85,
-      "volume": 6207808,
+      "volume": 8874174,
       "averageVolume": 24189588,
-      "marketCap": 19941961728,
+      "marketCap": 20105056256,
       "peTTM": null,
       "eps": -0.81,
       "divYield": 0,
@@ -200,11 +200,11 @@
       "extendedLabel": null
     },
     "IQE.L": {
-      "c": 43.6,
-      "d": 3.75,
-      "dp": 9.410289,
+      "c": 42.95,
+      "d": 3.1000023,
+      "dp": 7.779178,
       "o": 40.8,
-      "h": 43.7703,
+      "h": 44.35,
       "l": 40.4,
       "pc": 39.85,
       "currency": "GBp",
@@ -212,9 +212,9 @@
       "exchange": "LSE",
       "fiftyTwoWeekHigh": 72.9,
       "fiftyTwoWeekLow": 4.655,
-      "volume": 7627322,
+      "volume": 13130279,
       "averageVolume": 38813969,
-      "marketCap": 427228640,
+      "marketCap": 420859456,
       "peTTM": null,
       "eps": -0.05,
       "divYield": 0,
@@ -222,9 +222,9 @@
       "extendedLabel": null
     },
     "VITL": {
-      "c": 9.36,
-      "d": 0.119999886,
-      "dp": 1.2987001,
+      "c": 9.2882,
+      "d": 0.048200607,
+      "dp": 0.5216516,
       "o": 9.5,
       "h": 9.93,
       "l": 9.225,
@@ -244,9 +244,9 @@
       "extendedLabel": "Pre-market"
     },
     "ADBE": {
-      "c": 244.19,
-      "d": 0.08999634,
-      "dp": 0.036868636,
+      "c": 245.43,
+      "d": 1.3299866,
+      "dp": 0.54485315,
       "o": 246.2189,
       "h": 247.95,
       "l": 242.11,
@@ -266,9 +266,9 @@
       "extendedLabel": "Pre-market"
     },
     "NVO": {
-      "c": 43.9805,
-      "d": -0.38949966,
-      "dp": -0.87784463,
+      "c": 43.75,
+      "d": -0.61999893,
+      "dp": -1.3973382,
       "o": 44.22,
       "h": 44.585,
       "l": 43.735,
@@ -288,9 +288,9 @@
       "extendedLabel": "Pre-market"
     },
     "PFE": {
-      "c": 25.93,
-      "d": -0.020000458,
-      "dp": -0.07707305,
+      "c": 25.971,
+      "d": 0.020999908,
+      "dp": 0.0809245,
       "o": 25.765,
       "h": 25.96,
       "l": 25.575,
@@ -310,9 +310,9 @@
       "extendedLabel": "Pre-market"
     },
     "OXY": {
-      "c": 58.84,
-      "d": 0.0099983215,
-      "dp": 0.016995277,
+      "c": 58.7,
+      "d": -0.13000107,
+      "dp": -0.2209775,
       "o": 60.65,
       "h": 60.835,
       "l": 58.02,
@@ -332,9 +332,9 @@
       "extendedLabel": "Pre-market"
     },
     "LWLG": {
-      "c": 14,
-      "d": 0.8299999,
-      "dp": 6.3022013,
+      "c": 13.69,
+      "d": 0.5199995,
+      "dp": 3.9483638,
       "o": 11.7,
       "h": 13.215,
       "l": 11.48,
@@ -354,31 +354,31 @@
       "extendedLabel": "Pre-market"
     },
     "TPRO.MI": {
-      "c": 30.52,
-      "d": 0.5600014,
-      "dp": 1.8679166,
+      "c": 30.92,
+      "d": 0.960001,
+      "dp": 3.2000036,
       "o": 30.42,
-      "h": 30.9,
+      "h": 31.18,
       "l": 30.02,
       "pc": 29.96,
       "currency": "EUR",
       "name": "TECHNOPROBE",
       "exchange": "Milan",
-      "fiftyTwoWeekHigh": 30.9,
+      "fiftyTwoWeekHigh": 31.18,
       "fiftyTwoWeekLow": 5.92,
-      "volume": 270040,
-      "averageVolume": 704913,
-      "marketCap": 19542546432,
-      "peTTM": 203.46666,
+      "volume": 465075,
+      "averageVolume": 709633,
+      "marketCap": 19798675456,
+      "peTTM": 206.13333,
       "eps": 0.15,
       "divYield": 0,
       "marketState": "REGULAR",
       "extendedLabel": null
     },
     "USAR": {
-      "c": 24.53,
-      "d": 0.23999977,
-      "dp": 0.98805994,
+      "c": 24.4,
+      "d": 0.1099987,
+      "dp": 0.4528559,
       "o": 22.85,
       "h": 24.95,
       "l": 22.8,
@@ -398,9 +398,9 @@
       "extendedLabel": "Pre-market"
     },
     "SMHN.DE": {
-      "c": 89.8,
-      "d": 2.9500046,
-      "dp": 3.3966663,
+      "c": 88.15,
+      "d": 1.300003,
+      "dp": 1.4968371,
       "o": 90,
       "h": 91.35,
       "l": 88.15,
@@ -410,19 +410,19 @@
       "exchange": "XETRA",
       "fiftyTwoWeekHigh": 94.75,
       "fiftyTwoWeekLow": 24,
-      "volume": 12440,
+      "volume": 18705,
       "averageVolume": 142249,
-      "marketCap": 1716575360,
-      "peTTM": 30.440678,
+      "marketCap": 1685034752,
+      "peTTM": 29.881355,
       "eps": 2.95,
       "divYield": 0.0034542317,
       "marketState": "REGULAR",
       "extendedLabel": null
     },
     "INTC": {
-      "c": 119.9,
-      "d": 1.4000015,
-      "dp": 1.181436,
+      "c": 119,
+      "d": 0.5,
+      "dp": 0.42194092,
       "o": 116.58,
       "h": 119.41,
       "l": 113.17,
@@ -442,9 +442,9 @@
       "extendedLabel": "Pre-market"
     },
     "TSLA": {
-      "c": 420.2,
-      "d": 2.350006,
-      "dp": 0.5624042,
+      "c": 418.93,
+      "d": 1.0799866,
+      "dp": 0.25846273,
       "o": 422.245,
       "h": 426.95,
       "l": 412.9,
@@ -464,9 +464,9 @@
       "extendedLabel": "Pre-market"
     },
     "GOOG": {
-      "c": 385.79,
-      "d": 2.3200073,
-      "dp": 0.6050036,
+      "c": 384.1259,
+      "d": 0.6558838,
+      "dp": 0.17103913,
       "o": 381.885,
       "h": 388.6778,
       "l": 379.48,
@@ -644,7 +644,7 @@
       "exchange": "Stockholm",
       "weburl": null,
       "currency": "SEK",
-      "marketCap": 19941961728,
+      "marketCap": 20105056256,
       "ipo": null,
       "ticker": null
     },
@@ -657,7 +657,7 @@
       "exchange": "LSE",
       "weburl": null,
       "currency": "GBp",
-      "marketCap": 427228640,
+      "marketCap": 420859456,
       "ipo": null,
       "ticker": null
     },
@@ -748,7 +748,7 @@
       "exchange": "Milan",
       "weburl": null,
       "currency": "EUR",
-      "marketCap": 19542546432,
+      "marketCap": 19798675456,
       "ipo": null,
       "ticker": null
     },
@@ -774,7 +774,7 @@
       "exchange": "XETRA",
       "weburl": null,
       "currency": "EUR",
-      "marketCap": 1716575360,
+      "marketCap": 1685034752,
       "ipo": null,
       "ticker": null
     },
@@ -936,12 +936,12 @@
     "SIVE.ST": {
       "peTTM": null,
       "pbAnnual": null,
-      "fiftyTwoWeekHigh": 67.55,
+      "fiftyTwoWeekHigh": 67.8,
       "fiftyTwoWeekLow": 2.85,
       "divYield": 0,
       "beta": null,
       "eps": -0.81,
-      "volume": 6207808,
+      "volume": 8874174,
       "averageVolume": 24189588
     },
     "IQE.L": {
@@ -952,7 +952,7 @@
       "divYield": 0,
       "beta": null,
       "eps": -0.05,
-      "volume": 7627322,
+      "volume": 13130279,
       "averageVolume": 38813969
     },
     "VITL": {
@@ -1022,15 +1022,15 @@
       "averageVolume": 7809482
     },
     "TPRO.MI": {
-      "peTTM": 203.46666,
+      "peTTM": 206.13333,
       "pbAnnual": null,
-      "fiftyTwoWeekHigh": 30.9,
+      "fiftyTwoWeekHigh": 31.18,
       "fiftyTwoWeekLow": 5.92,
       "divYield": 0,
       "beta": null,
       "eps": 0.15,
-      "volume": 270040,
-      "averageVolume": 704913
+      "volume": 465075,
+      "averageVolume": 709633
     },
     "USAR": {
       "peTTM": null,
@@ -1044,14 +1044,14 @@
       "averageVolume": 15491836
     },
     "SMHN.DE": {
-      "peTTM": 30.440678,
+      "peTTM": 29.881355,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 94.75,
       "fiftyTwoWeekLow": 24,
       "divYield": 0.34542317,
       "beta": null,
       "eps": 2.95,
-      "volume": 12440,
+      "volume": 18705,
       "averageVolume": 142249
     },
     "INTC": {
@@ -1112,10 +1112,10 @@
   },
   "fxRates": {
     "USD": 1,
-    "TWD": 0.031773265,
-    "SEK": 0.106966294,
-    "GBp": 0.013425702,
-    "EUR": 1.1610357,
-    "CNY": 0.1472017
+    "TWD": 0.031779326,
+    "SEK": 0.10679722,
+    "GBp": 0.013424441,
+    "EUR": 1.1604967,
+    "CNY": 0.14718436
   }
 }
