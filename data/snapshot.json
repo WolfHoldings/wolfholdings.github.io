@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-05-23T02:48:41.084Z",
+  "updatedAt": "2026-05-23T06:11:35.422Z",
   "quotes": {
     "LAES": {
-      "c": 3.32,
-      "d": -0.06000018,
-      "dp": -1.7751533,
+      "c": 3.38,
+      "d": 0.11,
+      "dp": 3.36392,
       "o": 3.26,
       "h": 3.56,
       "l": 3.25,
@@ -20,13 +20,13 @@
       "peTTM": null,
       "eps": -0.24,
       "divYield": 0,
-      "marketState": "POSTPOST",
-      "extendedLabel": "After hours"
+      "marketState": "CLOSED",
+      "extendedLabel": null
     },
     "COHX": {
-      "c": 57,
-      "d": -0.5999985,
-      "dp": -1.041664,
+      "c": 57.6,
+      "d": -0.52,
+      "dp": -0.894701,
       "o": 58.84,
       "h": 59.325,
       "l": 55.0583,
@@ -42,13 +42,13 @@
       "peTTM": null,
       "eps": null,
       "divYield": 0,
-      "marketState": "POSTPOST",
-      "extendedLabel": "After hours"
+      "marketState": "CLOSED",
+      "extendedLabel": null
     },
     "BABA": {
-      "c": 129.41,
-      "d": -0.58999634,
-      "dp": -0.45384333,
+      "c": 130,
+      "d": -1.47,
+      "dp": -1.11813,
       "o": 126.925,
       "h": 130.75,
       "l": 126.925,
@@ -61,11 +61,11 @@
       "volume": 11745743,
       "averageVolume": 11504242,
       "marketCap": 311887429632,
-      "peTTM": 20.123838,
-      "eps": 6.46,
+      "peTTM": 20.092737,
+      "eps": 6.47,
       "divYield": 0.05508481,
-      "marketState": "POSTPOST",
-      "extendedLabel": "After hours"
+      "marketState": "CLOSED",
+      "extendedLabel": null
     },
     "6488.TWO": {
       "c": 717,
@@ -222,9 +222,9 @@
       "extendedLabel": null
     },
     "VITL": {
-      "c": 9.9213,
-      "d": -0.20870018,
-      "dp": -2.060219,
+      "c": 10.13,
+      "d": 0.89,
+      "dp": 9.63204,
       "o": 9.36,
       "h": 10.145,
       "l": 9.3553,
@@ -240,13 +240,13 @@
       "peTTM": 9.740385,
       "eps": 1.04,
       "divYield": 0,
-      "marketState": "POSTPOST",
-      "extendedLabel": "After hours"
+      "marketState": "CLOSED",
+      "extendedLabel": null
     },
     "ADBE": {
-      "c": 244.47,
-      "d": -0.2899933,
-      "dp": -0.118480675,
+      "c": 244.76,
+      "d": 0.659988,
+      "dp": 0.270376,
       "o": 245.9,
       "h": 249.77,
       "l": 242.71,
@@ -262,13 +262,13 @@
       "peTTM": 14.263403,
       "eps": 17.16,
       "divYield": 0,
-      "marketState": "POSTPOST",
-      "extendedLabel": "After hours"
+      "marketState": "CLOSED",
+      "extendedLabel": null
     },
     "NVO": {
-      "c": 44.85,
-      "d": -0.11000061,
-      "dp": -0.24466328,
+      "c": 44.96,
+      "d": 0.57,
+      "dp": 1.28407,
       "o": 44.61,
       "h": 45.18,
       "l": 44.465,
@@ -284,13 +284,13 @@
       "peTTM": 10.553989,
       "eps": 4.26,
       "divYield": 0.26357287,
-      "marketState": "POSTPOST",
-      "extendedLabel": "After hours"
+      "marketState": "CLOSED",
+      "extendedLabel": null
     },
     "PFE": {
-      "c": 25.91,
-      "d": 0.010000229,
-      "dp": 0.038610924,
+      "c": 25.9,
+      "d": -0.0500011,
+      "dp": -0.192683,
       "o": 26,
       "h": 26.15,
       "l": 25.76,
@@ -306,13 +306,13 @@
       "peTTM": 19.770992,
       "eps": 1.31,
       "divYield": 0.06628131,
-      "marketState": "POSTPOST",
-      "extendedLabel": "After hours"
+      "marketState": "CLOSED",
+      "extendedLabel": null
     },
     "OXY": {
-      "c": 59.1597,
-      "d": 0.3496971,
-      "dp": 0.59462184,
+      "c": 58.81,
+      "d": -0.0200005,
+      "dp": -0.033997,
       "o": 58.69,
       "h": 59.17,
       "l": 58.08,
@@ -328,13 +328,13 @@
       "peTTM": 79.47298,
       "eps": 0.74,
       "divYield": 0.016658168,
-      "marketState": "POSTPOST",
-      "extendedLabel": "After hours"
+      "marketState": "CLOSED",
+      "extendedLabel": null
     },
     "LWLG": {
-      "c": 12.69,
-      "d": -0.1600008,
-      "dp": -1.2451423,
+      "c": 12.85,
+      "d": -0.32,
+      "dp": -2.42976,
       "o": 13.42,
       "h": 13.58,
       "l": 12.52,
@@ -350,8 +350,8 @@
       "peTTM": null,
       "eps": -0.16,
       "divYield": 0,
-      "marketState": "POSTPOST",
-      "extendedLabel": "After hours"
+      "marketState": "CLOSED",
+      "extendedLabel": null
     },
     "TPRO.MI": {
       "c": 32,
@@ -376,9 +376,9 @@
       "extendedLabel": null
     },
     "USAR": {
-      "c": 25.28,
-      "d": -0.01999855,
-      "dp": -0.07904565,
+      "c": 25.3,
+      "d": 1.01,
+      "dp": 4.15808,
       "o": 24.605,
       "h": 26.7093,
       "l": 24.605,
@@ -394,8 +394,8 @@
       "peTTM": null,
       "eps": -4.4,
       "divYield": 0,
-      "marketState": "POSTPOST",
-      "extendedLabel": "After hours"
+      "marketState": "CLOSED",
+      "extendedLabel": null
     },
     "SMHN.DE": {
       "c": 90.35,
@@ -420,9 +420,9 @@
       "extendedLabel": null
     },
     "INTC": {
-      "c": 118.15,
-      "d": -1.6899948,
-      "dp": -1.4102093,
+      "c": 119.84,
+      "d": 1.34,
+      "dp": 1.1308,
       "o": 120.295,
       "h": 122.78,
       "l": 118.09,
@@ -438,13 +438,13 @@
       "peTTM": null,
       "eps": -0.6,
       "divYield": 0,
-      "marketState": "POSTPOST",
-      "extendedLabel": "After hours"
+      "marketState": "CLOSED",
+      "extendedLabel": null
     },
     "TSLA": {
-      "c": 423.68,
-      "d": -2.330017,
-      "dp": -0.5469395,
+      "c": 426.01,
+      "d": 8.16,
+      "dp": 1.95285,
       "o": 422.665,
       "h": 431.51,
       "l": 420.51,
@@ -460,13 +460,13 @@
       "peTTM": 383.7928,
       "eps": 1.11,
       "divYield": 0,
-      "marketState": "POSTPOST",
-      "extendedLabel": "After hours"
+      "marketState": "CLOSED",
+      "extendedLabel": null
     },
     "GOOG": {
-      "c": 378.4,
-      "d": -0.980011,
-      "dp": -0.25831908,
+      "c": 379.38,
+      "d": -4.09,
+      "dp": -1.06658,
       "o": 382.85,
       "h": 384.85,
       "l": 378.26,
@@ -482,8 +482,8 @@
       "peTTM": 28.894136,
       "eps": 13.13,
       "divYield": 0.0021905233,
-      "marketState": "POSTPOST",
-      "extendedLabel": "After hours"
+      "marketState": "CLOSED",
+      "extendedLabel": null
     },
     "000333.SZ": {
       "c": 80.28,
@@ -868,13 +868,13 @@
       "averageVolume": 730122
     },
     "BABA": {
-      "peTTM": 20.123838,
+      "peTTM": 20.092737,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 192.67,
       "fiftyTwoWeekLow": 103.71,
       "divYield": 5.508481,
       "beta": null,
-      "eps": 6.46,
+      "eps": 6.47,
       "volume": 11745743,
       "averageVolume": 11504242
     },
