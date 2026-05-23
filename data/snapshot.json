@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-23T16:01:03.818Z",
+  "updatedAt": "2026-05-23T19:06:39.069Z",
   "quotes": {
     "LAES": {
       "c": 3.38,
@@ -14,7 +14,7 @@
       "exchange": "NasdaqGS",
       "fiftyTwoWeekHigh": 8.71,
       "fiftyTwoWeekLow": 1.99,
-      "volume": 30953221,
+      "volume": 30940362,
       "averageVolume": 11255722,
       "marketCap": 752976128,
       "peTTM": null,
@@ -245,8 +245,8 @@
     },
     "ADBE": {
       "c": 244.76,
-      "d": 0.659988,
-      "dp": 0.270376,
+      "d": 0.6599884,
+      "dp": 0.27037624,
       "o": 245.9,
       "h": 249.77,
       "l": 242.71,
@@ -454,7 +454,7 @@
       "exchange": "NasdaqGS",
       "fiftyTwoWeekHigh": 498.83,
       "fiftyTwoWeekLow": 273.21,
-      "volume": 45068466,
+      "volume": 45063632,
       "averageVolume": 61687869,
       "marketCap": 1599975981056,
       "peTTM": 383.7928,
@@ -853,7 +853,7 @@
       "divYield": 0,
       "beta": null,
       "eps": -0.24,
-      "volume": 30953221,
+      "volume": 30940362,
       "averageVolume": 11255722
     },
     "COHX": {
@@ -1073,7 +1073,7 @@
       "divYield": 0,
       "beta": null,
       "eps": 1.11,
-      "volume": 45068466,
+      "volume": 45063632,
       "averageVolume": 61687869
     },
     "GOOG": {
@@ -1113,8 +1113,8 @@
   "fxRates": {
     "USD": 1,
     "TWD": 0.031797513,
-    "SEK": 0.10697589,
-    "GBp": 0.013432915000000002,
+    "SEK": 0.106785245,
+    "GBp": 0.013433818,
     "EUR": 1.1604967,
     "CNY": 0.1471887
   }
