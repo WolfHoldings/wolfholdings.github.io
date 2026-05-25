@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-25T17:05:34.592Z",
+  "updatedAt": "2026-05-25T19:27:29.807Z",
   "quotes": {
     "LAES": {
       "c": 3.38,
@@ -106,7 +106,7 @@
       "averageVolume": 197127,
       "marketCap": 4869033984,
       "peTTM": null,
-      "eps": -1.74,
+      "eps": -1.89,
       "divYield": 0,
       "marketState": "PREPRE",
       "extendedLabel": null
@@ -190,7 +190,7 @@
       "exchange": "Stockholm",
       "fiftyTwoWeekHigh": 89.45,
       "fiftyTwoWeekLow": 2.85,
-      "volume": 19905872,
+      "volume": 19907730,
       "averageVolume": 25341007,
       "marketCap": 25368549376,
       "peTTM": null,
@@ -416,7 +416,7 @@
       "peTTM": 31.288136,
       "eps": 2.95,
       "divYield": 0.0033204209,
-      "marketState": "POST",
+      "marketState": "POSTPOST",
       "extendedLabel": null
     },
     "INTC": {
@@ -896,7 +896,7 @@
       "fiftyTwoWeekLow": 29.05,
       "divYield": 0,
       "beta": null,
-      "eps": -1.74,
+      "eps": -1.89,
       "volume": 224745,
       "averageVolume": 197127
     },
@@ -941,7 +941,7 @@
       "divYield": 0,
       "beta": null,
       "eps": -0.81,
-      "volume": 19905872,
+      "volume": 19907730,
       "averageVolume": 25341007
     },
     "IQE.L": {
@@ -1113,9 +1113,9 @@
   "fxRates": {
     "USD": 1,
     "TWD": 0.031850178,
-    "SEK": 0.107780576,
-    "GBp": 0.013504753000000001,
-    "EUR": 1.1644155,
+    "SEK": 0.107719734,
+    "GBp": 0.013506942,
+    "EUR": 1.1646867,
     "CNY": 0.14741218
   }
 }
