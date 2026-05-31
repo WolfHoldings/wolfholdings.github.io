@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-31T13:41:26.882Z",
+  "updatedAt": "2026-05-31T16:05:48.045Z",
   "quotes": {
     "LAES": {
       "c": 3.48,
@@ -86,7 +86,7 @@
       "peTTM": 66.64478,
       "eps": 15.23,
       "divYield": 0.0083063645,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "6634.TWO": {
@@ -108,7 +108,7 @@
       "peTTM": null,
       "eps": -1.74,
       "divYield": 0,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "1560.TW": {
@@ -130,7 +130,7 @@
       "peTTM": 78.72807,
       "eps": 9.12,
       "divYield": 0,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "3105.TWO": {
@@ -152,7 +152,7 @@
       "peTTM": 131.42143,
       "eps": 4.01,
       "divYield": 0.003787879,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "6451.TW": {
@@ -174,7 +174,7 @@
       "peTTM": 1965.5173,
       "eps": 0.29,
       "divYield": 0,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "SIVE.ST": {
@@ -190,7 +190,7 @@
       "exchange": "Stockholm",
       "fiftyTwoWeekHigh": 90.5,
       "fiftyTwoWeekLow": 2.85,
-      "volume": 35170020,
+      "volume": 35142990,
       "averageVolume": 25849094,
       "marketCap": 20446070784,
       "peTTM": null,
@@ -256,7 +256,7 @@
       "exchange": "NasdaqGS",
       "fiftyTwoWeekHigh": 421.48,
       "fiftyTwoWeekLow": 224.13,
-      "volume": 8839367,
+      "volume": 8835604,
       "averageVolume": 5488282,
       "marketCap": 104772681728,
       "peTTM": 15.105477,
@@ -337,7 +337,7 @@
       "dp": -5.23561,
       "o": 11.32,
       "h": 11.32,
-      "l": 10.4,
+      "l": 10.41,
       "pc": 11.46,
       "currency": "USD",
       "name": "Lightwave Logic, Inc.",
@@ -359,7 +359,7 @@
       "dp": -5.47059,
       "o": 33.9,
       "h": 33.92,
-      "l": 31.2,
+      "l": 31.62,
       "pc": 34,
       "currency": "EUR",
       "name": "TECHNOPROBE",
@@ -469,7 +469,7 @@
       "dp": -2.50958,
       "o": 381.2,
       "h": 381.65,
-      "l": 374.3,
+      "l": 374.37,
       "pc": 386.12,
       "currency": "USD",
       "name": "Alphabet Inc.",
@@ -500,11 +500,11 @@
       "fiftyTwoWeekLow": 69.88,
       "volume": 42972944,
       "averageVolume": 28512227,
-      "marketCap": 615386513408,
+      "marketCap": 615435403264,
       "peTTM": 13.891752,
       "eps": 5.82,
       "divYield": 0.054464854,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "300782.SZ": {
@@ -526,7 +526,7 @@
       "peTTM": null,
       "eps": -0.74,
       "divYield": 0,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     }
   },
@@ -826,7 +826,7 @@
       "exchange": "Shenzhen",
       "weburl": null,
       "currency": "CNY",
-      "marketCap": 615386513408,
+      "marketCap": 615435403264,
       "ipo": null,
       "ticker": null
     },
@@ -941,7 +941,7 @@
       "divYield": 0,
       "beta": null,
       "eps": -0.81,
-      "volume": 35170020,
+      "volume": 35142990,
       "averageVolume": 25849094
     },
     "IQE.L": {
@@ -974,7 +974,7 @@
       "divYield": 0,
       "beta": null,
       "eps": 17.16,
-      "volume": 8839367,
+      "volume": 8835604,
       "averageVolume": 5488282
     },
     "NVO": {
