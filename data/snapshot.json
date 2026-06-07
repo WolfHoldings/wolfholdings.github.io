@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-07T13:48:30.310Z",
+  "updatedAt": "2026-06-07T16:13:17.779Z",
   "quotes": {
     "LAES": {
       "c": 3.2,
@@ -29,7 +29,7 @@
       "dp": -21.0286,
       "o": 64.58,
       "h": 68.71,
-      "l": 54.39,
+      "l": 54.33,
       "pc": 70,
       "currency": "USD",
       "name": "Tradr 2X Long COHR Daily ETF",
@@ -86,7 +86,7 @@
       "peTTM": 53.18033,
       "eps": 15.25,
       "divYield": 0.0088505745,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "6634.TWO": {
@@ -108,7 +108,7 @@
       "peTTM": null,
       "eps": -1.74,
       "divYield": 0,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "1560.TW": {
@@ -130,7 +130,7 @@
       "peTTM": 76.957,
       "eps": 9.07,
       "divYield": 0,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "3105.TWO": {
@@ -152,7 +152,7 @@
       "peTTM": 120.57356,
       "eps": 4.01,
       "divYield": 0.004102564,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "6451.TW": {
@@ -174,7 +174,7 @@
       "peTTM": 2466.6665,
       "eps": 0.27,
       "divYield": 0,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "SIVE.ST": {
@@ -190,7 +190,7 @@
       "exchange": "Stockholm",
       "fiftyTwoWeekHigh": 110,
       "fiftyTwoWeekLow": 2.85,
-      "volume": 9172081,
+      "volume": 9178317,
       "averageVolume": 26970754,
       "marketCap": 23278981120,
       "peTTM": null,
@@ -256,7 +256,7 @@
       "exchange": "NasdaqGS",
       "fiftyTwoWeekHigh": 421.48,
       "fiftyTwoWeekLow": 224.13,
-      "volume": 4721544,
+      "volume": 4726410,
       "averageVolume": 5571100,
       "marketCap": 101632049152,
       "peTTM": 14.661225,
@@ -504,7 +504,7 @@
       "peTTM": 14.036082,
       "eps": 5.82,
       "divYield": 0.052171808,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "300782.SZ": {
@@ -526,7 +526,7 @@
       "peTTM": null,
       "eps": -0.73,
       "divYield": 0,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     }
   },
@@ -941,7 +941,7 @@
       "divYield": 0,
       "beta": null,
       "eps": -0.76,
-      "volume": 9172081,
+      "volume": 9178317,
       "averageVolume": 26970754
     },
     "IQE.L": {
@@ -974,7 +974,7 @@
       "divYield": 0,
       "beta": null,
       "eps": 17.15,
-      "volume": 4721544,
+      "volume": 4726410,
       "averageVolume": 5571100
     },
     "NVO": {
