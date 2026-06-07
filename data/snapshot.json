@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-07T19:20:00.016Z",
+  "updatedAt": "2026-06-07T22:02:15.988Z",
   "quotes": {
     "LAES": {
       "c": 3.2,
@@ -29,7 +29,7 @@
       "dp": -21.0286,
       "o": 64.58,
       "h": 68.71,
-      "l": 54.33,
+      "l": 54.39,
       "pc": 70,
       "currency": "USD",
       "name": "Tradr 2X Long COHR Daily ETF",
@@ -196,7 +196,7 @@
       "peTTM": null,
       "eps": -0.76,
       "divYield": 0,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "IQE.L": {
@@ -372,7 +372,7 @@
       "peTTM": 205.73332,
       "eps": 0.15,
       "divYield": 0,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "USAR": {
@@ -416,7 +416,7 @@
       "peTTM": 30.508474,
       "eps": 2.95,
       "divYield": 0.0031729245,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "INTC": {
@@ -1112,10 +1112,10 @@
   },
   "fxRates": {
     "USD": 1,
-    "TWD": 0.031660598,
-    "SEK": 0.10577645,
-    "GBp": 0.013337246,
-    "EUR": 1.1527377,
+    "TWD": 0.03165759,
+    "SEK": 0.10573585,
+    "GBp": 0.013319836000000002,
+    "EUR": 1.1515431,
     "CNY": 0.14781967
   }
 }
