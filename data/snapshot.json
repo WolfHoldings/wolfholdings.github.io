@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-07T11:07:58.019Z",
+  "updatedAt": "2026-06-07T13:48:30.310Z",
   "quotes": {
     "LAES": {
       "c": 3.2,
@@ -29,7 +29,7 @@
       "dp": -21.0286,
       "o": 64.58,
       "h": 68.71,
-      "l": 54.33,
+      "l": 54.39,
       "pc": 70,
       "currency": "USD",
       "name": "Tradr 2X Long COHR Daily ETF",
@@ -190,7 +190,7 @@
       "exchange": "Stockholm",
       "fiftyTwoWeekHigh": 110,
       "fiftyTwoWeekLow": 2.85,
-      "volume": 9178317,
+      "volume": 9172081,
       "averageVolume": 26970754,
       "marketCap": 23278981120,
       "peTTM": null,
@@ -256,7 +256,7 @@
       "exchange": "NasdaqGS",
       "fiftyTwoWeekHigh": 421.48,
       "fiftyTwoWeekLow": 224.13,
-      "volume": 4726410,
+      "volume": 4721544,
       "averageVolume": 5571100,
       "marketCap": 101632049152,
       "peTTM": 14.661225,
@@ -941,7 +941,7 @@
       "divYield": 0,
       "beta": null,
       "eps": -0.76,
-      "volume": 9178317,
+      "volume": 9172081,
       "averageVolume": 26970754
     },
     "IQE.L": {
@@ -974,7 +974,7 @@
       "divYield": 0,
       "beta": null,
       "eps": 17.15,
-      "volume": 4726410,
+      "volume": 4721544,
       "averageVolume": 5571100
     },
     "NVO": {
@@ -1116,6 +1116,6 @@
     "SEK": 0.105707124,
     "GBp": 0.013337246,
     "EUR": 1.1527377,
-    "CNY": 0.14779782
+    "CNY": 0.14781967
   }
 }
