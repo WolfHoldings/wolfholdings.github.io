@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-14T13:58:42.582Z",
+  "updatedAt": "2026-06-14T16:19:44.312Z",
   "quotes": {
     "LAES": {
       "c": 3.1,
@@ -86,7 +86,7 @@
       "peTTM": 56.507523,
       "eps": 15.29,
       "divYield": 0.009796438,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "6634.TWO": {
@@ -108,7 +108,7 @@
       "peTTM": null,
       "eps": -1.74,
       "divYield": 0,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "1560.TW": {
@@ -130,7 +130,7 @@
       "peTTM": 71.412926,
       "eps": 9.13,
       "divYield": 0,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "3105.TWO": {
@@ -152,7 +152,7 @@
       "peTTM": 126.566414,
       "eps": 3.99,
       "divYield": 0.0041536866,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "6451.TW": {
@@ -174,7 +174,7 @@
       "peTTM": 2008,
       "eps": 0.25,
       "divYield": 0,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "SIVE.ST": {
@@ -504,7 +504,7 @@
       "peTTM": 14.300688,
       "eps": 5.82,
       "divYield": 0.05038079,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "300782.SZ": {
@@ -526,7 +526,7 @@
       "peTTM": null,
       "eps": -0.73,
       "divYield": 0,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     }
   },
