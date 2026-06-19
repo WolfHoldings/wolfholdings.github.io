@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-19T19:47:19.260Z",
+  "updatedAt": "2026-06-19T22:02:14.813Z",
   "quotes": {
     "LAES": {
       "c": 3.12,
@@ -372,7 +372,7 @@
       "peTTM": 249.99998,
       "eps": 0.15,
       "divYield": 0,
-      "marketState": "POSTPOST",
+      "marketState": "CLOSED",
       "extendedLabel": null
     },
     "USAR": {
@@ -416,7 +416,7 @@
       "peTTM": 60.378376,
       "eps": 1.85,
       "divYield": 0.0029211298,
-      "marketState": "POSTPOST",
+      "marketState": "CLOSED",
       "extendedLabel": null
     },
     "INTC": {
@@ -1112,10 +1112,10 @@
   },
   "fxRates": {
     "USD": 1,
-    "TWD": 0.031623553,
-    "SEK": 0.10448185,
-    "GBp": 0.013234341,
-    "EUR": 1.1479738,
+    "TWD": 0.031575624,
+    "SEK": 0.104448676,
+    "GBp": 0.013237144000000001,
+    "EUR": 1.1469204,
     "CNY": 0.14775196
   }
 }
