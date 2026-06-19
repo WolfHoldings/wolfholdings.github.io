@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-19T15:10:56.219Z",
+  "updatedAt": "2026-06-19T19:47:19.260Z",
   "quotes": {
     "LAES": {
       "c": 3.12,
@@ -200,9 +200,9 @@
       "extendedLabel": null
     },
     "IQE.L": {
-      "c": 49.75,
-      "d": -1.25,
-      "dp": -2.4509804,
+      "c": 50.8,
+      "d": -0.20000076,
+      "dp": -0.3921584,
       "o": 51,
       "h": 52.8131,
       "l": 48.5,
@@ -212,13 +212,13 @@
       "exchange": "LSE",
       "fiftyTwoWeekHigh": 72.9,
       "fiftyTwoWeekLow": 4.655,
-      "volume": 10922206,
+      "volume": 15847286,
       "averageVolume": 40141454,
-      "marketCap": 657024448,
+      "marketCap": 670891264,
       "peTTM": null,
       "eps": -0.04,
       "divYield": 0,
-      "marketState": "REGULAR",
+      "marketState": "POSTPOST",
       "extendedLabel": null
     },
     "VITL": {
@@ -354,25 +354,25 @@
       "extendedLabel": null
     },
     "TPRO.MI": {
-      "c": 37.18,
-      "d": -0.579998,
-      "dp": -1.5360118,
+      "c": 37.5,
+      "d": -0.25999832,
+      "dp": -0.6885549,
       "o": 37.52,
       "h": 38.48,
-      "l": 37,
+      "l": 36.92,
       "pc": 37.76,
       "currency": "EUR",
       "name": "TECHNOPROBE",
       "exchange": "Milan",
       "fiftyTwoWeekHigh": 38.58,
       "fiftyTwoWeekLow": 5.92,
-      "volume": 400246,
+      "volume": 1112898,
       "averageVolume": 986917,
-      "marketCap": 23807074304,
-      "peTTM": 247.86665,
+      "marketCap": 24011976704,
+      "peTTM": 249.99998,
       "eps": 0.15,
       "divYield": 0,
-      "marketState": "REGULAR",
+      "marketState": "POSTPOST",
       "extendedLabel": null
     },
     "USAR": {
@@ -398,9 +398,9 @@
       "extendedLabel": null
     },
     "SMHN.DE": {
-      "c": 112.2,
-      "d": 9.5,
-      "dp": 9.250244,
+      "c": 111.7,
+      "d": 9,
+      "dp": 8.763389,
       "o": 105.7,
       "h": 113.9,
       "l": 105.7,
@@ -410,13 +410,13 @@
       "exchange": "XETRA",
       "fiftyTwoWeekHigh": 113.9,
       "fiftyTwoWeekLow": 24,
-      "volume": 92313,
+      "volume": 579764,
       "averageVolume": 129378,
-      "marketCap": 2144763264,
-      "peTTM": 60.648647,
+      "marketCap": 2135205504,
+      "peTTM": 60.378376,
       "eps": 1.85,
       "divYield": 0.0029211298,
-      "marketState": "REGULAR",
+      "marketState": "POSTPOST",
       "extendedLabel": null
     },
     "INTC": {
@@ -657,7 +657,7 @@
       "exchange": "LSE",
       "weburl": null,
       "currency": "GBp",
-      "marketCap": 657024448,
+      "marketCap": 670891264,
       "ipo": null,
       "ticker": null
     },
@@ -748,7 +748,7 @@
       "exchange": "Milan",
       "weburl": null,
       "currency": "EUR",
-      "marketCap": 23807074304,
+      "marketCap": 24011976704,
       "ipo": null,
       "ticker": null
     },
@@ -774,7 +774,7 @@
       "exchange": "XETRA",
       "weburl": null,
       "currency": "EUR",
-      "marketCap": 2144763264,
+      "marketCap": 2135205504,
       "ipo": null,
       "ticker": null
     },
@@ -952,7 +952,7 @@
       "divYield": 0,
       "beta": null,
       "eps": -0.04,
-      "volume": 10922206,
+      "volume": 15847286,
       "averageVolume": 40141454
     },
     "VITL": {
@@ -1022,14 +1022,14 @@
       "averageVolume": 7788614
     },
     "TPRO.MI": {
-      "peTTM": 247.86665,
+      "peTTM": 249.99998,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 38.58,
       "fiftyTwoWeekLow": 5.92,
       "divYield": 0,
       "beta": null,
       "eps": 0.15,
-      "volume": 400246,
+      "volume": 1112898,
       "averageVolume": 986917
     },
     "USAR": {
@@ -1044,14 +1044,14 @@
       "averageVolume": 17094147
     },
     "SMHN.DE": {
-      "peTTM": 60.648647,
+      "peTTM": 60.378376,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 113.9,
       "fiftyTwoWeekLow": 24,
       "divYield": 0.29211298,
       "beta": null,
       "eps": 1.85,
-      "volume": 92313,
+      "volume": 579764,
       "averageVolume": 129378
     },
     "INTC": {
@@ -1112,10 +1112,10 @@
   },
   "fxRates": {
     "USD": 1,
-    "TWD": 0.031614553,
-    "SEK": 0.10444344,
-    "GBp": 0.013227688,
-    "EUR": 1.1477103,
+    "TWD": 0.031623553,
+    "SEK": 0.10448185,
+    "GBp": 0.013234341,
+    "EUR": 1.1479738,
     "CNY": 0.14775196
   }
 }
