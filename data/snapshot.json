@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-20T11:16:28.616Z",
+  "updatedAt": "2026-06-20T13:58:16.768Z",
   "quotes": {
     "LAES": {
       "c": 3.12,
@@ -213,7 +213,7 @@
       "fiftyTwoWeekHigh": 72.9,
       "fiftyTwoWeekLow": 4.655,
       "volume": 15847286,
-      "averageVolume": 40496583,
+      "averageVolume": 40092496,
       "marketCap": 670891264,
       "peTTM": null,
       "eps": -0.04,
@@ -348,7 +348,7 @@
       "averageVolume": 7825359,
       "marketCap": 1506898816,
       "peTTM": null,
-      "eps": -0.15,
+      "eps": -0.16,
       "divYield": 0,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -411,7 +411,7 @@
       "fiftyTwoWeekHigh": 113.9,
       "fiftyTwoWeekLow": 24,
       "volume": 579764,
-      "averageVolume": 128846,
+      "averageVolume": 136120,
       "marketCap": 2135205504,
       "peTTM": 60.378376,
       "eps": 1.85,
@@ -953,7 +953,7 @@
       "beta": null,
       "eps": -0.04,
       "volume": 15847286,
-      "averageVolume": 40496583
+      "averageVolume": 40092496
     },
     "VITL": {
       "peTTM": 10.009616,
@@ -1017,7 +1017,7 @@
       "fiftyTwoWeekLow": 1.19,
       "divYield": 0,
       "beta": null,
-      "eps": -0.15,
+      "eps": -0.16,
       "volume": 4741444,
       "averageVolume": 7825359
     },
@@ -1052,7 +1052,7 @@
       "beta": null,
       "eps": 1.85,
       "volume": 579764,
-      "averageVolume": 128846
+      "averageVolume": 136120
     },
     "INTC": {
       "peTTM": null,
