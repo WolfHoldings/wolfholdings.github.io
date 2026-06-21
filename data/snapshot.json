@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-21T19:26:55.495Z",
+  "updatedAt": "2026-06-21T22:12:50.025Z",
   "quotes": {
     "LAES": {
       "c": 3.12,
@@ -196,7 +196,7 @@
       "peTTM": null,
       "eps": -0.76,
       "divYield": 0,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "IQE.L": {
@@ -372,7 +372,7 @@
       "peTTM": 249.99998,
       "eps": 0.15,
       "divYield": 0,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "USAR": {
@@ -416,7 +416,7 @@
       "peTTM": 60.378376,
       "eps": 1.85,
       "divYield": 0.0029211298,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "INTC": {
@@ -1113,9 +1113,9 @@
   "fxRates": {
     "USD": 1,
     "TWD": 0.031575624,
-    "SEK": 0.104448676,
-    "GBp": 0.013237144000000001,
-    "EUR": 1.1469204,
-    "CNY": 0.14775196
+    "SEK": 0.104387395,
+    "GBp": 0.013204981000000001,
+    "EUR": 1.1467891,
+    "CNY": 0.14782621
   }
 }
