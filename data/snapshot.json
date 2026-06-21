@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-21T14:06:11.164Z",
+  "updatedAt": "2026-06-21T16:43:35.978Z",
   "quotes": {
     "LAES": {
       "c": 3.12,
@@ -86,7 +86,7 @@
       "peTTM": 72.9783,
       "eps": 15.21,
       "divYield": 0.0069999998,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "6634.TWO": {
@@ -108,7 +108,7 @@
       "peTTM": null,
       "eps": -1.74,
       "divYield": 0,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "1560.TW": {
@@ -130,7 +130,7 @@
       "peTTM": 76.92307,
       "eps": 9.1,
       "divYield": 0,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "3105.TWO": {
@@ -152,7 +152,7 @@
       "peTTM": 131.67082,
       "eps": 4.01,
       "divYield": 0.0038535646,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "6451.TW": {
@@ -174,7 +174,7 @@
       "peTTM": 2003.5714,
       "eps": 0.28,
       "divYield": 0,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "SIVE.ST": {
@@ -500,11 +500,11 @@
       "fiftyTwoWeekLow": 69.88,
       "volume": 36366779,
       "averageVolume": 31273215,
-      "marketCap": 593848238080,
+      "marketCap": 593842536448,
       "peTTM": 13.402061,
       "eps": 5.82,
       "divYield": 0.054279223,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "300782.SZ": {
@@ -526,7 +526,7 @@
       "peTTM": null,
       "eps": -0.73,
       "divYield": 0,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     }
   },
@@ -826,7 +826,7 @@
       "exchange": "Shenzhen",
       "weburl": null,
       "currency": "CNY",
-      "marketCap": 593848238080,
+      "marketCap": 593842536448,
       "ipo": null,
       "ticker": null
     },
@@ -1116,6 +1116,6 @@
     "SEK": 0.104448676,
     "GBp": 0.013237144000000001,
     "EUR": 1.1469204,
-    "CNY": 0.14782621
+    "CNY": 0.14775196
   }
 }
