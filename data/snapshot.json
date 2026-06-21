@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-21T16:43:35.978Z",
+  "updatedAt": "2026-06-21T19:26:55.495Z",
   "quotes": {
     "LAES": {
       "c": 3.12,
@@ -500,7 +500,7 @@
       "fiftyTwoWeekLow": 69.88,
       "volume": 36366779,
       "averageVolume": 31273215,
-      "marketCap": 593842536448,
+      "marketCap": 593848238080,
       "peTTM": 13.402061,
       "eps": 5.82,
       "divYield": 0.054279223,
@@ -826,7 +826,7 @@
       "exchange": "Shenzhen",
       "weburl": null,
       "currency": "CNY",
-      "marketCap": 593842536448,
+      "marketCap": 593848238080,
       "ipo": null,
       "ticker": null
     },
