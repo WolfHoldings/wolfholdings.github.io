@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-21T04:00:41.338Z",
+  "updatedAt": "2026-06-21T09:46:26.423Z",
   "quotes": {
     "LAES": {
       "c": 3.12,
@@ -410,7 +410,7 @@
       "exchange": "XETRA",
       "fiftyTwoWeekHigh": 113.9,
       "fiftyTwoWeekLow": 24,
-      "volume": 579764,
+      "volume": 579879,
       "averageVolume": 136120,
       "marketCap": 2135205504,
       "peTTM": 60.378376,
@@ -1051,7 +1051,7 @@
       "divYield": 0.29211298,
       "beta": null,
       "eps": 1.85,
-      "volume": 579764,
+      "volume": 579879,
       "averageVolume": 136120
     },
     "INTC": {
