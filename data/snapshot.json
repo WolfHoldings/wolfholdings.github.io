@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-27T19:17:21.034Z",
+  "updatedAt": "2026-06-27T22:01:10.875Z",
   "quotes": {
     "LAES": {
       "c": 3.12,
@@ -234,7 +234,7 @@
       "exchange": "NasdaqGM",
       "fiftyTwoWeekHigh": 53.125,
       "fiftyTwoWeekLow": 7.95,
-      "volume": 3790496,
+      "volume": 3793836,
       "averageVolume": 3292432,
       "marketCap": 479474208,
       "peTTM": 10.759615,
@@ -344,7 +344,7 @@
       "exchange": "NasdaqCM",
       "fiftyTwoWeekHigh": 18.71,
       "fiftyTwoWeekLow": 1.19,
-      "volume": 18271192,
+      "volume": 19867973,
       "averageVolume": 7999200,
       "marketCap": 1215688320,
       "peTTM": null,
@@ -500,7 +500,7 @@
       "fiftyTwoWeekLow": 69.88,
       "volume": 44953388,
       "averageVolume": 32111836,
-      "marketCap": 598035660800,
+      "marketCap": 598029893632,
       "peTTM": 13.496564,
       "eps": 5.82,
       "divYield": 0.056209154,
@@ -826,7 +826,7 @@
       "exchange": "Shenzhen",
       "weburl": null,
       "currency": "CNY",
-      "marketCap": 598035660800,
+      "marketCap": 598029893632,
       "ipo": null,
       "ticker": null
     },
@@ -963,7 +963,7 @@
       "divYield": 0,
       "beta": null,
       "eps": 1.04,
-      "volume": 3790496,
+      "volume": 3793836,
       "averageVolume": 3292432
     },
     "ADBE": {
@@ -1018,7 +1018,7 @@
       "divYield": 0,
       "beta": null,
       "eps": -0.16,
-      "volume": 18271192,
+      "volume": 19867973,
       "averageVolume": 7999200
     },
     "TPRO.MI": {
