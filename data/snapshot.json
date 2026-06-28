@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-28T13:42:16.971Z",
+  "updatedAt": "2026-06-28T16:08:16.275Z",
   "quotes": {
     "LAES": {
       "c": 3.12,
@@ -86,7 +86,7 @@
       "peTTM": 61.336826,
       "eps": 15.26,
       "divYield": 0.007403846,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "6634.TWO": {
@@ -108,7 +108,7 @@
       "peTTM": null,
       "eps": -1.74,
       "divYield": 0,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "1560.TW": {
@@ -130,7 +130,7 @@
       "peTTM": 77.50827,
       "eps": 9.07,
       "divYield": 0,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "3105.TWO": {
@@ -152,7 +152,7 @@
       "peTTM": 81.22606,
       "eps": 5.22,
       "divYield": 0.0043196543,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "6451.TW": {
@@ -174,7 +174,7 @@
       "peTTM": 2491.6667,
       "eps": 0.24,
       "divYield": 0,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "SIVE.ST": {
@@ -234,7 +234,7 @@
       "exchange": "NasdaqGM",
       "fiftyTwoWeekHigh": 53.125,
       "fiftyTwoWeekLow": 7.95,
-      "volume": 3793836,
+      "volume": 3790496,
       "averageVolume": 3292432,
       "marketCap": 479474208,
       "peTTM": 10.759615,
@@ -344,7 +344,7 @@
       "exchange": "NasdaqCM",
       "fiftyTwoWeekHigh": 18.71,
       "fiftyTwoWeekLow": 1.19,
-      "volume": 19867973,
+      "volume": 18271192,
       "averageVolume": 7999200,
       "marketCap": 1215688320,
       "peTTM": null,
@@ -500,11 +500,11 @@
       "fiftyTwoWeekLow": 69.88,
       "volume": 44953388,
       "averageVolume": 32111836,
-      "marketCap": 598029893632,
+      "marketCap": 598035660800,
       "peTTM": 13.496564,
       "eps": 5.82,
       "divYield": 0.056209154,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "300782.SZ": {
@@ -526,7 +526,7 @@
       "peTTM": null,
       "eps": -0.73,
       "divYield": 0,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     }
   },
@@ -826,7 +826,7 @@
       "exchange": "Shenzhen",
       "weburl": null,
       "currency": "CNY",
-      "marketCap": 598029893632,
+      "marketCap": 598035660800,
       "ipo": null,
       "ticker": null
     },
@@ -963,7 +963,7 @@
       "divYield": 0,
       "beta": null,
       "eps": 1.04,
-      "volume": 3793836,
+      "volume": 3790496,
       "averageVolume": 3292432
     },
     "ADBE": {
@@ -1018,7 +1018,7 @@
       "divYield": 0,
       "beta": null,
       "eps": -0.16,
-      "volume": 19867973,
+      "volume": 18271192,
       "averageVolume": 7999200
     },
     "TPRO.MI": {
