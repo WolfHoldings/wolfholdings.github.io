@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-28T19:16:41.632Z",
+  "updatedAt": "2026-06-28T22:00:13.937Z",
   "quotes": {
     "LAES": {
       "c": 3.12,
@@ -196,7 +196,7 @@
       "peTTM": null,
       "eps": -0.76,
       "divYield": 0,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "IQE.L": {
@@ -372,7 +372,7 @@
       "peTTM": 220.26666,
       "eps": 0.15,
       "divYield": 0,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "USAR": {
@@ -416,7 +416,7 @@
       "peTTM": 49.81081,
       "eps": 1.85,
       "divYield": 0.0030753461,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "INTC": {
@@ -500,7 +500,7 @@
       "fiftyTwoWeekLow": 69.88,
       "volume": 44953388,
       "averageVolume": 32111836,
-      "marketCap": 598029893632,
+      "marketCap": 598035660800,
       "peTTM": 13.496564,
       "eps": 5.82,
       "divYield": 0.056209154,
@@ -826,7 +826,7 @@
       "exchange": "Shenzhen",
       "weburl": null,
       "currency": "CNY",
-      "marketCap": 598029893632,
+      "marketCap": 598035660800,
       "ipo": null,
       "ticker": null
     },
@@ -1112,10 +1112,10 @@
   },
   "fxRates": {
     "USD": 1,
-    "TWD": 0.031382393,
+    "TWD": 0.031402104,
     "SEK": 0.1027253,
-    "GBp": 0.01319801,
-    "EUR": 1.1389521,
-    "CNY": 0.1471129
+    "GBp": 0.013197312000000001,
+    "EUR": 1.1392117,
+    "CNY": 0.14728191
   }
 }
