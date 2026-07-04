@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-04T06:16:57.460Z",
+  "updatedAt": "2026-07-04T10:52:42.100Z",
   "quotes": {
     "LAES": {
       "c": 3.03,
@@ -413,8 +413,8 @@
       "volume": 101570,
       "averageVolume": 122305,
       "marketCap": 1693636608,
-      "peTTM": 47.89189,
-      "eps": 1.85,
+      "peTTM": 45.20408,
+      "eps": 1.96,
       "divYield": 0.0035799523,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -1044,13 +1044,13 @@
       "averageVolume": 17030075
     },
     "SMHN.DE": {
-      "peTTM": 47.89189,
+      "peTTM": 45.20408,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 118.4,
       "fiftyTwoWeekLow": 24,
       "divYield": 0.35799523,
       "beta": null,
-      "eps": 1.85,
+      "eps": 1.96,
       "volume": 101570,
       "averageVolume": 122305
     },
