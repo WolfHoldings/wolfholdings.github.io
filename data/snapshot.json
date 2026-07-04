@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-04T10:52:42.100Z",
+  "updatedAt": "2026-07-04T13:20:00.109Z",
   "quotes": {
     "LAES": {
       "c": 3.03,
@@ -191,7 +191,7 @@
       "fiftyTwoWeekHigh": 110,
       "fiftyTwoWeekLow": 2.85,
       "volume": 9454987,
-      "averageVolume": 21345211,
+      "averageVolume": 21151700,
       "marketCap": 16632062976,
       "peTTM": null,
       "eps": -0.76,
@@ -213,7 +213,7 @@
       "fiftyTwoWeekHigh": 72.9,
       "fiftyTwoWeekLow": 4.655,
       "volume": 10497759,
-      "averageVolume": 40118956,
+      "averageVolume": 39641195,
       "marketCap": 596968192,
       "peTTM": null,
       "eps": -0.04,
@@ -367,7 +367,7 @@
       "fiftyTwoWeekHigh": 38.58,
       "fiftyTwoWeekLow": 5.92,
       "volume": 421355,
-      "averageVolume": 964265,
+      "averageVolume": 955648,
       "marketCap": 21425084416,
       "peTTM": 223.06665,
       "eps": 0.15,
@@ -411,10 +411,10 @@
       "fiftyTwoWeekHigh": 118.4,
       "fiftyTwoWeekLow": 24,
       "volume": 101570,
-      "averageVolume": 122305,
+      "averageVolume": 122007,
       "marketCap": 1693636608,
-      "peTTM": 45.20408,
-      "eps": 1.96,
+      "peTTM": 47.89189,
+      "eps": 1.85,
       "divYield": 0.0035799523,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -942,7 +942,7 @@
       "beta": null,
       "eps": -0.76,
       "volume": 9454987,
-      "averageVolume": 21345211
+      "averageVolume": 21151700
     },
     "IQE.L": {
       "peTTM": null,
@@ -953,7 +953,7 @@
       "beta": null,
       "eps": -0.04,
       "volume": 10497759,
-      "averageVolume": 40118956
+      "averageVolume": 39641195
     },
     "VITL": {
       "peTTM": 12.269232,
@@ -1030,7 +1030,7 @@
       "beta": null,
       "eps": 0.15,
       "volume": 421355,
-      "averageVolume": 964265
+      "averageVolume": 955648
     },
     "USAR": {
       "peTTM": null,
@@ -1044,15 +1044,15 @@
       "averageVolume": 17030075
     },
     "SMHN.DE": {
-      "peTTM": 45.20408,
+      "peTTM": 47.89189,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 118.4,
       "fiftyTwoWeekLow": 24,
       "divYield": 0.35799523,
       "beta": null,
-      "eps": 1.96,
+      "eps": 1.85,
       "volume": 101570,
-      "averageVolume": 122305
+      "averageVolume": 122007
     },
     "INTC": {
       "peTTM": null,
@@ -1113,7 +1113,7 @@
   "fxRates": {
     "USD": 1,
     "TWD": 0.031325378,
-    "SEK": 0.10368926,
+    "SEK": 0.103707545,
     "GBp": 0.013349887000000001,
     "EUR": 1.1440338,
     "CNY": 0.14770614
