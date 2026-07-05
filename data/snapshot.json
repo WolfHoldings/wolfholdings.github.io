@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-04T21:56:55.278Z",
+  "updatedAt": "2026-07-05T02:52:57.043Z",
   "quotes": {
     "LAES": {
       "c": 3.03,
@@ -257,7 +257,7 @@
       "fiftyTwoWeekHigh": 386.6,
       "fiftyTwoWeekLow": 190.12,
       "volume": 7855227,
-      "averageVolume": 6372730,
+      "averageVolume": 6372659,
       "marketCap": 87338696704,
       "peTTM": 12.562608,
       "eps": 17.49,
@@ -279,7 +279,7 @@
       "fiftyTwoWeekHigh": 71.8,
       "fiftyTwoWeekLow": 35.12,
       "volume": 11774681,
-      "averageVolume": 14866032,
+      "averageVolume": 14865853,
       "marketCap": 223193366528,
       "peTTM": 12.093525,
       "eps": 4.17,
@@ -301,7 +301,7 @@
       "fiftyTwoWeekHigh": 28.75,
       "fiftyTwoWeekLow": 23.11,
       "volume": 51809215,
-      "averageVolume": 39649996,
+      "averageVolume": 39649445,
       "marketCap": 138610475008,
       "peTTM": 18.564886,
       "eps": 1.31,
@@ -323,7 +323,7 @@
       "fiftyTwoWeekHigh": 67.45,
       "fiftyTwoWeekLow": 38.8,
       "volume": 8496330,
-      "averageVolume": 11767791,
+      "averageVolume": 11767712,
       "marketCap": 48647581696,
       "peTTM": 66.0946,
       "eps": 0.74,
@@ -433,7 +433,7 @@
       "fiftyTwoWeekHigh": 142.35,
       "fiftyTwoWeekLow": 18.97,
       "volume": 122319394,
-      "averageVolume": 136586025,
+      "averageVolume": 136578862,
       "marketCap": 604879060992,
       "peTTM": null,
       "eps": -0.6,
@@ -975,7 +975,7 @@
       "beta": null,
       "eps": 17.49,
       "volume": 7855227,
-      "averageVolume": 6372730
+      "averageVolume": 6372659
     },
     "NVO": {
       "peTTM": 12.093525,
@@ -986,7 +986,7 @@
       "beta": null,
       "eps": 4.17,
       "volume": 11774681,
-      "averageVolume": 14866032
+      "averageVolume": 14865853
     },
     "PFE": {
       "peTTM": 18.564886,
@@ -997,7 +997,7 @@
       "beta": null,
       "eps": 1.31,
       "volume": 51809215,
-      "averageVolume": 39649996
+      "averageVolume": 39649445
     },
     "OXY": {
       "peTTM": 66.0946,
@@ -1008,7 +1008,7 @@
       "beta": null,
       "eps": 0.74,
       "volume": 8496330,
-      "averageVolume": 11767791
+      "averageVolume": 11767712
     },
     "LWLG": {
       "peTTM": null,
@@ -1063,7 +1063,7 @@
       "beta": null,
       "eps": -0.6,
       "volume": 122319394,
-      "averageVolume": 136586025
+      "averageVolume": 136578862
     },
     "TSLA": {
       "peTTM": 357.68182,
