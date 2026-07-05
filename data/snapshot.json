@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-05T13:26:10.950Z",
+  "updatedAt": "2026-07-05T16:06:19.903Z",
   "quotes": {
     "LAES": {
       "c": 3.03,
@@ -86,7 +86,7 @@
       "peTTM": 81.972565,
       "eps": 15.31,
       "divYield": 0.006390041,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "6634.TWO": {
@@ -108,7 +108,7 @@
       "peTTM": null,
       "eps": -1.74,
       "divYield": 0,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "1560.TW": {
@@ -130,7 +130,7 @@
       "peTTM": 83.351715,
       "eps": 9.07,
       "divYield": 0,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "3105.TWO": {
@@ -152,7 +152,7 @@
       "peTTM": 78.735634,
       "eps": 5.22,
       "divYield": 0.00486618,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "6451.TW": {
@@ -174,7 +174,7 @@
       "peTTM": 2011.1111,
       "eps": 0.27,
       "divYield": 0,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "SIVE.ST": {
@@ -500,11 +500,11 @@
       "fiftyTwoWeekLow": 69.88,
       "volume": 55780335,
       "averageVolume": 33809223,
-      "marketCap": 593537990656,
+      "marketCap": 593543692288,
       "peTTM": 13.395188,
       "eps": 5.82,
       "divYield": 0.055836905,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "300782.SZ": {
@@ -526,7 +526,7 @@
       "peTTM": null,
       "eps": -0.73,
       "divYield": 0,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     }
   },
@@ -826,7 +826,7 @@
       "exchange": "Shenzhen",
       "weburl": null,
       "currency": "CNY",
-      "marketCap": 593537990656,
+      "marketCap": 593543692288,
       "ipo": null,
       "ticker": null
     },
@@ -1112,7 +1112,7 @@
   },
   "fxRates": {
     "USD": 1,
-    "TWD": 0.031325378,
+    "TWD": 0.031323414,
     "SEK": 0.103707545,
     "GBp": 0.013349887000000001,
     "EUR": 1.1440338,
