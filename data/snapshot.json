@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-11T15:53:54.477Z",
+  "updatedAt": "2026-07-11T18:59:32.700Z",
   "quotes": {
     "LAES": {
       "c": 2.8,
@@ -194,7 +194,7 @@
       "averageVolume": 20923400,
       "marketCap": 13967387648,
       "peTTM": null,
-      "eps": -0.86,
+      "eps": -0.76,
       "divYield": 0,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -940,7 +940,7 @@
       "fiftyTwoWeekLow": 2.85,
       "divYield": 0,
       "beta": null,
-      "eps": -0.86,
+      "eps": -0.76,
       "volume": 10557229,
       "averageVolume": 20923400
     },
