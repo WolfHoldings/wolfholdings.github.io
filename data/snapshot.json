@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-11T13:13:44.366Z",
+  "updatedAt": "2026-07-11T15:53:54.477Z",
   "quotes": {
     "LAES": {
       "c": 2.8,
@@ -61,8 +61,8 @@
       "volume": 16124077,
       "averageVolume": 12418150,
       "marketCap": 269262307328,
-      "peTTM": 17.175842,
-      "eps": 6.54,
+      "peTTM": 17.36167,
+      "eps": 6.47,
       "divYield": 0.06516106,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -348,7 +348,7 @@
       "averageVolume": 7774567,
       "marketCap": 1052363904,
       "peTTM": null,
-      "eps": -0.15,
+      "eps": -0.16,
       "divYield": 0,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -413,8 +413,8 @@
       "volume": 131574,
       "averageVolume": 122210,
       "marketCap": 1620997632,
-      "peTTM": 44.166668,
-      "eps": 1.92,
+      "peTTM": 45.837837,
+      "eps": 1.85,
       "divYield": 0.003660769,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -479,8 +479,8 @@
       "volume": 11580519,
       "averageVolume": 21559688,
       "marketCap": 4332279300096,
-      "peTTM": 27.163734,
-      "eps": 13.07,
+      "peTTM": 27.101526,
+      "eps": 13.1,
       "divYield": 0.002357961,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -868,13 +868,13 @@
       "averageVolume": 859579
     },
     "BABA": {
-      "peTTM": 17.175842,
+      "peTTM": 17.36167,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 192.67,
       "fiftyTwoWeekLow": 91.99,
       "divYield": 6.516106000000001,
       "beta": null,
-      "eps": 6.54,
+      "eps": 6.47,
       "volume": 16124077,
       "averageVolume": 12418150
     },
@@ -1017,7 +1017,7 @@
       "fiftyTwoWeekLow": 1.4,
       "divYield": 0,
       "beta": null,
-      "eps": -0.15,
+      "eps": -0.16,
       "volume": 2549131,
       "averageVolume": 7774567
     },
@@ -1044,13 +1044,13 @@
       "averageVolume": 16823103
     },
     "SMHN.DE": {
-      "peTTM": 44.166668,
+      "peTTM": 45.837837,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 118.4,
       "fiftyTwoWeekLow": 24,
       "divYield": 0.3660769,
       "beta": null,
-      "eps": 1.92,
+      "eps": 1.85,
       "volume": 131574,
       "averageVolume": 122210
     },
@@ -1077,13 +1077,13 @@
       "averageVolume": 53155664
     },
     "GOOG": {
-      "peTTM": 27.163734,
+      "peTTM": 27.101526,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 404.47,
       "fiftyTwoWeekLow": 180.711,
       "divYield": 0.2357961,
       "beta": null,
-      "eps": 13.07,
+      "eps": 13.1,
       "volume": 11580519,
       "averageVolume": 21559688
     },
