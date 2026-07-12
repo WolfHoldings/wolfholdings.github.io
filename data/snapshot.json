@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-12T13:14:36.270Z",
+  "updatedAt": "2026-07-12T15:57:21.346Z",
   "quotes": {
     "LAES": {
       "c": 2.8,
@@ -7,7 +7,7 @@
       "dp": -2.43902,
       "o": 2.935,
       "h": 2.97,
-      "l": 2.8309,
+      "l": 2.8,
       "pc": 2.87,
       "currency": "USD",
       "name": "SEALSQ Corp",
@@ -183,7 +183,7 @@
       "dp": 13.110047,
       "o": 47.4,
       "h": 49.74,
-      "l": 44.94,
+      "l": 44.9,
       "pc": 41.8,
       "currency": "SEK",
       "name": "Sivers Semiconductors AB",
@@ -366,7 +366,7 @@
       "exchange": "Milan",
       "fiftyTwoWeekHigh": 38.58,
       "fiftyTwoWeekLow": 5.92,
-      "volume": 312198,
+      "volume": 315210,
       "averageVolume": 946360,
       "marketCap": 20426186752,
       "peTTM": 212.66666,
@@ -454,7 +454,7 @@
       "exchange": "NasdaqGS",
       "fiftyTwoWeekHigh": 498.83,
       "fiftyTwoWeekLow": 297.82,
-      "volume": 32766701,
+      "volume": 32768180,
       "averageVolume": 53155664,
       "marketCap": 1531433975808,
       "peTTM": 370.69092,
@@ -489,9 +489,9 @@
       "c": 78.99,
       "d": -0.34000397,
       "dp": -0.4285944,
-      "o": 78.75,
-      "h": 79.59,
-      "l": 78,
+      "o": 77.5,
+      "h": 79.3,
+      "l": 77.86,
       "pc": 79.33,
       "currency": "CNY",
       "name": "MIDEA GROUP",
@@ -500,7 +500,7 @@
       "fiftyTwoWeekLow": 69.88,
       "volume": 28388458,
       "averageVolume": 34561133,
-      "marketCap": 601385533440,
+      "marketCap": 601379766272,
       "peTTM": 13.572165,
       "eps": 5.82,
       "divYield": 0.05420396,
@@ -511,7 +511,7 @@
       "c": 94.69,
       "d": 1.8600006,
       "dp": 2.0036633,
-      "o": 91.11,
+      "o": 99.99,
       "h": 99.88,
       "l": 91.8,
       "pc": 92.83,
@@ -826,7 +826,7 @@
       "exchange": "Shenzhen",
       "weburl": null,
       "currency": "CNY",
-      "marketCap": 601385533440,
+      "marketCap": 601379766272,
       "ipo": null,
       "ticker": null
     },
@@ -1029,7 +1029,7 @@
       "divYield": 0,
       "beta": null,
       "eps": 0.15,
-      "volume": 312198,
+      "volume": 315210,
       "averageVolume": 946360
     },
     "USAR": {
@@ -1073,7 +1073,7 @@
       "divYield": 0,
       "beta": null,
       "eps": 1.1,
-      "volume": 32766701,
+      "volume": 32768180,
       "averageVolume": 53155664
     },
     "GOOG": {
@@ -1116,6 +1116,6 @@
     "SEK": 0.10353124,
     "GBp": 0.013401412,
     "EUR": 1.1419436,
-    "CNY": 0.14778253
+    "CNY": 0.14757751
   }
 }
