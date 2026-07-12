@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-12T19:02:06.178Z",
+  "updatedAt": "2026-07-12T21:46:44.390Z",
   "quotes": {
     "LAES": {
       "c": 2.8,
@@ -500,7 +500,7 @@
       "fiftyTwoWeekLow": 69.88,
       "volume": 27969458,
       "averageVolume": 34561133,
-      "marketCap": 601379766272,
+      "marketCap": 601385533440,
       "peTTM": 13.572165,
       "eps": 5.82,
       "divYield": 0.05420396,
@@ -826,7 +826,7 @@
       "exchange": "Shenzhen",
       "weburl": null,
       "currency": "CNY",
-      "marketCap": 601379766272,
+      "marketCap": 601385533440,
       "ipo": null,
       "ticker": null
     },
@@ -1112,10 +1112,10 @@
   },
   "fxRates": {
     "USD": 1,
-    "TWD": 0.031183735,
+    "TWD": 0.03115459,
     "SEK": 0.10353124,
-    "GBp": 0.013401412,
-    "EUR": 1.1419436,
+    "GBp": 0.013389212,
+    "EUR": 1.1406411,
     "CNY": 0.14778253
   }
 }
