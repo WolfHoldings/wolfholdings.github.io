@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-18T10:16:25.704Z",
+  "updatedAt": "2026-07-18T13:09:20.899Z",
   "quotes": {
     "LAES": {
       "c": 2.54,
@@ -191,7 +191,7 @@
       "fiftyTwoWeekHigh": 110,
       "fiftyTwoWeekLow": 2.85,
       "volume": 11479669,
-      "averageVolume": 18260609,
+      "averageVolume": 18160546,
       "marketCap": 9890612224,
       "peTTM": null,
       "eps": -0.76,
@@ -213,7 +213,7 @@
       "fiftyTwoWeekHigh": 72.9,
       "fiftyTwoWeekLow": 4.655,
       "volume": 28624759,
-      "averageVolume": 34653429,
+      "averageVolume": 34557735,
       "marketCap": 491151168,
       "peTTM": null,
       "eps": -0.04,
@@ -259,8 +259,8 @@
       "volume": 7210699,
       "averageVolume": 6413590,
       "marketCap": 94306877440,
-      "peTTM": 13.457176,
-      "eps": 17.63,
+      "peTTM": 13.564895,
+      "eps": 17.49,
       "divYield": 0,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -325,8 +325,8 @@
       "volume": 6880243,
       "averageVolume": 10912441,
       "marketCap": 54565658624,
-      "peTTM": 72.18421,
-      "eps": 0.76,
+      "peTTM": 74.13513,
+      "eps": 0.74,
       "divYield": 0.018266542,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -343,7 +343,7 @@
       "name": "Lightwave Logic, Inc.",
       "exchange": "NasdaqCM",
       "fiftyTwoWeekHigh": 18.71,
-      "fiftyTwoWeekLow": 1.75,
+      "fiftyTwoWeekLow": 1.81,
       "volume": 2804863,
       "averageVolume": 7068908,
       "marketCap": 959916096,
@@ -367,10 +367,10 @@
       "fiftyTwoWeekHigh": 38.58,
       "fiftyTwoWeekLow": 5.92,
       "volume": 752699,
-      "averageVolume": 949616,
+      "averageVolume": 946539,
       "marketCap": 18915035136,
-      "peTTM": 211,
-      "eps": 0.14,
+      "peTTM": 196.93333,
+      "eps": 0.15,
       "divYield": 0,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -411,7 +411,7 @@
       "fiftyTwoWeekHigh": 118.4,
       "fiftyTwoWeekLow": 24,
       "volume": 109009,
-      "averageVolume": 119107,
+      "averageVolume": 118950,
       "marketCap": 1515862272,
       "peTTM": 42.864864,
       "eps": 1.85,
@@ -436,7 +436,7 @@
       "averageVolume": 134279767,
       "marketCap": 477671030784,
       "peTTM": null,
-      "eps": -0.59,
+      "eps": -0.6,
       "divYield": 0,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -457,8 +457,8 @@
       "volume": 29958144,
       "averageVolume": 49394937,
       "marketCap": 1430329884672,
-      "peTTM": 355.9252,
-      "eps": 1.07,
+      "peTTM": 346.21817,
+      "eps": 1.1,
       "divYield": 0,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -475,12 +475,12 @@
       "name": "Alphabet Inc.",
       "exchange": "NasdaqGS",
       "fiftyTwoWeekHigh": 404.47,
-      "fiftyTwoWeekLow": 184.73,
+      "fiftyTwoWeekLow": 187.05,
       "volume": 21685314,
       "averageVolume": 21691816,
       "marketCap": 4223554551808,
-      "peTTM": 26.956385,
-      "eps": 12.84,
+      "peTTM": 26.381098,
+      "eps": 13.12,
       "divYield": 0.0023741554,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -942,7 +942,7 @@
       "beta": null,
       "eps": -0.76,
       "volume": 11479669,
-      "averageVolume": 18260609
+      "averageVolume": 18160546
     },
     "IQE.L": {
       "peTTM": null,
@@ -953,7 +953,7 @@
       "beta": null,
       "eps": -0.04,
       "volume": 28624759,
-      "averageVolume": 34653429
+      "averageVolume": 34557735
     },
     "VITL": {
       "peTTM": 13.028847,
@@ -967,13 +967,13 @@
       "averageVolume": 3077801
     },
     "ADBE": {
-      "peTTM": 13.457176,
+      "peTTM": 13.564895,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 376.16,
       "fiftyTwoWeekLow": 190.12,
       "divYield": 0,
       "beta": null,
-      "eps": 17.63,
+      "eps": 17.49,
       "volume": 7210699,
       "averageVolume": 6413590
     },
@@ -1000,13 +1000,13 @@
       "averageVolume": 41428314
     },
     "OXY": {
-      "peTTM": 72.18421,
+      "peTTM": 74.13513,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 67.45,
       "fiftyTwoWeekLow": 38.8,
       "divYield": 1.8266542000000001,
       "beta": null,
-      "eps": 0.76,
+      "eps": 0.74,
       "volume": 6880243,
       "averageVolume": 10912441
     },
@@ -1014,7 +1014,7 @@
       "peTTM": null,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 18.71,
-      "fiftyTwoWeekLow": 1.75,
+      "fiftyTwoWeekLow": 1.81,
       "divYield": 0,
       "beta": null,
       "eps": -0.16,
@@ -1022,15 +1022,15 @@
       "averageVolume": 7068908
     },
     "TPRO.MI": {
-      "peTTM": 211,
+      "peTTM": 196.93333,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 38.58,
       "fiftyTwoWeekLow": 5.92,
       "divYield": 0,
       "beta": null,
-      "eps": 0.14,
+      "eps": 0.15,
       "volume": 752699,
-      "averageVolume": 949616
+      "averageVolume": 946539
     },
     "USAR": {
       "peTTM": null,
@@ -1052,7 +1052,7 @@
       "beta": null,
       "eps": 1.85,
       "volume": 109009,
-      "averageVolume": 119107
+      "averageVolume": 118950
     },
     "INTC": {
       "peTTM": null,
@@ -1061,29 +1061,29 @@
       "fiftyTwoWeekLow": 18.97,
       "divYield": 0,
       "beta": null,
-      "eps": -0.59,
+      "eps": -0.6,
       "volume": 120108222,
       "averageVolume": 134279767
     },
     "TSLA": {
-      "peTTM": 355.9252,
+      "peTTM": 346.21817,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 498.83,
       "fiftyTwoWeekLow": 297.82,
       "divYield": 0,
       "beta": null,
-      "eps": 1.07,
+      "eps": 1.1,
       "volume": 29958144,
       "averageVolume": 49394937
     },
     "GOOG": {
-      "peTTM": 26.956385,
+      "peTTM": 26.381098,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 404.47,
-      "fiftyTwoWeekLow": 184.73,
+      "fiftyTwoWeekLow": 187.05,
       "divYield": 0.23741553999999998,
       "beta": null,
-      "eps": 12.84,
+      "eps": 13.12,
       "volume": 21685314,
       "averageVolume": 21691816
     },
