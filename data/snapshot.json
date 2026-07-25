@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-07-25T02:28:00.085Z",
+  "updatedAt": "2026-07-25T05:41:15.980Z",
   "quotes": {
     "LAES": {
-      "c": 2.4358,
-      "d": 0.005800009,
-      "dp": 0.23868348,
+      "c": 2.43,
+      "d": -0.14,
+      "dp": -5.44747,
       "o": 2.53,
       "h": 2.57,
       "l": 2.43,
@@ -20,13 +20,13 @@
       "peTTM": null,
       "eps": -0.23,
       "divYield": 0,
-      "marketState": "POSTPOST",
-      "extendedLabel": "After hours"
+      "marketState": "CLOSED",
+      "extendedLabel": null
     },
     "COHX": {
-      "c": 27.37,
-      "d": 0.40000153,
-      "dp": 1.4831351,
+      "c": 26.97,
+      "d": -6.61,
+      "dp": -19.6843,
       "o": 32.01,
       "h": 32.2,
       "l": 26.7501,
@@ -42,13 +42,13 @@
       "peTTM": null,
       "eps": null,
       "divYield": 0,
-      "marketState": "POSTPOST",
-      "extendedLabel": "After hours"
+      "marketState": "CLOSED",
+      "extendedLabel": null
     },
     "BABA": {
-      "c": 112.19,
-      "d": 0.05000305,
-      "dp": 0.044589844,
+      "c": 112.14,
+      "d": -1.92,
+      "dp": -1.68332,
       "o": 112.79,
       "h": 113.33,
       "l": 111.6637,
@@ -64,8 +64,8 @@
       "peTTM": 17.549295,
       "eps": 6.39,
       "divYield": 0.0634929,
-      "marketState": "POSTPOST",
-      "extendedLabel": "After hours"
+      "marketState": "CLOSED",
+      "extendedLabel": null
     },
     "6488.TWO": {
       "c": 1030,
@@ -223,8 +223,8 @@
     },
     "VITL": {
       "c": 13.02,
-      "d": 0,
-      "dp": 0,
+      "d": 0.27,
+      "dp": 2.11765,
       "o": 12.935,
       "h": 13.06,
       "l": 12.7195,
@@ -240,13 +240,13 @@
       "peTTM": 12.28302,
       "eps": 1.06,
       "divYield": 0,
-      "marketState": "POSTPOST",
-      "extendedLabel": "After hours"
+      "marketState": "CLOSED",
+      "extendedLabel": null
     },
     "ADBE": {
-      "c": 225,
-      "d": -0.11000061,
-      "dp": -0.04886527,
+      "c": 225.11,
+      "d": 12.94,
+      "dp": 6.09888,
       "o": 216.49,
       "h": 226.92,
       "l": 216.15,
@@ -262,13 +262,13 @@
       "peTTM": 12.13531,
       "eps": 18.55,
       "divYield": 0,
-      "marketState": "POSTPOST",
-      "extendedLabel": "After hours"
+      "marketState": "CLOSED",
+      "extendedLabel": null
     },
     "NVO": {
-      "c": 48.99,
-      "d": 0.22000122,
-      "dp": 0.4510995,
+      "c": 48.77,
+      "d": 0.59,
+      "dp": 1.22457,
       "o": 48.83,
       "h": 49.52,
       "l": 48.705,
@@ -284,13 +284,13 @@
       "peTTM": 11.667464,
       "eps": 4.18,
       "divYield": 0.24283935,
-      "marketState": "POSTPOST",
-      "extendedLabel": "After hours"
+      "marketState": "CLOSED",
+      "extendedLabel": null
     },
     "PFE": {
-      "c": 24.53,
-      "d": -0.010000229,
-      "dp": -0.040750727,
+      "c": 24.54,
+      "d": -0.039999,
+      "dp": -0.16273,
       "o": 24.62,
       "h": 24.75,
       "l": 24.51,
@@ -306,13 +306,13 @@
       "peTTM": 18.732826,
       "eps": 1.31,
       "divYield": 0.06997559,
-      "marketState": "POSTPOST",
-      "extendedLabel": "After hours"
+      "marketState": "CLOSED",
+      "extendedLabel": null
     },
     "OXY": {
       "c": 57.3,
-      "d": 0,
-      "dp": 0,
+      "d": -0.299999,
+      "dp": -0.520832,
       "o": 57.3,
       "h": 57.93,
       "l": 56.8301,
@@ -328,13 +328,13 @@
       "peTTM": 77.432434,
       "eps": 0.74,
       "divYield": 0.017013889,
-      "marketState": "POSTPOST",
-      "extendedLabel": "After hours"
+      "marketState": "CLOSED",
+      "extendedLabel": null
     },
     "LWLG": {
-      "c": 6.1,
-      "d": 0.049999714,
-      "dp": 0.8264415,
+      "c": 6.05,
+      "d": -0.63,
+      "dp": -9.43113,
       "o": 6.64,
       "h": 6.64,
       "l": 6.04,
@@ -350,8 +350,8 @@
       "peTTM": null,
       "eps": -0.14,
       "divYield": 0,
-      "marketState": "POSTPOST",
-      "extendedLabel": "After hours"
+      "marketState": "CLOSED",
+      "extendedLabel": null
     },
     "TPRO.MI": {
       "c": 29.74,
@@ -376,9 +376,9 @@
       "extendedLabel": null
     },
     "USAR": {
-      "c": 14.2,
-      "d": 0.05000019,
-      "dp": 0.35335824,
+      "c": 14.15,
+      "d": -0.990001,
+      "dp": -6.53897,
       "o": 15.07,
       "h": 15.11,
       "l": 14.14,
@@ -394,8 +394,8 @@
       "peTTM": null,
       "eps": -4.11,
       "divYield": 0,
-      "marketState": "POSTPOST",
-      "extendedLabel": "After hours"
+      "marketState": "CLOSED",
+      "extendedLabel": null
     },
     "SMHN.DE": {
       "c": 79.15,
@@ -420,9 +420,9 @@
       "extendedLabel": null
     },
     "INTC": {
-      "c": 91.535,
-      "d": -0.78499603,
-      "dp": -0.850299,
+      "c": 92.32,
+      "d": -7.91,
+      "dp": -7.89185,
       "o": 100.39,
       "h": 101.74,
       "l": 91.58,
@@ -438,13 +438,13 @@
       "peTTM": null,
       "eps": -0.55,
       "divYield": 0,
-      "marketState": "POSTPOST",
-      "extendedLabel": "After hours"
+      "marketState": "CLOSED",
+      "extendedLabel": null
     },
     "TSLA": {
-      "c": 311.38,
-      "d": -1.6499939,
-      "dp": -0.5271041,
+      "c": 313.03,
+      "d": -6.66,
+      "dp": -2.08327,
       "o": 320.88,
       "h": 322.96,
       "l": 306.51,
@@ -460,13 +460,13 @@
       "peTTM": 295.31134,
       "eps": 1.06,
       "divYield": 0,
-      "marketState": "POSTPOST",
-      "extendedLabel": "After hours"
+      "marketState": "CLOSED",
+      "extendedLabel": null
     },
     "GOOG": {
-      "c": 318.6328,
-      "d": -0.45718384,
-      "dp": -0.14327739,
+      "c": 319.09,
+      "d": 0.75,
+      "dp": 0.235597,
       "o": 317.95,
       "h": 323.98,
       "l": 317.5,
@@ -482,8 +482,8 @@
       "peTTM": 15.97047,
       "eps": 19.98,
       "divYield": 0.0026701014,
-      "marketState": "POSTPOST",
-      "extendedLabel": "After hours"
+      "marketState": "CLOSED",
+      "extendedLabel": null
     },
     "000333.SZ": {
       "c": 84.5,
@@ -1113,9 +1113,9 @@
   "fxRates": {
     "USD": 1,
     "TWD": 0.03092146,
-    "SEK": 0.10296541,
+    "SEK": 0.10296858,
     "GBp": 0.013318595,
     "EUR": 1.137527,
-    "CNY": 0.14767995
+    "CNY": 0.14767122
   }
 }
