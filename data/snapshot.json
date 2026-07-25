@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-25T08:02:44.642Z",
+  "updatedAt": "2026-07-25T10:25:12.955Z",
   "quotes": {
     "LAES": {
       "c": 2.43,
@@ -226,7 +226,7 @@
       "d": 0.27,
       "dp": 2.11765,
       "o": 12.935,
-      "h": 13.06,
+      "h": 13.04,
       "l": 12.7195,
       "pc": 12.75,
       "currency": "USD",
@@ -259,8 +259,8 @@
       "volume": 4587661,
       "averageVolume": 6242304,
       "marketCap": 89481224192,
-      "peTTM": 12.13531,
-      "eps": 18.55,
+      "peTTM": 12.870784,
+      "eps": 17.49,
       "divYield": 0,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -302,7 +302,7 @@
       "fiftyTwoWeekLow": 23.11,
       "volume": 22861320,
       "averageVolume": 41226156,
-      "marketCap": 139864358912,
+      "marketCap": null,
       "peTTM": 18.732826,
       "eps": 1.31,
       "divYield": 0.06997559,
@@ -403,7 +403,7 @@
       "dp": -0.81453824,
       "o": 78.3,
       "h": 81.45,
-      "l": 77.7,
+      "l": 77.8,
       "pc": 79.8,
       "currency": "EUR",
       "name": "SUSS MicroTec SE              N",
@@ -709,7 +709,7 @@
       "exchange": "NYSE",
       "weburl": null,
       "currency": "USD",
-      "marketCap": 139864358912,
+      "marketCap": null,
       "ipo": null,
       "ticker": null
     },
@@ -967,13 +967,13 @@
       "averageVolume": 3021591
     },
     "ADBE": {
-      "peTTM": 12.13531,
+      "peTTM": 12.870784,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 376.16,
       "fiftyTwoWeekLow": 190.12,
       "divYield": 0,
       "beta": null,
-      "eps": 18.55,
+      "eps": 17.49,
       "volume": 4587661,
       "averageVolume": 6242304
     },
