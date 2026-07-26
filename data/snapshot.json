@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-26T19:06:47.414Z",
+  "updatedAt": "2026-07-26T21:57:08.353Z",
   "quotes": {
     "LAES": {
       "c": 2.43,
@@ -302,7 +302,7 @@
       "fiftyTwoWeekLow": 23.11,
       "volume": 22861320,
       "averageVolume": 41226156,
-      "marketCap": null,
+      "marketCap": 139864358912,
       "peTTM": 18.732826,
       "eps": 1.31,
       "divYield": 0.06997559,
@@ -709,7 +709,7 @@
       "exchange": "NYSE",
       "weburl": null,
       "currency": "USD",
-      "marketCap": null,
+      "marketCap": 139864358912,
       "ipo": null,
       "ticker": null
     },
@@ -1113,9 +1113,9 @@
   "fxRates": {
     "USD": 1,
     "TWD": 0.030939637,
-    "SEK": 0.10296858,
-    "GBp": 0.013320545,
-    "EUR": 1.137527,
+    "SEK": 0.1032208,
+    "GBp": 0.013338313,
+    "EUR": 1.1396011,
     "CNY": 0.1478918
   }
 }
