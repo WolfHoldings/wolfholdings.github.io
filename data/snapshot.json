@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-01T13:14:39.452Z",
+  "updatedAt": "2026-08-01T15:58:41.968Z",
   "quotes": {
     "LAES": {
       "c": 2.36,
@@ -303,8 +303,8 @@
       "volume": 33906387,
       "averageVolume": 41508525,
       "marketCap": 142543093760,
-      "peTTM": 18.94697,
-      "eps": 1.32,
+      "peTTM": 19.091604,
+      "eps": 1.31,
       "divYield": 0.069048576,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -989,13 +989,13 @@
       "averageVolume": 12521093
     },
     "PFE": {
-      "peTTM": 18.94697,
+      "peTTM": 19.091604,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 28.75,
       "fiftyTwoWeekLow": 23.4,
       "divYield": 6.9048576,
       "beta": null,
-      "eps": 1.32,
+      "eps": 1.31,
       "volume": 33906387,
       "averageVolume": 41508525
     },
