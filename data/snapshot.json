@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-09T09:36:14.428Z",
+  "updatedAt": "2026-08-09T12:44:10.455Z",
   "quotes": {
     "LAES": {
       "c": 2.57,
@@ -85,7 +85,7 @@
       "marketCap": 416915161088,
       "peTTM": 53.76079,
       "eps": 16.22,
-      "divYield": 0,
+      "divYield": 0.006536697,
       "marketState": "CLOSED",
       "extendedLabel": null
     },
@@ -883,7 +883,7 @@
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 1600,
       "fiftyTwoWeekLow": 333,
-      "divYield": 0,
+      "divYield": 0.6536697,
       "beta": null,
       "eps": 16.22,
       "volume": 9547835,
