@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-09T01:27:31.038Z",
+  "updatedAt": "2026-08-09T04:16:03.753Z",
   "quotes": {
     "LAES": {
       "c": 2.57,
@@ -28,7 +28,7 @@
       "d": 9.73,
       "dp": 27.5014,
       "o": 41.28,
-      "h": 47.61,
+      "h": 47.6,
       "l": 40,
       "pc": 35.38,
       "currency": "USD",
@@ -36,7 +36,7 @@
       "exchange": "Cboe US",
       "fiftyTwoWeekHigh": 75.64,
       "fiftyTwoWeekLow": 16.1,
-      "volume": 1982410,
+      "volume": 1982020,
       "averageVolume": 775761,
       "marketCap": null,
       "peTTM": null,
@@ -322,7 +322,7 @@
       "exchange": "NYSE",
       "fiftyTwoWeekHigh": 67.45,
       "fiftyTwoWeekLow": 38.8,
-      "volume": 5828769,
+      "volume": 5826182,
       "averageVolume": 9991814,
       "marketCap": 55889727488,
       "peTTM": 16.492624,
@@ -390,7 +390,7 @@
       "fiftyTwoWeekLow": 11.45,
       "volume": 18899236,
       "averageVolume": 14020811,
-      "marketCap": 4729492992,
+      "marketCap": 4730439680,
       "peTTM": null,
       "eps": -4.4,
       "divYield": 0,
@@ -761,7 +761,7 @@
       "exchange": "NasdaqGM",
       "weburl": null,
       "currency": "USD",
-      "marketCap": 4729492992,
+      "marketCap": 4730439680,
       "ipo": null,
       "ticker": null
     },
@@ -864,7 +864,7 @@
       "divYield": 0,
       "beta": null,
       "eps": null,
-      "volume": 1982410,
+      "volume": 1982020,
       "averageVolume": 775761
     },
     "BABA": {
@@ -1007,7 +1007,7 @@
       "divYield": 1.7844395999999998,
       "beta": null,
       "eps": 3.39,
-      "volume": 5828769,
+      "volume": 5826182,
       "averageVolume": 9991814
     },
     "LWLG": {
@@ -1116,6 +1116,6 @@
     "SEK": 0.105535105,
     "GBp": 0.013492364,
     "EUR": 1.156203,
-    "CNY": 0.14842962
+    "CNY": 0.14818767
   }
 }
