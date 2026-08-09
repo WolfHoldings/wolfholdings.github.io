@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-08T21:27:07.113Z",
+  "updatedAt": "2026-08-09T01:27:31.038Z",
   "quotes": {
     "LAES": {
       "c": 2.57,
@@ -14,7 +14,7 @@
       "exchange": "NasdaqGS",
       "fiftyTwoWeekHigh": 8.71,
       "fiftyTwoWeekLow": 1.99,
-      "volume": 13854168,
+      "volume": 13932085,
       "averageVolume": 17159145,
       "marketCap": 572529152,
       "peTTM": null,
@@ -256,7 +256,7 @@
       "exchange": "NasdaqGS",
       "fiftyTwoWeekHigh": 370.86,
       "fiftyTwoWeekLow": 190.12,
-      "volume": 4581566,
+      "volume": 4581951,
       "averageVolume": 6460945,
       "marketCap": 105420972032,
       "peTTM": 15.172196,
@@ -322,7 +322,7 @@
       "exchange": "NYSE",
       "fiftyTwoWeekHigh": 67.45,
       "fiftyTwoWeekLow": 38.8,
-      "volume": 5826182,
+      "volume": 5828769,
       "averageVolume": 9991814,
       "marketCap": 55889727488,
       "peTTM": 16.492624,
@@ -853,7 +853,7 @@
       "divYield": 0,
       "beta": null,
       "eps": -0.24,
-      "volume": 13854168,
+      "volume": 13932085,
       "averageVolume": 17159145
     },
     "COHX": {
@@ -974,7 +974,7 @@
       "divYield": 0,
       "beta": null,
       "eps": 17.48,
-      "volume": 4581566,
+      "volume": 4581951,
       "averageVolume": 6460945
     },
     "NVO": {
@@ -1007,7 +1007,7 @@
       "divYield": 1.7844395999999998,
       "beta": null,
       "eps": 3.39,
-      "volume": 5826182,
+      "volume": 5828769,
       "averageVolume": 9991814
     },
     "LWLG": {
