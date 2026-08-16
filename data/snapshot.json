@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-16T18:24:32.629Z",
+  "updatedAt": "2026-08-16T21:17:05.390Z",
   "quotes": {
     "LAES": {
       "c": 3.01,
@@ -390,7 +390,7 @@
       "fiftyTwoWeekLow": 11.45,
       "volume": 16530523,
       "averageVolume": 13828075,
-      "marketCap": 4893422592,
+      "marketCap": 4894402048,
       "peTTM": null,
       "eps": -2.69,
       "divYield": 0,
@@ -761,7 +761,7 @@
       "exchange": "NasdaqGM",
       "weburl": null,
       "currency": "USD",
-      "marketCap": 4893422592,
+      "marketCap": 4894402048,
       "ipo": null,
       "ticker": null
     },
@@ -1114,8 +1114,8 @@
     "USD": 1,
     "TWD": 0.031246092,
     "SEK": 0.10504257,
-    "GBp": 0.013532898,
-    "EUR": 1.1572735,
+    "GBp": 0.013540412,
+    "EUR": 1.1568718,
     "CNY": 0.14853986
   }
 }
