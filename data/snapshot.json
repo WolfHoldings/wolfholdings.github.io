@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-16T21:17:05.390Z",
+  "updatedAt": "2026-08-17T01:06:18.195Z",
   "quotes": {
     "LAES": {
       "c": 3.01,
@@ -86,7 +86,7 @@
       "peTTM": 62.5,
       "eps": 16.16,
       "divYield": 0.0055609755,
-      "marketState": "PREPRE",
+      "marketState": "REGULAR",
       "extendedLabel": null
     },
     "6634.TWO": {
@@ -108,7 +108,7 @@
       "peTTM": null,
       "eps": -1.74,
       "divYield": 0,
-      "marketState": "PREPRE",
+      "marketState": "REGULAR",
       "extendedLabel": null
     },
     "1560.TW": {
@@ -130,7 +130,7 @@
       "peTTM": 71.92461,
       "eps": 10.08,
       "divYield": 0,
-      "marketState": "PREPRE",
+      "marketState": "REGULAR",
       "extendedLabel": null
     },
     "3105.TWO": {
@@ -152,7 +152,7 @@
       "peTTM": 72.413795,
       "eps": 5.22,
       "divYield": 0.005167959,
-      "marketState": "PREPRE",
+      "marketState": "REGULAR",
       "extendedLabel": null
     },
     "6451.TW": {
@@ -174,7 +174,7 @@
       "peTTM": null,
       "eps": -0.13,
       "divYield": 0,
-      "marketState": "PREPRE",
+      "marketState": "REGULAR",
       "extendedLabel": null
     },
     "SIVE.ST": {
@@ -196,7 +196,7 @@
       "peTTM": null,
       "eps": -0.76,
       "divYield": 0,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "IQE.L": {
@@ -218,7 +218,7 @@
       "peTTM": null,
       "eps": -0.04,
       "divYield": 0,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "VITL": {
@@ -372,7 +372,7 @@
       "peTTM": 98.25001,
       "eps": 0.32,
       "divYield": 0,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "USAR": {
@@ -416,7 +416,7 @@
       "peTTM": 61.851852,
       "eps": 1.35,
       "divYield": 0.00047675802,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "INTC": {
@@ -1112,10 +1112,10 @@
   },
   "fxRates": {
     "USD": 1,
-    "TWD": 0.031246092,
-    "SEK": 0.10504257,
-    "GBp": 0.013540412,
-    "EUR": 1.1568718,
-    "CNY": 0.14853986
+    "TWD": 0.031306744,
+    "SEK": 0.105176255,
+    "GBp": 0.013554542999999999,
+    "EUR": 1.1583458,
+    "CNY": 0.14835255
   }
 }
