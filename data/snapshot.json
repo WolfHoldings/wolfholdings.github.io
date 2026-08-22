@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22T06:34:56.376Z",
+  "updatedAt": "2026-08-22T09:24:07.830Z",
   "quotes": {
     "LAES": {
       "c": 2.54,
@@ -169,7 +169,7 @@
       "fiftyTwoWeekHigh": 756,
       "fiftyTwoWeekLow": 133,
       "volume": 4503886,
-      "averageVolume": 4807609,
+      "averageVolume": 4804034,
       "marketCap": 44380647424,
       "peTTM": null,
       "eps": -0.13,
@@ -190,7 +190,7 @@
       "exchange": "Stockholm",
       "fiftyTwoWeekHigh": 110,
       "fiftyTwoWeekLow": 2.85,
-      "volume": 3543204,
+      "volume": 3543067,
       "averageVolume": 10621719,
       "marketCap": 10782776320,
       "peTTM": null,
@@ -315,7 +315,7 @@
       "dp": -0.357609,
       "o": 61.535,
       "h": 61.7798,
-      "l": 61.21,
+      "l": 61.2,
       "pc": 61.52,
       "currency": "USD",
       "name": "Occidental Petroleum Corporatio",
@@ -323,7 +323,7 @@
       "fiftyTwoWeekHigh": 67.45,
       "fiftyTwoWeekLow": 38.8,
       "volume": 6435274,
-      "averageVolume": 9375361,
+      "averageVolume": 9352309,
       "marketCap": 61277769728,
       "peTTM": 18.136093,
       "eps": 3.38,
@@ -388,9 +388,9 @@
       "exchange": "NasdaqGM",
       "fiftyTwoWeekHigh": 43.98,
       "fiftyTwoWeekLow": 11.45,
-      "volume": 21118640,
+      "volume": 21114895,
       "averageVolume": 13453504,
-      "marketCap": 4712366080,
+      "marketCap": 4713309184,
       "peTTM": null,
       "eps": -3.03,
       "divYield": 0,
@@ -403,7 +403,7 @@
       "dp": 1.731302,
       "o": 73.15,
       "h": 74.65,
-      "l": 72.5,
+      "l": 72.55,
       "pc": 72.2,
       "currency": "EUR",
       "name": "SUSS MicroTec SE              N",
@@ -425,7 +425,7 @@
       "dp": -2.23597,
       "o": 92.768,
       "h": 92.768,
-      "l": 89.755,
+      "l": 89.75,
       "pc": 92.13,
       "currency": "USD",
       "name": "Intel Corporation",
@@ -761,7 +761,7 @@
       "exchange": "NasdaqGM",
       "weburl": null,
       "currency": "USD",
-      "marketCap": 4712366080,
+      "marketCap": 4713309184,
       "ipo": null,
       "ticker": null
     },
@@ -931,7 +931,7 @@
       "beta": null,
       "eps": -0.13,
       "volume": 4503886,
-      "averageVolume": 4807609
+      "averageVolume": 4804034
     },
     "SIVE.ST": {
       "peTTM": null,
@@ -941,7 +941,7 @@
       "divYield": 0,
       "beta": null,
       "eps": -0.76,
-      "volume": 3543204,
+      "volume": 3543067,
       "averageVolume": 10621719
     },
     "IQE.L": {
@@ -1008,7 +1008,7 @@
       "beta": null,
       "eps": 3.38,
       "volume": 6435274,
-      "averageVolume": 9375361
+      "averageVolume": 9352309
     },
     "LWLG": {
       "peTTM": null,
@@ -1040,7 +1040,7 @@
       "divYield": 0,
       "beta": null,
       "eps": -3.03,
-      "volume": 21118640,
+      "volume": 21114895,
       "averageVolume": 13453504
     },
     "SMHN.DE": {
