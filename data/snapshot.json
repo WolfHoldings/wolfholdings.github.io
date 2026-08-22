@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22T15:17:51.316Z",
+  "updatedAt": "2026-08-22T18:25:38.553Z",
   "quotes": {
     "LAES": {
       "c": 2.54,
@@ -223,8 +223,8 @@
     },
     "VITL": {
       "c": 10.57,
-      "d": -0.0500002,
-      "dp": -0.470812,
+      "d": -0.05000019,
+      "dp": -0.4708116,
       "o": 10.5406,
       "h": 10.73,
       "l": 10.42,
@@ -234,7 +234,7 @@
       "exchange": "NasdaqGM",
       "fiftyTwoWeekHigh": 53.125,
       "fiftyTwoWeekLow": 7.95,
-      "volume": 899632,
+      "volume": 846661,
       "averageVolume": 1967175,
       "marketCap": 453786144,
       "peTTM": null,
@@ -436,7 +436,7 @@
       "averageVolume": 119694637,
       "marketCap": 476119498752,
       "peTTM": null,
-      "eps": -2.04,
+      "eps": -2.09,
       "divYield": 0,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -963,7 +963,7 @@
       "divYield": 0,
       "beta": null,
       "eps": -0.05,
-      "volume": 899632,
+      "volume": 846661,
       "averageVolume": 1967175
     },
     "ADBE": {
@@ -1061,7 +1061,7 @@
       "fiftyTwoWeekLow": 23.68,
       "divYield": 0,
       "beta": null,
-      "eps": -2.04,
+      "eps": -2.09,
       "volume": 90790387,
       "averageVolume": 119694637
     },
@@ -1116,6 +1116,6 @@
     "SEK": 0.10568367,
     "GBp": 0.013647963999999999,
     "EUR": 1.167815,
-    "CNY": 0.14879845
+    "CNY": 0.14899133
   }
 }
