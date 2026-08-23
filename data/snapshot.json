@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22T21:18:33.677Z",
+  "updatedAt": "2026-08-23T01:09:58.596Z",
   "quotes": {
     "LAES": {
       "c": 2.54,
@@ -194,7 +194,7 @@
       "averageVolume": 10621719,
       "marketCap": 10782776320,
       "peTTM": null,
-      "eps": -0.73,
+      "eps": -0.76,
       "divYield": 0,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -325,8 +325,8 @@
       "volume": 6435274,
       "averageVolume": 9375361,
       "marketCap": 61277769728,
-      "peTTM": 18.136093,
-      "eps": 3.38,
+      "peTTM": 18.082596,
+      "eps": 3.39,
       "divYield": 0.016254876,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -413,8 +413,8 @@
       "volume": 64730,
       "averageVolume": 102975,
       "marketCap": 1404036224,
-      "peTTM": 55.22556,
-      "eps": 1.33,
+      "peTTM": 54.407406,
+      "eps": 1.35,
       "divYield": 0.0005540166,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -940,7 +940,7 @@
       "fiftyTwoWeekLow": 2.85,
       "divYield": 0,
       "beta": null,
-      "eps": -0.73,
+      "eps": -0.76,
       "volume": 3543067,
       "averageVolume": 10621719
     },
@@ -1000,13 +1000,13 @@
       "averageVolume": 42615122
     },
     "OXY": {
-      "peTTM": 18.136093,
+      "peTTM": 18.082596,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 67.45,
       "fiftyTwoWeekLow": 38.8,
       "divYield": 1.6254876,
       "beta": null,
-      "eps": 3.38,
+      "eps": 3.39,
       "volume": 6435274,
       "averageVolume": 9375361
     },
@@ -1044,13 +1044,13 @@
       "averageVolume": 13453504
     },
     "SMHN.DE": {
-      "peTTM": 55.22556,
+      "peTTM": 54.407406,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 118.4,
       "fiftyTwoWeekLow": 24,
       "divYield": 0.055401660000000005,
       "beta": null,
-      "eps": 1.33,
+      "eps": 1.35,
       "volume": 64730,
       "averageVolume": 102975
     },
@@ -1114,7 +1114,7 @@
     "USD": 1,
     "TWD": 0.031426776,
     "SEK": 0.10568367,
-    "GBp": 0.013644241,
+    "GBp": 0.013648337,
     "EUR": 1.167815,
     "CNY": 0.14899133
   }
