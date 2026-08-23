@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-23T18:24:37.643Z",
+  "updatedAt": "2026-08-23T21:18:39.183Z",
   "quotes": {
     "LAES": {
       "c": 2.54,
@@ -315,7 +315,7 @@
       "dp": -0.357609,
       "o": 61.535,
       "h": 61.7798,
-      "l": 61.21,
+      "l": 61.2,
       "pc": 61.52,
       "currency": "USD",
       "name": "Occidental Petroleum Corporatio",
@@ -390,7 +390,7 @@
       "fiftyTwoWeekLow": 11.45,
       "volume": 21586974,
       "averageVolume": 13453504,
-      "marketCap": 4712366080,
+      "marketCap": 4713309184,
       "peTTM": null,
       "eps": -2.69,
       "divYield": 0,
@@ -761,7 +761,7 @@
       "exchange": "NasdaqGM",
       "weburl": null,
       "currency": "USD",
-      "marketCap": 4712366080,
+      "marketCap": 4713309184,
       "ipo": null,
       "ticker": null
     },
@@ -1112,10 +1112,10 @@
   },
   "fxRates": {
     "USD": 1,
-    "TWD": 0.031441595,
-    "SEK": 0.10568367,
-    "GBp": 0.013648337,
-    "EUR": 1.167815,
-    "CNY": 0.14899133
+    "TWD": 0.031427763,
+    "SEK": 0.105843626,
+    "GBp": 0.013632336,
+    "EUR": 1.1680878,
+    "CNY": 0.14879845
   }
 }
