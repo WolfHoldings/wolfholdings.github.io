@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-29T05:37:45.821Z",
+  "updatedAt": "2026-08-29T12:16:38.672Z",
   "quotes": {
     "LAES": {
       "c": 2.48,
@@ -83,8 +83,8 @@
       "volume": 11494305,
       "averageVolume": 8007403,
       "marketCap": 464726556672,
-      "peTTM": 47.184464,
-      "eps": 20.6,
+      "peTTM": 47.16157,
+      "eps": 20.61,
       "divYield": 0.0059498954,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -521,7 +521,7 @@
       "fiftyTwoWeekHigh": 144.9,
       "fiftyTwoWeekLow": 64.55,
       "volume": 8423018,
-      "averageVolume": 20143389,
+      "averageVolume": 19776472,
       "marketCap": 44498243584,
       "peTTM": null,
       "eps": -0.95,
@@ -879,13 +879,13 @@
       "averageVolume": 12790582
     },
     "6488.TWO": {
-      "peTTM": 47.184464,
+      "peTTM": 47.16157,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 1600,
       "fiftyTwoWeekLow": 333,
       "divYield": 0.59498954,
       "beta": null,
-      "eps": 20.6,
+      "eps": 20.61,
       "volume": 11494305,
       "averageVolume": 8007403
     },
@@ -1107,13 +1107,13 @@
       "beta": null,
       "eps": -0.95,
       "volume": 8423018,
-      "averageVolume": 20143389
+      "averageVolume": 19776472
     }
   },
   "fxRates": {
     "USD": 1,
     "TWD": 0.031617552,
-    "SEK": 0.10425681,
+    "SEK": 0.10423181,
     "GBp": 0.013537478,
     "EUR": 1.1587486,
     "CNY": 0.14879845
