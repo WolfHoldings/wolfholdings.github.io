@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T02:55:45.713Z",
+  "updatedAt": "2026-09-06T07:39:39.727Z",
   "quotes": {
     "LAES": {
       "c": 2.42,
@@ -214,7 +214,7 @@
       "fiftyTwoWeekLow": 4.655,
       "volume": 13664358,
       "averageVolume": 19074145,
-      "marketCap": 631602688,
+      "marketCap": 631592000,
       "peTTM": null,
       "eps": -0.04,
       "divYield": 0,
@@ -280,7 +280,7 @@
       "fiftyTwoWeekLow": 35.12,
       "volume": 6119184,
       "averageVolume": 11980534,
-      "marketCap": 206019985408,
+      "marketCap": 205971079168,
       "peTTM": 11.449631,
       "eps": 4.07,
       "divYield": 0.24626395,
@@ -303,8 +303,8 @@
       "volume": 23529537,
       "averageVolume": 42320944,
       "marketCap": 162155724800,
-      "peTTM": 37.933334,
-      "eps": 0.75,
+      "peTTM": 37.43421,
+      "eps": 0.76,
       "divYield": 0.059701495,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -390,7 +390,7 @@
       "fiftyTwoWeekLow": 11.45,
       "volume": 21727220,
       "averageVolume": 12592914,
-      "marketCap": 4309520896,
+      "marketCap": 4308658688,
       "peTTM": null,
       "eps": -2.69,
       "divYield": 0,
@@ -657,7 +657,7 @@
       "exchange": "LSE",
       "weburl": null,
       "currency": "GBp",
-      "marketCap": 631602688,
+      "marketCap": 631592000,
       "ipo": null,
       "ticker": null
     },
@@ -696,7 +696,7 @@
       "exchange": "NYSE",
       "weburl": null,
       "currency": "USD",
-      "marketCap": 206019985408,
+      "marketCap": 205971079168,
       "ipo": null,
       "ticker": null
     },
@@ -761,7 +761,7 @@
       "exchange": "NasdaqGM",
       "weburl": null,
       "currency": "USD",
-      "marketCap": 4309520896,
+      "marketCap": 4308658688,
       "ipo": null,
       "ticker": null
     },
@@ -989,13 +989,13 @@
       "averageVolume": 11980534
     },
     "PFE": {
-      "peTTM": 37.933334,
+      "peTTM": 37.43421,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 29.21,
       "fiftyTwoWeekLow": 23.58,
       "divYield": 5.9701495,
       "beta": null,
-      "eps": 0.75,
+      "eps": 0.76,
       "volume": 23529537,
       "averageVolume": 42320944
     },
@@ -1116,6 +1116,6 @@
     "SEK": 0.10455549,
     "GBp": 0.013516984000000001,
     "EUR": 1.1621151,
-    "CNY": 0.14922477
+    "CNY": 0.14901352
   }
 }
