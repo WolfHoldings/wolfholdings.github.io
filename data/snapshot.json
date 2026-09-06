@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-06T07:39:39.727Z",
+  "updatedAt": "2026-09-06T12:36:25.531Z",
   "quotes": {
     "LAES": {
       "c": 2.42,
@@ -214,7 +214,7 @@
       "fiftyTwoWeekLow": 4.655,
       "volume": 13664358,
       "averageVolume": 19074145,
-      "marketCap": 631592000,
+      "marketCap": 631602688,
       "peTTM": null,
       "eps": -0.04,
       "divYield": 0,
@@ -280,7 +280,7 @@
       "fiftyTwoWeekLow": 35.12,
       "volume": 6119184,
       "averageVolume": 11980534,
-      "marketCap": 205971079168,
+      "marketCap": 206019985408,
       "peTTM": 11.449631,
       "eps": 4.07,
       "divYield": 0.24626395,
@@ -390,7 +390,7 @@
       "fiftyTwoWeekLow": 11.45,
       "volume": 21727220,
       "averageVolume": 12592914,
-      "marketCap": 4308658688,
+      "marketCap": 4309520896,
       "peTTM": null,
       "eps": -2.69,
       "divYield": 0,
@@ -657,7 +657,7 @@
       "exchange": "LSE",
       "weburl": null,
       "currency": "GBp",
-      "marketCap": 631592000,
+      "marketCap": 631602688,
       "ipo": null,
       "ticker": null
     },
@@ -696,7 +696,7 @@
       "exchange": "NYSE",
       "weburl": null,
       "currency": "USD",
-      "marketCap": 205971079168,
+      "marketCap": 206019985408,
       "ipo": null,
       "ticker": null
     },
@@ -761,7 +761,7 @@
       "exchange": "NasdaqGM",
       "weburl": null,
       "currency": "USD",
-      "marketCap": 4308658688,
+      "marketCap": 4309520896,
       "ipo": null,
       "ticker": null
     },
