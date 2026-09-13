@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-12T22:49:43.844Z",
+  "updatedAt": "2026-09-13T03:08:45.997Z",
   "quotes": {
     "LAES": {
       "c": 2.38,
@@ -214,7 +214,7 @@
       "fiftyTwoWeekLow": 4.655,
       "volume": 7929402,
       "averageVolume": 18096168,
-      "marketCap": 591659904,
+      "marketCap": 591670016,
       "peTTM": null,
       "eps": -0.03,
       "divYield": 0,
@@ -281,8 +281,8 @@
       "volume": 10997493,
       "averageVolume": 11484653,
       "marketCap": 190323097600,
-      "peTTM": 10.556373,
-      "eps": 4.08,
+      "peTTM": 10.530561,
+      "eps": 4.09,
       "divYield": 0.26584867,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -390,7 +390,7 @@
       "fiftyTwoWeekLow": 11.45,
       "volume": 14680856,
       "averageVolume": 12453006,
-      "marketCap": 3807083008,
+      "marketCap": 3807844864,
       "peTTM": null,
       "eps": -2.69,
       "divYield": 0,
@@ -657,7 +657,7 @@
       "exchange": "LSE",
       "weburl": null,
       "currency": "GBp",
-      "marketCap": 591659904,
+      "marketCap": 591670016,
       "ipo": null,
       "ticker": null
     },
@@ -761,7 +761,7 @@
       "exchange": "NasdaqGM",
       "weburl": null,
       "currency": "USD",
-      "marketCap": 3807083008,
+      "marketCap": 3807844864,
       "ipo": null,
       "ticker": null
     },
@@ -978,13 +978,13 @@
       "averageVolume": 5843701
     },
     "NVO": {
-      "peTTM": 10.556373,
+      "peTTM": 10.530561,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 64.16,
       "fiftyTwoWeekLow": 35.12,
       "divYield": 26.584867000000003,
       "beta": null,
-      "eps": 4.08,
+      "eps": 4.09,
       "volume": 10997493,
       "averageVolume": 11484653
     },
@@ -1113,7 +1113,7 @@
   "fxRates": {
     "USD": 1,
     "TWD": 0.031618554,
-    "SEK": 0.10325778,
+    "SEK": 0.10315552,
     "GBp": 0.013530334,
     "EUR": 1.1600928,
     "CNY": 0.14931168
