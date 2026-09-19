@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-19T20:01:49.107Z",
+  "updatedAt": "2026-09-19T22:39:15.014Z",
   "quotes": {
     "LAES": {
       "c": 2.24,
@@ -214,7 +214,7 @@
       "fiftyTwoWeekLow": 4.655,
       "volume": 12999973,
       "averageVolume": 15840879,
-      "marketCap": 568375936,
+      "marketCap": 568366272,
       "peTTM": null,
       "eps": -0.03,
       "divYield": 0,
@@ -366,7 +366,7 @@
       "exchange": "Milan",
       "fiftyTwoWeekHigh": 38.58,
       "fiftyTwoWeekLow": 8.09,
-      "volume": 6501915,
+      "volume": 6489160,
       "averageVolume": 902192,
       "marketCap": 18863808512,
       "peTTM": 92.0625,
@@ -657,7 +657,7 @@
       "exchange": "LSE",
       "weburl": null,
       "currency": "GBp",
-      "marketCap": 568375936,
+      "marketCap": 568366272,
       "ipo": null,
       "ticker": null
     },
@@ -1029,7 +1029,7 @@
       "divYield": 0,
       "beta": null,
       "eps": 0.32,
-      "volume": 6501915,
+      "volume": 6489160,
       "averageVolume": 902192
     },
     "USAR": {
