@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-26T15:45:48.971Z",
+  "updatedAt": "2026-09-26T20:38:30.699Z",
   "quotes": {
     "LAES": {
       "c": 2.35,
@@ -149,8 +149,8 @@
       "volume": 21646645,
       "averageVolume": 23885939,
       "marketCap": 40574148608,
-      "peTTM": 58.50816,
-      "eps": 8.58,
+      "peTTM": 58.851116,
+      "eps": 8.53,
       "divYield": 0.0040241447,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -191,7 +191,7 @@
       "fiftyTwoWeekHigh": 110,
       "fiftyTwoWeekLow": 2.85,
       "volume": 4342638,
-      "averageVolume": 8021091,
+      "averageVolume": 8076533,
       "marketCap": 10451487744,
       "peTTM": null,
       "eps": -1.01,
@@ -214,7 +214,7 @@
       "fiftyTwoWeekLow": 4.655,
       "volume": 13531700,
       "averageVolume": 14385430,
-      "marketCap": 617615744,
+      "marketCap": 617626304,
       "peTTM": null,
       "eps": -0.03,
       "divYield": 0,
@@ -235,7 +235,7 @@
       "fiftyTwoWeekHigh": 45.155,
       "fiftyTwoWeekLow": 7.95,
       "volume": 1306240,
-      "averageVolume": 1589871,
+      "averageVolume": 1594445,
       "marketCap": 427168608,
       "peTTM": null,
       "eps": -0.05,
@@ -281,8 +281,8 @@
       "volume": 9860490,
       "averageVolume": 12158173,
       "marketCap": 171371249664,
-      "peTTM": 9.62779,
-      "eps": 4.03,
+      "peTTM": 9.724311,
+      "eps": 3.99,
       "divYield": 0.30295184,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -315,7 +315,7 @@
       "dp": -2.04995,
       "o": 57.076,
       "h": 57.435,
-      "l": 56.58,
+      "l": 56.59,
       "pc": 58.05,
       "currency": "USD",
       "name": "Occidental Petroleum Corporatio",
@@ -345,7 +345,7 @@
       "fiftyTwoWeekHigh": 18.71,
       "fiftyTwoWeekLow": 2.84,
       "volume": 2679955,
-      "averageVolume": 2997220,
+      "averageVolume": 3002295,
       "marketCap": 818628096,
       "peTTM": null,
       "eps": -0.17,
@@ -367,7 +367,7 @@
       "fiftyTwoWeekHigh": 38.58,
       "fiftyTwoWeekLow": 8.09,
       "volume": 753783,
-      "averageVolume": 917136,
+      "averageVolume": 919689,
       "marketCap": 19299225600,
       "peTTM": 94.1875,
       "eps": 0.32,
@@ -389,7 +389,7 @@
       "fiftyTwoWeekHigh": 43.98,
       "fiftyTwoWeekLow": 11.45,
       "volume": 9989847,
-      "averageVolume": 12136788,
+      "averageVolume": 12170214,
       "marketCap": 5698461696,
       "peTTM": null,
       "eps": -2.69,
@@ -657,7 +657,7 @@
       "exchange": "LSE",
       "weburl": null,
       "currency": "GBp",
-      "marketCap": 617615744,
+      "marketCap": 617626304,
       "ipo": null,
       "ticker": null
     },
@@ -912,13 +912,13 @@
       "averageVolume": 1553699
     },
     "3105.TWO": {
-      "peTTM": 58.50816,
+      "peTTM": 58.851116,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 637,
       "fiftyTwoWeekLow": 91,
       "divYield": 0.40241447,
       "beta": null,
-      "eps": 8.58,
+      "eps": 8.53,
       "volume": 21646645,
       "averageVolume": 23885939
     },
@@ -942,7 +942,7 @@
       "beta": null,
       "eps": -1.01,
       "volume": 4342638,
-      "averageVolume": 8021091
+      "averageVolume": 8076533
     },
     "IQE.L": {
       "peTTM": null,
@@ -964,7 +964,7 @@
       "beta": null,
       "eps": -0.05,
       "volume": 1306240,
-      "averageVolume": 1589871
+      "averageVolume": 1594445
     },
     "ADBE": {
       "peTTM": 13.140067,
@@ -978,13 +978,13 @@
       "averageVolume": 5303906
     },
     "NVO": {
-      "peTTM": 9.62779,
+      "peTTM": 9.724311,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 64.16,
       "fiftyTwoWeekLow": 35.12,
       "divYield": 30.295184,
       "beta": null,
-      "eps": 4.03,
+      "eps": 3.99,
       "volume": 9860490,
       "averageVolume": 12158173
     },
@@ -1019,7 +1019,7 @@
       "beta": null,
       "eps": -0.17,
       "volume": 2679955,
-      "averageVolume": 2997220
+      "averageVolume": 3002295
     },
     "TPRO.MI": {
       "peTTM": 94.1875,
@@ -1030,7 +1030,7 @@
       "beta": null,
       "eps": 0.32,
       "volume": 753783,
-      "averageVolume": 917136
+      "averageVolume": 919689
     },
     "USAR": {
       "peTTM": null,
@@ -1041,7 +1041,7 @@
       "beta": null,
       "eps": -2.69,
       "volume": 9989847,
-      "averageVolume": 12136788
+      "averageVolume": 12170214
     },
     "SMHN.DE": {
       "peTTM": 49.777775,
@@ -1116,6 +1116,6 @@
     "SEK": 0.10086237,
     "GBp": 0.013246436,
     "EUR": 1.1401209,
-    "CNY": 0.14897579
+    "CNY": 0.14917135
   }
 }
