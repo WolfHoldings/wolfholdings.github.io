@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-27T20:53:10.251Z",
+  "updatedAt": "2026-09-27T23:38:21.095Z",
   "quotes": {
     "LAES": {
       "c": 2.35,
@@ -149,8 +149,8 @@
       "volume": 21692103,
       "averageVolume": 23885939,
       "marketCap": 40574148608,
-      "peTTM": 58.50816,
-      "eps": 8.58,
+      "peTTM": 58.851116,
+      "eps": 8.53,
       "divYield": 0.0040241447,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -196,7 +196,7 @@
       "peTTM": null,
       "eps": -1.01,
       "divYield": 0,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "IQE.L": {
@@ -214,11 +214,11 @@
       "fiftyTwoWeekLow": 4.655,
       "volume": 13531700,
       "averageVolume": 14385430,
-      "marketCap": 617615744,
+      "marketCap": 617626304,
       "peTTM": null,
       "eps": -0.03,
       "divYield": 0,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "VITL": {
@@ -315,7 +315,7 @@
       "dp": -2.04995,
       "o": 57.076,
       "h": 57.435,
-      "l": 56.58,
+      "l": 56.59,
       "pc": 58.05,
       "currency": "USD",
       "name": "Occidental Petroleum Corporatio",
@@ -372,7 +372,7 @@
       "peTTM": 94.1875,
       "eps": 0.32,
       "divYield": 0,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "USAR": {
@@ -416,7 +416,7 @@
       "peTTM": 49.777775,
       "eps": 1.35,
       "divYield": 0.00058266567,
-      "marketState": "CLOSED",
+      "marketState": "PREPRE",
       "extendedLabel": null
     },
     "INTC": {
@@ -657,7 +657,7 @@
       "exchange": "LSE",
       "weburl": null,
       "currency": "GBp",
-      "marketCap": 617615744,
+      "marketCap": 617626304,
       "ipo": null,
       "ticker": null
     },
@@ -912,13 +912,13 @@
       "averageVolume": 1553699
     },
     "3105.TWO": {
-      "peTTM": 58.50816,
+      "peTTM": 58.851116,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 637,
       "fiftyTwoWeekLow": 91,
       "divYield": 0.40241447,
       "beta": null,
-      "eps": 8.58,
+      "eps": 8.53,
       "volume": 21692103,
       "averageVolume": 23885939
     },
@@ -1112,10 +1112,10 @@
   },
   "fxRates": {
     "USD": 1,
-    "TWD": 0.031491105,
-    "SEK": 0.10086339,
-    "GBp": 0.013240824,
+    "TWD": 0.031468313,
+    "SEK": 0.10063733,
+    "GBp": 0.013226115,
     "EUR": 1.1379154,
-    "CNY": 0.14898023
+    "CNY": 0.14917135
   }
 }
