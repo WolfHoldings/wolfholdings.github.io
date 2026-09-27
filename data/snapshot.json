@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-27T03:39:57.610Z",
+  "updatedAt": "2026-09-27T11:23:50.759Z",
   "quotes": {
     "LAES": {
       "c": 2.35,
@@ -149,8 +149,8 @@
       "volume": 21646645,
       "averageVolume": 23885939,
       "marketCap": 40574148608,
-      "peTTM": 58.851116,
-      "eps": 8.53,
+      "peTTM": 58.50816,
+      "eps": 8.58,
       "divYield": 0.0040241447,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -214,7 +214,7 @@
       "fiftyTwoWeekLow": 4.655,
       "volume": 13531700,
       "averageVolume": 14398981,
-      "marketCap": 617626304,
+      "marketCap": 617615744,
       "peTTM": null,
       "eps": -0.03,
       "divYield": 0,
@@ -657,7 +657,7 @@
       "exchange": "LSE",
       "weburl": null,
       "currency": "GBp",
-      "marketCap": 617626304,
+      "marketCap": 617615744,
       "ipo": null,
       "ticker": null
     },
@@ -912,13 +912,13 @@
       "averageVolume": 1553699
     },
     "3105.TWO": {
-      "peTTM": 58.851116,
+      "peTTM": 58.50816,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 637,
       "fiftyTwoWeekLow": 91,
       "divYield": 0.40241447,
       "beta": null,
-      "eps": 8.53,
+      "eps": 8.58,
       "volume": 21646645,
       "averageVolume": 23885939
     },
