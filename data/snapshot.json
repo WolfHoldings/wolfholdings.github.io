@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-27T23:38:21.095Z",
+  "updatedAt": "2026-09-28T03:38:33.210Z",
   "quotes": {
     "LAES": {
       "c": 2.35,
@@ -191,7 +191,7 @@
       "fiftyTwoWeekHigh": 110,
       "fiftyTwoWeekLow": 2.85,
       "volume": 4342638,
-      "averageVolume": 8076533,
+      "averageVolume": 8021091,
       "marketCap": 10451487744,
       "peTTM": null,
       "eps": -1.01,
@@ -486,47 +486,47 @@
       "extendedLabel": null
     },
     "000333.SZ": {
-      "c": 82.65,
-      "d": 0.1800003,
-      "dp": 0.21826154,
+      "c": 81.8,
+      "d": -0.8499985,
+      "dp": -1.0284313,
       "o": 82.18,
-      "h": 83.05,
-      "l": 82.05,
-      "pc": 82.47,
+      "h": 82.97,
+      "l": 81.27,
+      "pc": 82.65,
       "currency": "CNY",
       "name": "MIDEA GROUP",
       "exchange": "Shenzhen",
       "fiftyTwoWeekHigh": 89.5,
       "fiftyTwoWeekLow": 71.02,
-      "volume": 14323402,
+      "volume": 16807873,
       "averageVolume": 31168175,
-      "marketCap": 630605611008,
-      "peTTM": 14.128205,
+      "marketCap": 624120299520,
+      "peTTM": 13.982906,
       "eps": 5.85,
-      "divYield": 0.052140173,
-      "marketState": "PREPRE",
+      "divYield": 0.05202662,
+      "marketState": "REGULAR",
       "extendedLabel": null
     },
     "300782.SZ": {
-      "c": 75.78,
-      "d": -0.98000336,
-      "dp": -1.276711,
+      "c": 70.46,
+      "d": -5.3199997,
+      "dp": -7.019396,
       "o": 76.66,
-      "h": 79,
-      "l": 75.7,
-      "pc": 76.76,
+      "h": 75.7,
+      "l": 69.95,
+      "pc": 75.78,
       "currency": "CNY",
       "name": "MAXSCEND",
       "exchange": "Shenzhen",
       "fiftyTwoWeekHigh": 144.9,
       "fiftyTwoWeekLow": 64.55,
-      "volume": 14312740,
+      "volume": 8722911,
       "averageVolume": 14125647,
-      "marketCap": 43572514816,
+      "marketCap": 40513585152,
       "peTTM": null,
       "eps": -0.95,
       "divYield": 0,
-      "marketState": "PREPRE",
+      "marketState": "REGULAR",
       "extendedLabel": null
     }
   },
@@ -826,7 +826,7 @@
       "exchange": "Shenzhen",
       "weburl": null,
       "currency": "CNY",
-      "marketCap": 630605611008,
+      "marketCap": 624120299520,
       "ipo": null,
       "ticker": null
     },
@@ -839,7 +839,7 @@
       "exchange": "Shenzhen",
       "weburl": null,
       "currency": "CNY",
-      "marketCap": 43572514816,
+      "marketCap": 40513585152,
       "ipo": null,
       "ticker": null
     }
@@ -942,7 +942,7 @@
       "beta": null,
       "eps": -1.01,
       "volume": 4342638,
-      "averageVolume": 8076533
+      "averageVolume": 8021091
     },
     "IQE.L": {
       "peTTM": null,
@@ -1088,14 +1088,14 @@
       "averageVolume": 18270244
     },
     "000333.SZ": {
-      "peTTM": 14.128205,
+      "peTTM": 13.982906,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 89.5,
       "fiftyTwoWeekLow": 71.02,
-      "divYield": 5.2140173,
+      "divYield": 5.202662,
       "beta": null,
       "eps": 5.85,
-      "volume": 14323402,
+      "volume": 16807873,
       "averageVolume": 31168175
     },
     "300782.SZ": {
@@ -1106,16 +1106,16 @@
       "divYield": 0,
       "beta": null,
       "eps": -0.95,
-      "volume": 14312740,
+      "volume": 8722911,
       "averageVolume": 14125647
     }
   },
   "fxRates": {
     "USD": 1,
-    "TWD": 0.031468313,
-    "SEK": 0.10063733,
-    "GBp": 0.013226115,
-    "EUR": 1.1379154,
-    "CNY": 0.14917135
+    "TWD": 0.031486146,
+    "SEK": 0.10071021,
+    "GBp": 0.013243103,
+    "EUR": 1.1389521,
+    "CNY": 0.1489425
   }
 }
