@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-04T04:18:32.999Z",
+  "updatedAt": "2026-10-04T11:46:50.643Z",
   "quotes": {
     "LAES": {
       "c": 2.37,
@@ -281,8 +281,8 @@
       "volume": 10147743,
       "averageVolume": 12346309,
       "marketCap": 164789452800,
-      "peTTM": 9.400503,
-      "eps": 3.97,
+      "peTTM": 9.353383,
+      "eps": 3.99,
       "divYield": 0.3128342,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -303,8 +303,8 @@
       "volume": 34914894,
       "averageVolume": 36762993,
       "marketCap": 158450925568,
-      "peTTM": 36.578945,
-      "eps": 0.76,
+      "peTTM": 37.066666,
+      "eps": 0.75,
       "divYield": 0.061166428,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -366,7 +366,7 @@
       "exchange": "Milan",
       "fiftyTwoWeekHigh": 38.58,
       "fiftyTwoWeekLow": 8.395,
-      "volume": 1815582,
+      "volume": 1819824,
       "averageVolume": 996216,
       "marketCap": 22449598464,
       "peTTM": 109.56251,
@@ -425,7 +425,7 @@
       "dp": -0.558332,
       "o": 124.17,
       "h": 126,
-      "l": 118.96,
+      "l": 118.98,
       "pc": 120,
       "currency": "USD",
       "name": "Intel Corporation",
@@ -978,24 +978,24 @@
       "averageVolume": 5129803
     },
     "NVO": {
-      "peTTM": 9.400503,
+      "peTTM": 9.353383,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 64.16,
       "fiftyTwoWeekLow": 35.12,
       "divYield": 31.28342,
       "beta": null,
-      "eps": 3.97,
+      "eps": 3.99,
       "volume": 10147743,
       "averageVolume": 12346309
     },
     "PFE": {
-      "peTTM": 36.578945,
+      "peTTM": 37.066666,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 29.21,
       "fiftyTwoWeekLow": 23.62,
       "divYield": 6.1166428,
       "beta": null,
-      "eps": 0.76,
+      "eps": 0.75,
       "volume": 34914894,
       "averageVolume": 36762993
     },
@@ -1029,7 +1029,7 @@
       "divYield": 0,
       "beta": null,
       "eps": 0.32,
-      "volume": 1815582,
+      "volume": 1819824,
       "averageVolume": 996216
     },
     "USAR": {
