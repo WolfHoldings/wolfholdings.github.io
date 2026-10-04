@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-03T23:30:27.818Z",
+  "updatedAt": "2026-10-04T04:18:32.999Z",
   "quotes": {
     "LAES": {
       "c": 2.37,
@@ -191,7 +191,7 @@
       "fiftyTwoWeekHigh": 110,
       "fiftyTwoWeekLow": 2.85,
       "volume": 7105370,
-      "averageVolume": 7568058,
+      "averageVolume": 7562462,
       "marketCap": 10610906112,
       "peTTM": null,
       "eps": -1.01,
@@ -942,7 +942,7 @@
       "beta": null,
       "eps": -1.01,
       "volume": 7105370,
-      "averageVolume": 7568058
+      "averageVolume": 7562462
     },
     "IQE.L": {
       "peTTM": null,
@@ -1116,6 +1116,6 @@
     "SEK": 0.099577785,
     "GBp": 0.013240472999999999,
     "EUR": 1.1257458,
-    "CNY": 0.1492827
+    "CNY": 0.14914687
   }
 }
