@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10T16:57:49.976Z",
+  "updatedAt": "2026-10-10T21:09:11.799Z",
   "quotes": {
     "LAES": {
       "c": 2.11,
@@ -367,7 +367,7 @@
       "fiftyTwoWeekHigh": 38.58,
       "fiftyTwoWeekLow": 8.595,
       "volume": 1532462,
-      "averageVolume": 1091426,
+      "averageVolume": 1084535,
       "marketCap": 21886115840,
       "peTTM": 106.8125,
       "eps": 0.32,
@@ -413,8 +413,8 @@
       "volume": 54651,
       "averageVolume": 91177,
       "marketCap": 1257802496,
-      "peTTM": 45.694447,
-      "eps": 1.44,
+      "peTTM": 45.068493,
+      "eps": 1.46,
       "divYield": 0.0006130268,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -425,7 +425,7 @@
       "dp": -2.22264,
       "o": 108.38,
       "h": 108.38,
-      "l": 104.05,
+      "l": 104,
       "pc": 107.08,
       "currency": "USD",
       "name": "Intel Corporation",
@@ -468,7 +468,7 @@
       "d": 3,
       "dp": 0.869918,
       "o": 348.01,
-      "h": 351.05,
+      "h": 351.06,
       "l": 346.88,
       "pc": 344.86,
       "currency": "USD",
@@ -1030,7 +1030,7 @@
       "beta": null,
       "eps": 0.32,
       "volume": 1532462,
-      "averageVolume": 1091426
+      "averageVolume": 1084535
     },
     "USAR": {
       "peTTM": null,
@@ -1044,13 +1044,13 @@
       "averageVolume": 12546203
     },
     "SMHN.DE": {
-      "peTTM": 45.694447,
+      "peTTM": 45.068493,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 118.4,
       "fiftyTwoWeekLow": 25.8,
       "divYield": 0.06130268,
       "beta": null,
-      "eps": 1.44,
+      "eps": 1.46,
       "volume": 54651,
       "averageVolume": 91177
     },
