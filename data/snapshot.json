@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10T21:09:11.799Z",
+  "updatedAt": "2026-10-11T03:59:28.209Z",
   "quotes": {
     "LAES": {
       "c": 2.11,
@@ -190,8 +190,8 @@
       "exchange": "Stockholm",
       "fiftyTwoWeekHigh": 110,
       "fiftyTwoWeekLow": 2.85,
-      "volume": 4781395,
-      "averageVolume": 6886000,
+      "volume": 4777397,
+      "averageVolume": 6854663,
       "marketCap": 9577874432,
       "peTTM": null,
       "eps": -0.74,
@@ -213,7 +213,7 @@
       "fiftyTwoWeekHigh": 72.9,
       "fiftyTwoWeekLow": 4.655,
       "volume": 8105387,
-      "averageVolume": 14248343,
+      "averageVolume": 14152360,
       "marketCap": 662901376,
       "peTTM": null,
       "eps": -0.02,
@@ -303,8 +303,8 @@
       "volume": 22604129,
       "averageVolume": 36112359,
       "marketCap": 161186775040,
-      "peTTM": 37.21053,
-      "eps": 0.76,
+      "peTTM": 36.727276,
+      "eps": 0.77,
       "divYield": 0.061826028,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -367,7 +367,7 @@
       "fiftyTwoWeekHigh": 38.58,
       "fiftyTwoWeekLow": 8.595,
       "volume": 1532462,
-      "averageVolume": 1084535,
+      "averageVolume": 1091426,
       "marketCap": 21886115840,
       "peTTM": 106.8125,
       "eps": 0.32,
@@ -392,7 +392,7 @@
       "averageVolume": 12546203,
       "marketCap": 4710962176,
       "peTTM": null,
-      "eps": -2.49,
+      "eps": -2.48,
       "divYield": 0,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -425,7 +425,7 @@
       "dp": -2.22264,
       "o": 108.38,
       "h": 108.38,
-      "l": 104,
+      "l": 104.05,
       "pc": 107.08,
       "currency": "USD",
       "name": "Intel Corporation",
@@ -501,8 +501,8 @@
       "volume": 35637754,
       "averageVolume": 28634092,
       "marketCap": 629173387264,
-      "peTTM": 13.976271,
-      "eps": 5.9,
+      "peTTM": 14.095727,
+      "eps": 5.85,
       "divYield": 0.052605826,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -941,8 +941,8 @@
       "divYield": 0,
       "beta": null,
       "eps": -0.74,
-      "volume": 4781395,
-      "averageVolume": 6886000
+      "volume": 4777397,
+      "averageVolume": 6854663
     },
     "IQE.L": {
       "peTTM": null,
@@ -953,7 +953,7 @@
       "beta": null,
       "eps": -0.02,
       "volume": 8105387,
-      "averageVolume": 14248343
+      "averageVolume": 14152360
     },
     "VITL": {
       "peTTM": null,
@@ -989,13 +989,13 @@
       "averageVolume": 12690670
     },
     "PFE": {
-      "peTTM": 37.21053,
+      "peTTM": 36.727276,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 29.21,
       "fiftyTwoWeekLow": 23.62,
       "divYield": 6.1826028,
       "beta": null,
-      "eps": 0.76,
+      "eps": 0.77,
       "volume": 22604129,
       "averageVolume": 36112359
     },
@@ -1030,7 +1030,7 @@
       "beta": null,
       "eps": 0.32,
       "volume": 1532462,
-      "averageVolume": 1084535
+      "averageVolume": 1091426
     },
     "USAR": {
       "peTTM": null,
@@ -1039,7 +1039,7 @@
       "fiftyTwoWeekLow": 11.45,
       "divYield": 0,
       "beta": null,
-      "eps": -2.49,
+      "eps": -2.48,
       "volume": 10893750,
       "averageVolume": 12546203
     },
@@ -1088,13 +1088,13 @@
       "averageVolume": 17808740
     },
     "000333.SZ": {
-      "peTTM": 13.976271,
+      "peTTM": 14.095727,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 89.5,
       "fiftyTwoWeekLow": 71.02,
       "divYield": 5.2605826,
       "beta": null,
-      "eps": 5.9,
+      "eps": 5.85,
       "volume": 35637754,
       "averageVolume": 28634092
     },
@@ -1116,6 +1116,6 @@
     "SEK": 0.10006003,
     "GBp": 0.013233815,
     "EUR": 1.1205738,
-    "CNY": 0.1496334
+    "CNY": 0.14942768
   }
 }
