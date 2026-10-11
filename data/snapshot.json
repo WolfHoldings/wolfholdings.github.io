@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-11T03:59:28.209Z",
+  "updatedAt": "2026-10-11T12:06:01.839Z",
   "quotes": {
     "LAES": {
       "c": 2.11,
@@ -190,7 +190,7 @@
       "exchange": "Stockholm",
       "fiftyTwoWeekHigh": 110,
       "fiftyTwoWeekLow": 2.85,
-      "volume": 4777397,
+      "volume": 4781395,
       "averageVolume": 6854663,
       "marketCap": 9577874432,
       "peTTM": null,
@@ -303,8 +303,8 @@
       "volume": 22604129,
       "averageVolume": 36112359,
       "marketCap": 161186775040,
-      "peTTM": 36.727276,
-      "eps": 0.77,
+      "peTTM": 37.21053,
+      "eps": 0.76,
       "divYield": 0.061826028,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -392,7 +392,7 @@
       "averageVolume": 12546203,
       "marketCap": 4710962176,
       "peTTM": null,
-      "eps": -2.48,
+      "eps": -2.49,
       "divYield": 0,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -425,7 +425,7 @@
       "dp": -2.22264,
       "o": 108.38,
       "h": 108.38,
-      "l": 104.05,
+      "l": 104,
       "pc": 107.08,
       "currency": "USD",
       "name": "Intel Corporation",
@@ -500,7 +500,7 @@
       "fiftyTwoWeekLow": 71.02,
       "volume": 35637754,
       "averageVolume": 28634092,
-      "marketCap": 629173387264,
+      "marketCap": 629177581568,
       "peTTM": 14.095727,
       "eps": 5.85,
       "divYield": 0.052605826,
@@ -826,7 +826,7 @@
       "exchange": "Shenzhen",
       "weburl": null,
       "currency": "CNY",
-      "marketCap": 629173387264,
+      "marketCap": 629177581568,
       "ipo": null,
       "ticker": null
     },
@@ -941,7 +941,7 @@
       "divYield": 0,
       "beta": null,
       "eps": -0.74,
-      "volume": 4777397,
+      "volume": 4781395,
       "averageVolume": 6854663
     },
     "IQE.L": {
@@ -989,13 +989,13 @@
       "averageVolume": 12690670
     },
     "PFE": {
-      "peTTM": 36.727276,
+      "peTTM": 37.21053,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 29.21,
       "fiftyTwoWeekLow": 23.62,
       "divYield": 6.1826028,
       "beta": null,
-      "eps": 0.77,
+      "eps": 0.76,
       "volume": 22604129,
       "averageVolume": 36112359
     },
@@ -1039,7 +1039,7 @@
       "fiftyTwoWeekLow": 11.45,
       "divYield": 0,
       "beta": null,
-      "eps": -2.48,
+      "eps": -2.49,
       "volume": 10893750,
       "averageVolume": 12546203
     },
