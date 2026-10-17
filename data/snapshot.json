@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-17T12:40:49.837Z",
+  "updatedAt": "2026-10-17T17:45:02.866Z",
   "quotes": {
     "LAES": {
       "c": 1.79,
@@ -106,7 +106,7 @@
       "averageVolume": 98226,
       "marketCap": 4255949056,
       "peTTM": null,
-      "eps": -1.74,
+      "eps": -1.66,
       "divYield": 0,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -190,7 +190,7 @@
       "exchange": "Stockholm",
       "fiftyTwoWeekHigh": 110,
       "fiftyTwoWeekLow": 2.85,
-      "volume": 3663481,
+      "volume": 3661133,
       "averageVolume": 6710057,
       "marketCap": 7620212224,
       "peTTM": null,
@@ -281,8 +281,8 @@
       "volume": 9457786,
       "averageVolume": 12835189,
       "marketCap": 171361075200,
-      "peTTM": 9.136471,
-      "eps": 4.25,
+      "peTTM": 9.493888,
+      "eps": 4.09,
       "divYield": 0.29831716,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -369,8 +369,8 @@
       "volume": 2424351,
       "averageVolume": 1187446,
       "marketCap": 16981269504,
-      "peTTM": 82.875,
-      "eps": 0.32,
+      "peTTM": 78,
+      "eps": 0.34,
       "divYield": 0,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -896,7 +896,7 @@
       "fiftyTwoWeekLow": 29.05,
       "divYield": 0,
       "beta": null,
-      "eps": -1.74,
+      "eps": -1.66,
       "volume": 56155,
       "averageVolume": 98226
     },
@@ -941,7 +941,7 @@
       "divYield": 0,
       "beta": null,
       "eps": -0.74,
-      "volume": 3663481,
+      "volume": 3661133,
       "averageVolume": 6710057
     },
     "IQE.L": {
@@ -978,13 +978,13 @@
       "averageVolume": 4981003
     },
     "NVO": {
-      "peTTM": 9.136471,
+      "peTTM": 9.493888,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 64.16,
       "fiftyTwoWeekLow": 35.12,
       "divYield": 29.831716000000004,
       "beta": null,
-      "eps": 4.25,
+      "eps": 4.09,
       "volume": 9457786,
       "averageVolume": 12835189
     },
@@ -1022,13 +1022,13 @@
       "averageVolume": 3109298
     },
     "TPRO.MI": {
-      "peTTM": 82.875,
+      "peTTM": 78,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 38.58,
       "fiftyTwoWeekLow": 8.625,
       "divYield": 0,
       "beta": null,
-      "eps": 0.32,
+      "eps": 0.34,
       "volume": 2424351,
       "averageVolume": 1187446
     },
@@ -1116,6 +1116,6 @@
     "SEK": 0.10092386,
     "GBp": 0.013329957,
     "EUR": 1.124227,
-    "CNY": 0.14956178
+    "CNY": 0.14977235
   }
 }
