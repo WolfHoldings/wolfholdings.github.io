@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-24T20:12:23.869Z",
+  "updatedAt": "2026-10-24T22:53:09.709Z",
   "quotes": {
     "LAES": {
       "c": 1.55,
@@ -281,8 +281,8 @@
       "volume": 9120693,
       "averageVolume": 12851778,
       "marketCap": 172284100608,
-      "peTTM": 9.455205,
-      "eps": 4.13,
+      "peTTM": 9.188235,
+      "eps": 4.25,
       "divYield": 0.29672837,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -303,8 +303,8 @@
       "volume": 29400028,
       "averageVolume": 34542867,
       "marketCap": 171161206784,
-      "peTTM": 39.51316,
-      "eps": 0.76,
+      "peTTM": 39,
+      "eps": 0.77,
       "divYield": 0.05654175,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -369,8 +369,8 @@
       "volume": 1700043,
       "averageVolume": 1282737,
       "marketCap": 15162762240,
-      "peTTM": 74,
-      "eps": 0.32,
+      "peTTM": 71.757576,
+      "eps": 0.33,
       "divYield": 0,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -978,24 +978,24 @@
       "averageVolume": 4932295
     },
     "NVO": {
-      "peTTM": 9.455205,
+      "peTTM": 9.188235,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 64.16,
       "fiftyTwoWeekLow": 35.12,
       "divYield": 29.672837,
       "beta": null,
-      "eps": 4.13,
+      "eps": 4.25,
       "volume": 9120693,
       "averageVolume": 12851778
     },
     "PFE": {
-      "peTTM": 39.51316,
+      "peTTM": 39,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 30.44,
       "fiftyTwoWeekLow": 23.62,
       "divYield": 5.654175,
       "beta": null,
-      "eps": 0.76,
+      "eps": 0.77,
       "volume": 29400028,
       "averageVolume": 34542867
     },
@@ -1022,13 +1022,13 @@
       "averageVolume": 3104998
     },
     "TPRO.MI": {
-      "peTTM": 74,
+      "peTTM": 71.757576,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 38.58,
       "fiftyTwoWeekLow": 8.625,
       "divYield": 0,
       "beta": null,
-      "eps": 0.32,
+      "eps": 0.33,
       "volume": 1700043,
       "averageVolume": 1282737
     },
