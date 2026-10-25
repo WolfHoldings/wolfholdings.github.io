@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-25T10:43:02.264Z",
+  "updatedAt": "2026-10-25T15:32:39.564Z",
   "quotes": {
     "LAES": {
       "c": 1.55,
@@ -281,8 +281,8 @@
       "volume": 9120693,
       "averageVolume": 12851778,
       "marketCap": 172284100608,
-      "peTTM": 9.188235,
-      "eps": 4.25,
+      "peTTM": 9.455205,
+      "eps": 4.13,
       "divYield": 0.29672837,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -303,8 +303,8 @@
       "volume": 29400028,
       "averageVolume": 34542867,
       "marketCap": 171161206784,
-      "peTTM": 39,
-      "eps": 0.77,
+      "peTTM": 39.51316,
+      "eps": 0.76,
       "divYield": 0.05654175,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -369,8 +369,8 @@
       "volume": 1700043,
       "averageVolume": 1282737,
       "marketCap": 15162762240,
-      "peTTM": 71.757576,
-      "eps": 0.33,
+      "peTTM": 74,
+      "eps": 0.32,
       "divYield": 0,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -446,7 +446,7 @@
       "d": -2.35999,
       "dp": -0.630035,
       "o": 373.135,
-      "h": 377.28,
+      "h": 377.3,
       "l": 365.27,
       "pc": 374.58,
       "currency": "USD",
@@ -500,7 +500,7 @@
       "fiftyTwoWeekLow": 71.77,
       "volume": 33410388,
       "averageVolume": 27181868,
-      "marketCap": 653076725760,
+      "marketCap": 653076856832,
       "peTTM": 14.630769,
       "eps": 5.85,
       "divYield": 0.050416227,
@@ -826,7 +826,7 @@
       "exchange": "Shenzhen",
       "weburl": null,
       "currency": "CNY",
-      "marketCap": 653076725760,
+      "marketCap": 653076856832,
       "ipo": null,
       "ticker": null
     },
@@ -978,24 +978,24 @@
       "averageVolume": 4932295
     },
     "NVO": {
-      "peTTM": 9.188235,
+      "peTTM": 9.455205,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 64.16,
       "fiftyTwoWeekLow": 35.12,
       "divYield": 29.672837,
       "beta": null,
-      "eps": 4.25,
+      "eps": 4.13,
       "volume": 9120693,
       "averageVolume": 12851778
     },
     "PFE": {
-      "peTTM": 39,
+      "peTTM": 39.51316,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 30.44,
       "fiftyTwoWeekLow": 23.62,
       "divYield": 5.654175,
       "beta": null,
-      "eps": 0.77,
+      "eps": 0.76,
       "volume": 29400028,
       "averageVolume": 34542867
     },
@@ -1022,13 +1022,13 @@
       "averageVolume": 3104998
     },
     "TPRO.MI": {
-      "peTTM": 71.757576,
+      "peTTM": 74,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 38.58,
       "fiftyTwoWeekLow": 8.625,
       "divYield": 0,
       "beta": null,
-      "eps": 0.33,
+      "eps": 0.32,
       "volume": 1700043,
       "averageVolume": 1282737
     },
@@ -1116,6 +1116,6 @@
     "SEK": 0.10077293,
     "GBp": 0.01337399,
     "EUR": 1.1204482,
-    "CNY": 0.14992054
+    "CNY": 0.14993177
   }
 }
