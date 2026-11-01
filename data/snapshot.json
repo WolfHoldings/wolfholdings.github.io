@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-01T05:45:54.361Z",
+  "updatedAt": "2026-11-01T12:40:05.973Z",
   "quotes": {
     "LAES": {
       "c": 1.47,
@@ -183,14 +183,14 @@
       "dp": -9.602081,
       "o": 21.44,
       "h": 21.8,
-      "l": 20.48,
+      "l": 20.46,
       "pc": 23.12,
       "currency": "SEK",
       "name": "Sivers Semiconductors AB",
       "exchange": "Stockholm",
       "fiftyTwoWeekHigh": 110,
       "fiftyTwoWeekLow": 2.85,
-      "volume": 2468294,
+      "volume": 2462504,
       "averageVolume": 6111348,
       "marketCap": 6364545024,
       "peTTM": null,
@@ -292,7 +292,7 @@
       "d": 0.57,
       "dp": 1.90317,
       "o": 30.51,
-      "h": 30.66,
+      "h": 30.65,
       "l": 30.14,
       "pc": 29.95,
       "currency": "USD",
@@ -369,8 +369,8 @@
       "volume": 2389154,
       "averageVolume": 1346844,
       "marketCap": 15508534272,
-      "peTTM": 73.393936,
-      "eps": 0.33,
+      "peTTM": 75.6875,
+      "eps": 0.32,
       "divYield": 0,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -446,7 +446,7 @@
       "d": -3.48999,
       "dp": -0.865358,
       "o": 393.04,
-      "h": 404.2,
+      "h": 404.19,
       "l": 387.52,
       "pc": 403.3,
       "currency": "USD",
@@ -503,7 +503,7 @@
       "marketCap": 680470642688,
       "peTTM": 14.223286,
       "eps": 6.27,
-      "divYield": 0.043438498,
+      "divYield": 0.04915409,
       "marketState": "CLOSED",
       "extendedLabel": null
     },
@@ -941,7 +941,7 @@
       "divYield": 0,
       "beta": null,
       "eps": -0.74,
-      "volume": 2468294,
+      "volume": 2462504,
       "averageVolume": 6111348
     },
     "IQE.L": {
@@ -1022,13 +1022,13 @@
       "averageVolume": 3090175
     },
     "TPRO.MI": {
-      "peTTM": 73.393936,
+      "peTTM": 75.6875,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 38.58,
       "fiftyTwoWeekLow": 8.625,
       "divYield": 0,
       "beta": null,
-      "eps": 0.33,
+      "eps": 0.32,
       "volume": 2389154,
       "averageVolume": 1346844
     },
@@ -1092,7 +1092,7 @@
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 89.5,
       "fiftyTwoWeekLow": 71.77,
-      "divYield": 4.3438498,
+      "divYield": 4.9154089999999995,
       "beta": null,
       "eps": 6.27,
       "volume": 37161632,
