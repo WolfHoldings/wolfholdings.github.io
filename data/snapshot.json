@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-08T04:26:56.913Z",
+  "updatedAt": "2026-11-08T12:44:58.064Z",
   "quotes": {
     "LAES": {
       "c": 1.32,
@@ -366,7 +366,7 @@
       "exchange": "Milan",
       "fiftyTwoWeekHigh": 38.58,
       "fiftyTwoWeekLow": 8.815,
-      "volume": 2235516,
+      "volume": 2249063,
       "averageVolume": 1458552,
       "marketCap": 13280223232,
       "peTTM": 64.8125,
@@ -402,7 +402,7 @@
       "d": -0.20000076,
       "dp": -0.45045215,
       "o": 43.86,
-      "h": 45.3,
+      "h": 45.36,
       "l": 43.86,
       "pc": 44.4,
       "currency": "EUR",
@@ -500,7 +500,7 @@
       "fiftyTwoWeekLow": 71.77,
       "volume": 26506781,
       "averageVolume": 26585952,
-      "marketCap": 683695538176,
+      "marketCap": 683698552832,
       "peTTM": 14.290271,
       "eps": 6.27,
       "divYield": 0.048797097,
@@ -826,7 +826,7 @@
       "exchange": "Shenzhen",
       "weburl": null,
       "currency": "CNY",
-      "marketCap": 683695538176,
+      "marketCap": 683698552832,
       "ipo": null,
       "ticker": null
     },
@@ -1029,7 +1029,7 @@
       "divYield": 0,
       "beta": null,
       "eps": 0.32,
-      "volume": 2235516,
+      "volume": 2249063,
       "averageVolume": 1458552
     },
     "USAR": {
