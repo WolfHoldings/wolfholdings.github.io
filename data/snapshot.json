@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-07T21:26:36.521Z",
+  "updatedAt": "2026-11-08T04:26:56.913Z",
   "quotes": {
     "LAES": {
       "c": 1.32,
@@ -366,7 +366,7 @@
       "exchange": "Milan",
       "fiftyTwoWeekHigh": 38.58,
       "fiftyTwoWeekLow": 8.815,
-      "volume": 2249063,
+      "volume": 2235516,
       "averageVolume": 1458552,
       "marketCap": 13280223232,
       "peTTM": 64.8125,
@@ -402,7 +402,7 @@
       "d": -0.20000076,
       "dp": -0.45045215,
       "o": 43.86,
-      "h": 45.36,
+      "h": 45.3,
       "l": 43.86,
       "pc": 44.4,
       "currency": "EUR",
@@ -1029,7 +1029,7 @@
       "divYield": 0,
       "beta": null,
       "eps": 0.32,
-      "volume": 2249063,
+      "volume": 2235516,
       "averageVolume": 1458552
     },
     "USAR": {
@@ -1116,6 +1116,6 @@
     "SEK": 0.10109997,
     "GBp": 0.013355771,
     "EUR": 1.1143303,
-    "CNY": 0.15004201
+    "CNY": 0.14990257
   }
 }
