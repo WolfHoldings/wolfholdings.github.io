@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14T19:41:17.407Z",
+  "updatedAt": "2026-11-15T00:45:05.390Z",
   "quotes": {
     "LAES": {
       "c": 1.25,
@@ -18,7 +18,7 @@
       "averageVolume": 5136421,
       "marketCap": 281163200,
       "peTTM": null,
-      "eps": -0.19,
+      "eps": -0.2,
       "divYield": 0,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -281,8 +281,8 @@
       "volume": 11691685,
       "averageVolume": 12361665,
       "marketCap": 183519838208,
-      "peTTM": 10.253695,
-      "eps": 4.06,
+      "peTTM": 10.512627,
+      "eps": 3.96,
       "divYield": 0.28782287,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -369,8 +369,8 @@
       "volume": 1729521,
       "averageVolume": 1581901,
       "marketCap": 14074219520,
-      "peTTM": 66.60606,
-      "eps": 0.33,
+      "peTTM": 68.6875,
+      "eps": 0.32,
       "divYield": 0,
       "marketState": "CLOSED",
       "extendedLabel": null
@@ -852,7 +852,7 @@
       "fiftyTwoWeekLow": 1.2,
       "divYield": 0,
       "beta": null,
-      "eps": -0.19,
+      "eps": -0.2,
       "volume": 2878322,
       "averageVolume": 5136421
     },
@@ -978,13 +978,13 @@
       "averageVolume": 4598009
     },
     "NVO": {
-      "peTTM": 10.253695,
+      "peTTM": 10.512627,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 64.16,
       "fiftyTwoWeekLow": 35.12,
       "divYield": 28.782287,
       "beta": null,
-      "eps": 4.06,
+      "eps": 3.96,
       "volume": 11691685,
       "averageVolume": 12361665
     },
@@ -1022,13 +1022,13 @@
       "averageVolume": 3287192
     },
     "TPRO.MI": {
-      "peTTM": 66.60606,
+      "peTTM": 68.6875,
       "pbAnnual": null,
       "fiftyTwoWeekHigh": 38.58,
       "fiftyTwoWeekLow": 11.18,
       "divYield": 0,
       "beta": null,
-      "eps": 0.33,
+      "eps": 0.32,
       "volume": 1729521,
       "averageVolume": 1581901
     },
@@ -1114,7 +1114,7 @@
     "USD": 1,
     "TWD": 0.03041825,
     "SEK": 0.099276274,
-    "GBp": 0.013208992,
+    "GBp": 0.013212135,
     "EUR": 1.102779,
     "CNY": 0.15010282
   }
